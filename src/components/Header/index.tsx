@@ -1,4 +1,8 @@
 import React from "react";
+import { IoIosSearch } from "react-icons/io";
+import { CiLocationOn } from "react-icons/ci";
+import { BiChevronDown } from "react-icons/bi";
+import { FiShoppingCart } from "react-icons/fi";
 
 const logo =
     "https://http2.mlstatic.com/frontend-assets/ml-web-navigation/ui-navigation/5.21.22/mercadolibre/logo-pt__large_plus.png";
@@ -26,16 +30,19 @@ const Header: React.FC = () => {
                     </a>
                 </div>
                 <div className="flex gap-x-14">
-                    <div className="bg-white pl-2 pr-2 h-[38px] w-[600px] flex rounded-sm shadow border-l border-r border-b border-[#bebebe1a]">
+                    <div className="bg-white pl-2 pr-2 h-[38px] w-[600px] flex rounded-sm shadow-md border-l-2 border-r-2 border-b border-[#fffb005d]">
                         <input
                             type="text"
-                            className="outline-none h-[34px] w-full pl-2 placeholder:text-gray-300 placeholder:w"
+                            className="outline-none h-[34px] relative top-[2px] w-full pl-2 font-proxima placeholder:text-gray-300 placeholder:font-thin placeholder:font-proxima"
                             placeholder="Buscar produtos, marcas e muitos mais..."
-                            aria-placeholder="fdsfsdfds"
                         />
-                        <div className="border-l border-[#eee] flex justify-center items-center h-4/6 self-center">
-                            <button type="button" className="pl-3 pr-2 h-4/5">
-
+                        <div className="border-l border-[#e7e4e4] flex justify-center items-center h-4/6 self-center">
+                            <button type="button" className="pl-3 pr-1 h-4/5">
+                                <IoIosSearch
+                                    color="#888585"
+                                    className="relative bottom-1"
+                                    size={21}
+                                />
                             </button>
                         </div>
                     </div>
@@ -50,28 +57,68 @@ const Header: React.FC = () => {
                     </div>
                 </div>
             </div>
-            <div>
-                <ul className="flex mt-4 gap-x-4">
-                    <li className="mr-14">
-                        <span>Informe seu CEP</span>
+            <div className="flex">
+                <ul className="flex mt-4 gap-x-5">
+                    <button
+                        type="button"
+                        className="mr-16 w-[100px] h-10 relative bottom-3 hover:border border-[#eadd61] rounded"
+                    >
+                        <li className="w-[101px] h-8 flex justify-start text-left">
+                            <CiLocationOn size={30} />
+                            <span className="text-xs font-proxima relative top-1 font-thin text-[#00000080]">
+                                Informe seu{" "}
+                                <span className="relative bottom-[2px] text-[13px]">
+                                    CEP
+                                </span>
+                            </span>
+                        </li>
+                    </button>
+                    <li className="ml-[6px] relative top-2 cursor-pointer">
+                        <div className="flex items-center">
+                            <span className="font-proxima tracking-wider text-[#00000080] text-sm">
+                                Categorias
+                            </span>
+                            <BiChevronDown color="#9e9d9d" size={17} />
+                        </div>
                     </li>
-                    <li className="ml-1">
-                        <span>Categorias</span>
+                    <li className="relative top-1 cursor-pointer min-w-[100px]">
+                        <span className="font-proxima tracking-wider text-[#00000080] text-sm">
+                            Ofertas do dia
+                        </span>
+                    </li>
+                    <li className="relative top-1 cursor-pointer">
+                        <span className="font-proxima tracking-wider text-[#00000080] text-sm">
+                            Histórico
+                        </span>
+                    </li>
+                    <li className="relative top-1 cursor-pointer">
+                        <span className="font-proxima tracking-wider text-[#00000080] text-sm">
+                            Moda
+                        </span>
+                    </li>
+                    <li className="relative top-1 cursor-pointer">
+                        <span className="font-proxima tracking-wider text-[#00000080] text-sm">
+                            Vender
+                        </span>
+                    </li>
+                    <li className="relative top-1 cursor-pointer">
+                        <span className="font-proxima tracking-wider text-[#00000080] text-sm">
+                            Contato
+                        </span>
+                    </li>
+                </ul>
+                <ul className="flex w-full justify-end items-center gap-x-5 mr-5">
+                    <li>
+                        <span className="font-proxima cursor-pointer tracking-wider text-[#00000080] text-sm">Crie sua conta</span>
                     </li>
                     <li>
-                        <span>Ofertas do dia</span>
+                        <span className="font-proxima cursor-pointer tracking-wider text-[#00000080] text-sm">Entre</span>
                     </li>
                     <li>
-                        <span>Histórico</span>
+                        <span className="font-proxima cursor-pointer tracking-wider text-[#00000080] text-sm">Compras</span>
                     </li>
-                    <li>
-                        <span>Moda</span>
-                    </li>
-                    <li>
-                        <span>Vender</span>
-                    </li>
-                    <li>
-                        <span>Contato</span>
+                    <li className="font-proxima cursor-pointer">
+                        <FiShoppingCart color="#00000080" size={18} />
                     </li>
                 </ul>
             </div>
