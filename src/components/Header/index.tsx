@@ -8,11 +8,8 @@ const Header: React.FC = () => {
         <div className="h-[100px] w-screen bg-pallet-yellow pt-3 pl-20 pr-20">
             <a href="https://www.mercadolivre.com.br/">
                 <div
-                    className="h-[34px] w-[134px] bg-no-repeat"
-                    style={{
-                        backgroundImage: `url(${logo})`,
-                        textIndent: "-999px",
-                    }}
+                    className="h-[34px] w-[134px] bg-no-repeat -indent-[999px]"
+                    style={{ backgroundImage: `url(${logo})` }}
                 >
                     <a href="https://www.mercadolivre.com.br/" tabIndex={-2}>
                         Mercado Livre Brasil - Onde comprar e vender de Tudo
