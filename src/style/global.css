@@ -29,3 +29,22 @@
     background: #fff;
     opacity: 1;
 }
+
+.swiper-button-next, .swiper-button-prev {
+    scale: 0.3;
+    background: #fff;
+    width: 150px;
+    height: 200px;
+}
+
+.swiper-button-next {
+    left: 93.3%;
+    top: 30%;
+    border-radius: 100px 0 0 100px;
+}
+
+.swiper-button-prev {
+    left: -4.5%;
+    top: 30%;
+    border-radius: 0 100px 100px 0;
+}
