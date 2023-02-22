@@ -107,7 +107,7 @@ const Header: React.FC = () => {
                         </span>
                     </li>
                 </ul>
-                <ul className="flex w-full justify-end items-center gap-x-5 mr-5">
+                <ul className="flex w-full justify-end items-center gap-x-5 mr-5 mt-2">
                     <li>
                         <span className="font-proxima cursor-pointer tracking-wider text-[#00000080] text-sm">Crie sua conta</span>
                     </li>
