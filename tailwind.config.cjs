@@ -5,6 +5,7 @@ module.exports = {
         extend: {
             colors: {
                 "pallet-yellow": "#fff159",
+                "pallet-blue": "#3483fa",
             },
             fontFamily: {
                 proxima: ["'Proxima Nova'"],

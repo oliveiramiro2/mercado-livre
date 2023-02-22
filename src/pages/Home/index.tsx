@@ -9,8 +9,36 @@ import "swiper/css/scrollbar";
 import "swiper/css/autoplay";
 import Header from "../../components/Header";
 
+import offer11 from "../../assets/imgs/offer1-1.png";
+import offer12 from "../../assets/imgs/offer1-2.png";
+import offer21 from "../../assets/imgs/offer2-1.png";
+import offer22 from "../../assets/imgs/offer2-2.png";
+import offer31 from "../../assets/imgs/offer3-1.png";
+import offer32 from "../../assets/imgs/offer3-2.png";
+import offer41 from "../../assets/imgs/offer4-1.png";
+import offer42 from "../../assets/imgs/offer4-2.png";
+import offer51 from "../../assets/imgs/offer5-1.png";
+import offer52 from "../../assets/imgs/offer5-2.png";
+
+interface IOffer {
+    offer1: boolean;
+    offer2: boolean;
+    offer3: boolean;
+    offer4: boolean;
+    offer5: boolean;
+}
+
+const offerInit: IOffer = {
+    offer1: false,
+    offer2: false,
+    offer3: false,
+    offer4: false,
+    offer5: false,
+};
+
 const Home: React.FC = () => {
     const [showNavigation, setShowNavigation] = useState<boolean>(false);
+    const [showInfoOffer, setShowInfoOffer] = useState<IOffer>(offerInit);
 
     const handleShowNavigation = (): void => {
         setShowNavigation(true);
@@ -20,11 +48,31 @@ const Home: React.FC = () => {
         setShowNavigation(false);
     };
 
+    const handleShowOffer = (index: number, action: boolean): void => {
+        switch (index) {
+            case 1:
+                setShowInfoOffer({ ...offerInit, offer1: action });
+                break;
+            case 2:
+                setShowInfoOffer({ ...offerInit, offer2: action });
+                break;
+            case 3:
+                setShowInfoOffer({ ...offerInit, offer3: action });
+                break;
+            case 4:
+                setShowInfoOffer({ ...offerInit, offer4: action });
+                break;
+            default:
+                setShowInfoOffer({ ...offerInit, offer5: action });
+                break;
+        }
+    };
+
     return (
         <div className="flex flex-col w-screen min-h-screen bg-[#ebebeb]">
             <Header />
             <div
-                className="h-[340px] z-50"
+                className="h-[340px] w-full"
                 onMouseOver={handleShowNavigation}
                 onMouseOut={handleHideNavigation}
                 onFocus={handleShowNavigation}
@@ -46,7 +94,7 @@ const Home: React.FC = () => {
                         disableOnInteraction: true,
                         pauseOnMouseEnter: true,
                     }}
-                    className="h-[340px]"
+                    className="h-[340px] w-screen"
                 >
                     <SwiperSlide>
                         <img
@@ -100,9 +148,9 @@ const Home: React.FC = () => {
                 </Swiper>
             </div>
             <div className="w-screen h-[170px] flex justify-center items-center">
-                <div className="bg-white w-[87%] h-[90px] flex shadow-md shadow-[#3483fa]">
+                <div className="bg-white w-[87%] h-[90px] flex shadow-md shadow-pallet-blue">
                     <div className="w-[260px] h-[90px] border-r border-[#eee] p-1 flex">
-                        <div className="w-1 h-full bg-[#3483fa]" />
+                        <div className="w-1 h-full bg-pallet-blue" />
                         <div className="w-full text-left flex flex-col justify-center pl-4">
                             <p className="text-xl text-[#333]">
                                 Pagamento rápido e seguro
@@ -123,7 +171,7 @@ const Home: React.FC = () => {
                                 Até 10 parcelas sem juros
                             </p>
                             <a
-                                className="text-[#3483fa] text-sm relative bottom-1"
+                                className="text-pallet-blue text-sm relative bottom-1"
                                 href="https://www.mercadolivre.com.br/gz/home/payments/methods"
                             >
                                 Ver mais
@@ -141,7 +189,7 @@ const Home: React.FC = () => {
                                 Parcelamento sem cartão
                             </p>
                             <a
-                                className="text-[#3483fa] text-sm relative bottom-1"
+                                className="text-pallet-blue text-sm relative bottom-1"
                                 href="https://www.mercadolivre.com.br/mercado-credito/boleto-parcelado/?sk=RHRsnBTf"
                             >
                                 Conheça o Mercado Crédito
@@ -157,7 +205,7 @@ const Home: React.FC = () => {
                         <div className="pl-4">
                             <p className="text-xl text-black">Via Pix</p>
                             <a
-                                className="text-[#3483fa] text-sm relative bottom-1"
+                                className="text-pallet-blue text-sm relative bottom-1"
                                 href="https://www.mercadolivre.com.br/gz/home/payments/methods#pix"
                             >
                                 Ver mais
@@ -170,6 +218,108 @@ const Home: React.FC = () => {
                             alt="Mais"
                             className="w-12 h-12 cursor-pointer"
                         />
+                    </div>
+                </div>
+            </div>
+            <div className="flex justify-center">
+                <div className="w-[87%] h-[460px]">
+                    <div className="flex gap-x-3">
+                        <h2 className="text-[26px] text-[#666] font-thin">
+                            Ofertas do dia
+                        </h2>
+                        <a
+                            className="text-[#1259c3] text-base relative top-[10px]"
+                            href="https://www.mercadolivre.com.br/ofertas#c_id=/home/promotions-recommendations/element&c_uid=83303aa3-ee29-49ff-b9ba-0edf5efc870d"
+                        >
+                            Ver todas
+                        </a>
+                    </div>
+                    <div className="flex mt-4">
+                        <div
+                            className="w-[366px] cursor-pointer"
+                            onMouseOver={() => handleShowOffer(1, true)}
+                            onMouseOut={() => handleShowOffer(1, false)}
+                            onFocus={() => handleShowOffer(1, true)}
+                            onBlur={() => handleShowOffer(1, false)}
+                        >
+                            <img
+                                src="https://http2.mlstatic.com/D_Q_NP_802413-MLA50710963248_072022-AB.webp"
+                                alt="Celular"
+                                className="w-56 h-56"
+                            />
+                            <img
+                                src={showInfoOffer.offer1 ? offer12 : offer11}
+                                alt="oferta 1"
+                            />
+                        </div>
+                        <div
+                            className="w-[366px] cursor-pointer"
+                            onMouseOver={() => handleShowOffer(2, true)}
+                            onMouseOut={() => handleShowOffer(2, false)}
+                            onFocus={() => handleShowOffer(2, true)}
+                            onBlur={() => handleShowOffer(2, false)}
+                        >
+                            <img
+                                src="https://http2.mlstatic.com/D_Q_NP_927250-MLB52007266563_102022-AB.webp"
+                                alt="Notebook"
+                                className="w-56 h-56"
+                            />
+                            <img
+                                src={showInfoOffer.offer2 ? offer22 : offer21}
+                                alt="oferta 2"
+                            />
+                        </div>
+                        <div
+                            className="w-[366px] cursor-pointer"
+                            onMouseOver={() => handleShowOffer(3, true)}
+                            onMouseOut={() => handleShowOffer(3, false)}
+                            onFocus={() => handleShowOffer(3, true)}
+                            onBlur={() => handleShowOffer(3, false)}
+                        >
+                            <img
+                                src="https://http2.mlstatic.com/D_Q_NP_908551-MLB53668961915_022023-AB.webp"
+                                alt="Máquina de solda"
+                                className="w-56 h-56"
+                            />
+                            <img
+                                src={showInfoOffer.offer3 ? offer32 : offer31}
+                                alt="oferta 3"
+                            />
+                        </div>
+                        <div
+                            className="w-[366px] cursor-pointer"
+                            onMouseOver={() => handleShowOffer(4, true)}
+                            onMouseOut={() => handleShowOffer(4, false)}
+                            onFocus={() => handleShowOffer(4, true)}
+                            onBlur={() => handleShowOffer(4, false)}
+                        >
+                            <img
+                                src="https://http2.mlstatic.com/D_Q_NP_775529-MLB51802661099_102022-AB.webp"
+                                alt="Câmera"
+                                className="w-56 h-56"
+                            />
+                            <img
+                                src={showInfoOffer.offer4 ? offer42 : offer41}
+                                alt="oferta 4"
+                            />
+                        </div>
+                        <div
+                            className="w-[366px] cursor-pointer"
+                            onMouseOver={() => handleShowOffer(5, true)}
+                            onMouseOut={() => handleShowOffer(5, false)}
+                            onFocus={() => handleShowOffer(5, true)}
+                            onBlur={() => handleShowOffer(5, false)}
+                        >
+                            <img
+                                src="https://http2.mlstatic.com/D_Q_NP_781836-MLB52319224650_112022-AB.webp"
+                                alt="Whey"
+                                className="w-56 h-56"
+                            />
+                            <img
+                                src={showInfoOffer.offer5 ? offer52 : offer51}
+                                alt="oferta 5"
+                            />
+                        </div>
                     </div>
                 </div>
             </div>
