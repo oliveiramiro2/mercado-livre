@@ -20,7 +20,8 @@ const Home: React.FC = () => {
                 navigation
                 pagination={{
                     clickable: true,
-                    bulletActiveClass: "scale-150",
+                    bulletActiveClass: "activeDots",
+                    bulletClass: "swiper-pagination-bullet allDots",
                 }}
                 loop
                 autoplay={{
