@@ -82,7 +82,7 @@ const Home: React.FC = () => {
                 </SwiperSlide>
             </Swiper>
             <div className="w-screen h-[170px] flex justify-center items-center">
-                <div className="bg-white w-[88%] h-[90px] flex">
+                <div className="bg-white w-[87%] h-[90px] flex shadow-md shadow-[#3483fa]">
                     <div className="w-[260px] h-[90px] border-r border-[#eee] p-1 flex">
                         <div className="w-1 h-full bg-[#3483fa]" />
                         <div className="w-full text-left flex flex-col justify-center pl-4">
