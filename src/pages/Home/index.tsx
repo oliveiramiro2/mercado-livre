@@ -148,7 +148,7 @@ const Home: React.FC = () => {
                 </Swiper>
             </section>
             <section className="w-screen h-[170px] flex justify-center items-center">
-                <div className="bg-white w-[87%] h-[90px] flex shadow-md shadow-pallet-blue">
+                <div className="bg-white w-[87%] h-[90px] flex shadow-lg shadow-slate-500">
                     <div className="w-[260px] h-[90px] border-r border-[#eee] p-1 flex">
                         <div className="w-1 h-full bg-pallet-blue" />
                         <div className="w-full text-left flex flex-col justify-center pl-4">
@@ -324,8 +324,8 @@ const Home: React.FC = () => {
                 </div>
             </section>
             <section className="w-screen h-[420px] flex items-center justify-center">
-                <div className="w-[87%] h-[340px] rounded-lg shadow-lg shadow-[#a90f90]">
-                    <div className="w-full flex h-[87px] rounded-t-lg pt-4 pr-6 pb-4 pl-6 bg-gradient-to-r from-[#a90f90] via-[#a90f90] to-[#0c1a51]">
+                <div className="w-[87%] h-[340px] rounded-lg shadow-lg shadow-slate-500">
+                    <div className="w-full flex h-[87px] rounded-t-lg pt-4 pr-6 pb-4 pl-6 bg-gradient-to-r from-[#a90f90] via-[#a90f90] to-[#0c1a51]  shadow-lg shadow-slate-500">
                         <div className="flex w-full items-center">
                             <span className="text-white text-[26px]">
                                 Assine o nível 6
@@ -348,7 +348,7 @@ const Home: React.FC = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="w-full h-[172px] bg-white p-6 border-b border-gray-200 shadow-lg shadow-[#a90f90]">
+                    <div className="w-full h-[172px] bg-white p-6 border-b border-gray-200">
                         <div>
                             <span className="text-[20px]">
                                 Conte com os melhores benefícios no Mercado
@@ -396,7 +396,7 @@ const Home: React.FC = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="w-full flex justify-between h-[81px] bg-white rounded-b-lg pt-4 pb-4 pl-[30px] pr-[30px] shadow-lg shadow-[#0c1a51]">
+                    <div className="w-full flex justify-between h-[81px] bg-white rounded-b-lg pt-4 pb-4 pl-[30px] pr-[30px]">
                         <span />
                         <a
                             href="https://www.mercadolivre.com.br/assinaturas/nivel-6#origin=widget_l6#c_id=/home/user-loyalty-benefits&c_uid=d46711aa-5c69-475e-b84a-a00c93eb8578"
