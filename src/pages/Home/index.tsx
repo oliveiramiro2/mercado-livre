@@ -71,7 +71,7 @@ const Home: React.FC = () => {
     return (
         <div className="flex flex-col w-screen min-h-screen bg-[#ebebeb]">
             <Header />
-            <div
+            <section
                 className="h-[340px] w-full"
                 onMouseOver={handleShowNavigation}
                 onMouseOut={handleHideNavigation}
@@ -146,8 +146,8 @@ const Home: React.FC = () => {
                         />
                     </SwiperSlide>
                 </Swiper>
-            </div>
-            <div className="w-screen h-[170px] flex justify-center items-center">
+            </section>
+            <section className="w-screen h-[170px] flex justify-center items-center">
                 <div className="bg-white w-[87%] h-[90px] flex shadow-md shadow-pallet-blue">
                     <div className="w-[260px] h-[90px] border-r border-[#eee] p-1 flex">
                         <div className="w-1 h-full bg-pallet-blue" />
@@ -220,8 +220,8 @@ const Home: React.FC = () => {
                         />
                     </div>
                 </div>
-            </div>
-            <div className="flex justify-center">
+            </section>
+            <section className="flex justify-center">
                 <div className="w-[87%] h-[460px]">
                     <div className="flex gap-x-3">
                         <h2 className="text-[26px] text-[#666] font-thin">
@@ -322,7 +322,7 @@ const Home: React.FC = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
         </div>
     );
 };
