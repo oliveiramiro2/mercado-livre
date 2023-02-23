@@ -245,7 +245,7 @@ const Home: React.FC = () => {
                         >
                             <div
                                 className={clsx("flex flex-col w-[224px]", {
-                                    "shadow-xl shadow-zinc-400 transition-shadow ease-in-out":
+                                    "shadow-xl shadow-zinc-400 delay-100 transition-shadow ease-linear":
                                         showInfoOffer.offer1,
                                 })}
                             >
@@ -271,7 +271,7 @@ const Home: React.FC = () => {
                         >
                             <div
                                 className={clsx("flex flex-col w-[224px]", {
-                                    "shadow-xl shadow-zinc-400 transition-shadow ease-in-out":
+                                    "shadow-xl shadow-zinc-400 delay-100 transition-shadow ease-linear":
                                         showInfoOffer.offer2,
                                 })}
                             >
@@ -297,7 +297,7 @@ const Home: React.FC = () => {
                         >
                             <div
                                 className={clsx("flex flex-col w-[224px]", {
-                                    "shadow-xl shadow-zinc-400 transition-shadow ease-in-out":
+                                    "shadow-xl shadow-zinc-400 delay-100 transition-shadow ease-linear":
                                         showInfoOffer.offer3,
                                 })}
                             >
@@ -323,7 +323,7 @@ const Home: React.FC = () => {
                         >
                             <div
                                 className={clsx("flex flex-col w-[224px]", {
-                                    "shadow-xl shadow-zinc-400 transition-shadow ease-in-out":
+                                    "shadow-xl shadow-zinc-400 delay-100 transition-shadow ease-linear":
                                         showInfoOffer.offer4,
                                 })}
                             >
@@ -349,7 +349,7 @@ const Home: React.FC = () => {
                         >
                             <div
                                 className={clsx("flex flex-col w-[224px]", {
-                                    "shadow-xl shadow-zinc-400 transition-shadow ease-in-out":
+                                    "shadow-xl shadow-zinc-400 delay-100 transition-shadow ease-linear":
                                         showInfoOffer.offer5,
                                 })}
                             >
