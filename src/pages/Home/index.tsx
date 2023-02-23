@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper";
 import clsx from "clsx";
+import gsap from "gsap";
+import { FcNext, FcPrevious } from "react-icons/fc";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -40,6 +42,64 @@ const offerInit: IOffer = {
 const Home: React.FC = () => {
     const [showNavigation, setShowNavigation] = useState<boolean>(false);
     const [showInfoOffer, setShowInfoOffer] = useState<IOffer>(offerInit);
+    const [showLoyalty4, setShowLoyalty4] = useState<boolean>(false);
+
+    const loyaltyRef4 = useRef(null);
+    const loyaltyRef1 = useRef(null);
+
+    useEffect(() => {
+        if (showLoyalty4) {
+            gsap.fromTo(
+                loyaltyRef1.current,
+                {
+                    opacity: 1,
+                    xPercent: 0,
+                },
+                {
+                    opacity: 0,
+                    xPercent: -100,
+                    ease: "easeInOut",
+                }
+            );
+            gsap.fromTo(
+                loyaltyRef4.current,
+                {
+                    opacity: 0,
+                    xPercent: 100,
+                },
+                {
+                    opacity: 1,
+                    xPercent: 0,
+                    ease: "easeInOut",
+                }
+            );
+        } else {
+            gsap.fromTo(
+                loyaltyRef4.current,
+                {
+                    opacity: 1,
+                    xPercent: 0,
+                },
+                {
+                    opacity: 0,
+                    xPercent: 100,
+                    ease: "easeInOut",
+                }
+            );
+            gsap.fromTo(
+                loyaltyRef1.current,
+                {
+                    opacity: 0,
+                    xPercent: -100,
+                },
+                {
+                    opacity: 1,
+                    xPercent: 0,
+                    ease: "easeInOut",
+                }
+            );
+        }
+    }, [showLoyalty4]);
 
     const handleShowNavigation = (): void => {
         setShowNavigation(true);
@@ -468,7 +528,12 @@ const Home: React.FC = () => {
                         </a>
                     </div>
                     <div className="flex gap-x-4">
-                        <div className="w-96 h-[260px]">
+                        <div
+                            ref={loyaltyRef1}
+                            className={clsx("w-96 h-[260px]", {
+                                hidden: showLoyalty4,
+                            })}
+                        >
                             <img
                                 src="https://http2.mlstatic.com/resources/frontend/statics/loyal/partners/disney/hub-widget-disney-star/Widget_Multicontent_Latam_768-x-566px.jpg"
                                 alt="Disney e Star Plus"
@@ -546,7 +611,12 @@ const Home: React.FC = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="w-96 h-[260px] hidden">
+                        <div
+                            ref={loyaltyRef4}
+                            className={clsx("w-96 h-[260px]", {
+                                hidden: !showLoyalty4,
+                            })}
+                        >
                             <img
                                 src="https://http2.mlstatic.com/resources/frontend/statics/loyal/partners/vdp/deezer/deezer-widget-mlb@2x.jpg"
                                 alt="Dreezer"
@@ -574,6 +644,18 @@ const Home: React.FC = () => {
                             </div>
                         </div>
                     </div>
+                    <button
+                        onClick={() => setShowLoyalty4(!showLoyalty4)}
+                        type="button"
+                        className={clsx(
+                            "relative left-[97.3%] flex justify-center items-center bottom-40 bg-white bg-opacity-90 text-pallet-blue text-2xl w-16 h-16 rounded-full",
+                            {
+                                "-left-8": showLoyalty4,
+                            }
+                        )}
+                    >
+                        {showLoyalty4 ? <FcPrevious /> : <FcNext />}
+                    </button>
                 </div>
             </section>
         </div>
