@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper";
+import clsx from "clsx";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -242,15 +243,24 @@ const Home: React.FC = () => {
                             onFocus={() => handleShowOffer(1, true)}
                             onBlur={() => handleShowOffer(1, false)}
                         >
-                            <img
-                                src="https://http2.mlstatic.com/D_Q_NP_802413-MLA50710963248_072022-AB.webp"
-                                alt="Celular"
-                                className="w-56 h-56"
-                            />
-                            <img
-                                src={showInfoOffer.offer1 ? offer12 : offer11}
-                                alt="oferta 1"
-                            />
+                            <div
+                                className={clsx("flex flex-col w-[224px]", {
+                                    "shadow-xl shadow-zinc-400 transition-shadow ease-in-out":
+                                        showInfoOffer.offer1,
+                                })}
+                            >
+                                <img
+                                    src="https://http2.mlstatic.com/D_Q_NP_802413-MLA50710963248_072022-AB.webp"
+                                    alt="Celular"
+                                    className="w-56 h-56"
+                                />
+                                <img
+                                    src={
+                                        showInfoOffer.offer1 ? offer12 : offer11
+                                    }
+                                    alt="oferta 1"
+                                />
+                            </div>
                         </div>
                         <div
                             className="w-[366px] cursor-pointer"
@@ -259,15 +269,24 @@ const Home: React.FC = () => {
                             onFocus={() => handleShowOffer(2, true)}
                             onBlur={() => handleShowOffer(2, false)}
                         >
-                            <img
-                                src="https://http2.mlstatic.com/D_Q_NP_927250-MLB52007266563_102022-AB.webp"
-                                alt="Notebook"
-                                className="w-56 h-56"
-                            />
-                            <img
-                                src={showInfoOffer.offer2 ? offer22 : offer21}
-                                alt="oferta 2"
-                            />
+                            <div
+                                className={clsx("flex flex-col w-[224px]", {
+                                    "shadow-xl shadow-zinc-400 transition-shadow ease-in-out":
+                                        showInfoOffer.offer2,
+                                })}
+                            >
+                                <img
+                                    src="https://http2.mlstatic.com/D_Q_NP_927250-MLB52007266563_102022-AB.webp"
+                                    alt="Notebook"
+                                    className="w-56 h-56"
+                                />
+                                <img
+                                    src={
+                                        showInfoOffer.offer2 ? offer22 : offer21
+                                    }
+                                    alt="oferta 2"
+                                />
+                            </div>
                         </div>
                         <div
                             className="w-[366px] cursor-pointer"
@@ -276,15 +295,24 @@ const Home: React.FC = () => {
                             onFocus={() => handleShowOffer(3, true)}
                             onBlur={() => handleShowOffer(3, false)}
                         >
-                            <img
-                                src="https://http2.mlstatic.com/D_Q_NP_908551-MLB53668961915_022023-AB.webp"
-                                alt="Máquina de solda"
-                                className="w-56 h-56"
-                            />
-                            <img
-                                src={showInfoOffer.offer3 ? offer32 : offer31}
-                                alt="oferta 3"
-                            />
+                            <div
+                                className={clsx("flex flex-col w-[224px]", {
+                                    "shadow-xl shadow-zinc-400 transition-shadow ease-in-out":
+                                        showInfoOffer.offer3,
+                                })}
+                            >
+                                <img
+                                    src="https://http2.mlstatic.com/D_Q_NP_908551-MLB53668961915_022023-AB.webp"
+                                    alt="Máquina de solda"
+                                    className="w-56 h-56"
+                                />
+                                <img
+                                    src={
+                                        showInfoOffer.offer3 ? offer32 : offer31
+                                    }
+                                    alt="oferta 3"
+                                />
+                            </div>
                         </div>
                         <div
                             className="w-[366px] cursor-pointer"
@@ -293,15 +321,24 @@ const Home: React.FC = () => {
                             onFocus={() => handleShowOffer(4, true)}
                             onBlur={() => handleShowOffer(4, false)}
                         >
-                            <img
-                                src="https://http2.mlstatic.com/D_Q_NP_775529-MLB51802661099_102022-AB.webp"
-                                alt="Câmera"
-                                className="w-56 h-56"
-                            />
-                            <img
-                                src={showInfoOffer.offer4 ? offer42 : offer41}
-                                alt="oferta 4"
-                            />
+                            <div
+                                className={clsx("flex flex-col w-[224px]", {
+                                    "shadow-xl shadow-zinc-400 transition-shadow ease-in-out":
+                                        showInfoOffer.offer4,
+                                })}
+                            >
+                                <img
+                                    src="https://http2.mlstatic.com/D_Q_NP_775529-MLB51802661099_102022-AB.webp"
+                                    alt="Câmera"
+                                    className="w-56 h-56"
+                                />
+                                <img
+                                    src={
+                                        showInfoOffer.offer4 ? offer42 : offer41
+                                    }
+                                    alt="oferta 4"
+                                />
+                            </div>
                         </div>
                         <div
                             className="w-[366px] cursor-pointer"
@@ -310,15 +347,24 @@ const Home: React.FC = () => {
                             onFocus={() => handleShowOffer(5, true)}
                             onBlur={() => handleShowOffer(5, false)}
                         >
-                            <img
-                                src="https://http2.mlstatic.com/D_Q_NP_781836-MLB52319224650_112022-AB.webp"
-                                alt="Whey"
-                                className="w-56 h-56"
-                            />
-                            <img
-                                src={showInfoOffer.offer5 ? offer52 : offer51}
-                                alt="oferta 5"
-                            />
+                            <div
+                                className={clsx("flex flex-col w-[224px]", {
+                                    "shadow-xl shadow-zinc-400 transition-shadow ease-in-out":
+                                        showInfoOffer.offer5,
+                                })}
+                            >
+                                <img
+                                    src="https://http2.mlstatic.com/D_Q_NP_781836-MLB52319224650_112022-AB.webp"
+                                    alt="Whey"
+                                    className="w-56 h-56"
+                                />
+                                <img
+                                    src={
+                                        showInfoOffer.offer5 ? offer52 : offer51
+                                    }
+                                    alt="oferta 5"
+                                />
+                            </div>
                         </div>
                     </div>
                 </div>
