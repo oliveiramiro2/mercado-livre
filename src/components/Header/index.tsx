@@ -61,7 +61,7 @@ const Header: React.FC = () => {
                 <ul className="flex mt-4 gap-x-5">
                     <button
                         type="button"
-                        className="mr-16 w-[100px] h-10 relative bottom-3 hover:border border-[#eadd61] rounded"
+                        className="mr-16 w-[100px] h-10 relative bottom-3 transition-all ease-out delay-100 hover:border border-[#eadd61] rounded"
                     >
                         <li className="w-[101px] h-8 flex justify-start text-left">
                             <CiLocationOn size={30} />

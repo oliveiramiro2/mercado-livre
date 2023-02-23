@@ -401,7 +401,7 @@ const Home: React.FC = () => {
                         <a
                             href="https://www.mercadolivre.com.br/assinaturas/nivel-6#origin=widget_l6#c_id=/home/user-loyalty-benefits&c_uid=d46711aa-5c69-475e-b84a-a00c93eb8578"
                             role="button"
-                            className="h-12 pl-6 pr-6 text-center flex items-center bg-pallet-blue hover:bg-[#2a6bcc] text-white font-black rounded-md text-base"
+                            className="h-12 transition-colors ease-in-out delay-75 pl-6 pr-6 text-center flex items-center bg-pallet-blue hover:bg-[#2a6bcc] text-white font-black rounded-md text-base"
                         >
                             Assine
                         </a>
