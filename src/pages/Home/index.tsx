@@ -527,7 +527,7 @@ const Home: React.FC = () => {
                             Conferir todas as vantagens
                         </a>
                     </div>
-                    <div className="flex gap-x-4">
+                    <div className="flex gap-x-4 cursor-pointer">
                         <div
                             ref={loyaltyRef1}
                             className={clsx("w-96 h-[260px]", {
@@ -557,7 +557,7 @@ const Home: React.FC = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="w-96 h-[260px]">
+                        <div className="w-96 h-[260px] cursor-pointer">
                             <img
                                 src="https://http2.mlstatic.com/resources/frontend/statics/loyal/partners/hbo/widget/HBOMax_widgetmulti_mobdsk_mlb_@2x.webp"
                                 alt="HBO Max"
@@ -584,7 +584,7 @@ const Home: React.FC = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="w-96 h-[260px]">
+                        <div className="w-96 h-[260px] cursor-pointer">
                             <img
                                 src="https://http2.mlstatic.com/resources/frontend/statics/loyal/partners/paramount/widgets/paramount_widgetmulti_mobdsk_mlb_@2x.jpg"
                                 alt="Paramount Plus"
@@ -613,7 +613,7 @@ const Home: React.FC = () => {
                         </div>
                         <div
                             ref={loyaltyRef4}
-                            className={clsx("w-96 h-[260px]", {
+                            className={clsx("w-96 h-[260px] cursor-pointer", {
                                 hidden: !showLoyalty4,
                             })}
                         >
