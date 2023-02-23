@@ -659,7 +659,7 @@ const Home: React.FC = () => {
                     </button>
                 </div>
             </section>
-            <section className="w-screen h-[380px] flex items-center justify-center">
+            <section className="w-screen h-[380px] pt-16">
                 <div className="flex items-center justify-center cursor-pointer">
                     <div className="w-[87%] h-[250px] flex">
                         <img
