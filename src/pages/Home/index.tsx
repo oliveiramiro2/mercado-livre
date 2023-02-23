@@ -508,7 +508,7 @@ const Home: React.FC = () => {
                         <a
                             href="https://www.mercadolivre.com.br/assinaturas/nivel-6#origin=widget_l6#c_id=/home/user-loyalty-benefits&c_uid=d46711aa-5c69-475e-b84a-a00c93eb8578"
                             role="button"
-                            className="h-12 transition-colors ease-in-out delay-75 pl-6 pr-6 text-center flex items-center bg-pallet-blue hover:bg-[#2a6bcc] text-white font-black rounded-md text-base"
+                            className="h-12 pl-6 pr-6 text-center flex items-center bg-pallet-blue hover:bg-[#2a6bcc] transition-colors ease-in-out delay-75 text-white font-black rounded-md text-base"
                         >
                             Assine
                         </a>
@@ -649,7 +649,7 @@ const Home: React.FC = () => {
                         onClick={() => setShowLoyalty4(!showLoyalty4)}
                         type="button"
                         className={clsx(
-                            "relative left-[97.3%] flex justify-center items-center bottom-40 bg-white bg-opacity-90 text-pallet-blue text-2xl w-16 h-16 rounded-full",
+                            "relative left-[97.3%] border-none flex justify-center items-center bottom-40 bg-white bg-opacity-90 text-pallet-blue text-2xl w-16 h-16 rounded-full",
                             {
                                 "-left-8": showLoyalty4,
                             }
@@ -659,7 +659,7 @@ const Home: React.FC = () => {
                     </button>
                 </div>
             </section>
-            <section className="w-screen h-[330px]">
+            <section className="w-screen h-[380px] flex items-center justify-center">
                 <div className="flex items-center justify-center cursor-pointer">
                     <div className="w-[87%] h-[250px] flex">
                         <img
@@ -694,14 +694,14 @@ const Home: React.FC = () => {
                 </div>
             </section>
             <section className="w-screen h-[399px] flex items-center justify-center">
-                <div className="pt-10 pb-10 h-[318px] w-[87%]">
+                <div className="h-[318px] w-[87%]">
                     <div className="pl-1 mb-[22px]">
                         <h2 className="text-[26px] font-light text-[#666]">
                             Confira
                         </h2>
                     </div>
                     <div className="rounded-[4px] flex justify-between">
-                        <div className="rounded-[4px] w-[584px] h-[250px] bg-white flex justify-between items-center">
+                        <div className="rounded-[4px] w-[584px] h-[250px] bg-white flex justify-between items-center hover:shadow-xl hover:shadow-slate-500 transition-shadow ease-in-out delay-100 cursor-pointer">
                             <div className="w-[230px] h-[145px] flex flex-col justify-center text-start ml-8">
                                 <span className="text-[#4b4b4b] font-semibold mb-1 text-[11px] tracking-[5px]">
                                     OFERTAS DA CASA
@@ -713,7 +713,7 @@ const Home: React.FC = () => {
                                     FULL⚡⚡⚡
                                 </span>
                                 <button
-                                    className="self-start w-24 h-12 rounded-sm bg-pallet-blue text-white font-semibold"
+                                    className="self-start w-24 h-12 rounded-sm bg-pallet-blue text-white font-semibold hover:bg-[#2a6bcc] transition-colors ease-in-out delay-75"
                                     type="button"
                                 >
                                     Confira
@@ -725,7 +725,7 @@ const Home: React.FC = () => {
                                 className="w-[300px] h-[250px] rounded-r-[4px]"
                             />
                         </div>
-                        <div className="rounded-[4px] w-[584px] h-[250px] bg-white flex justify-between items-center">
+                        <div className="rounded-[4px] w-[584px] h-[250px] bg-white flex justify-between items-center hover:shadow-xl hover:shadow-slate-500 transition-shadow ease-in-out delay-100 cursor-pointer">
                             <div className="w-[300px] h-[145px] flex flex-col justify-center text-start ml-8">
                                 <span className="text-[#4b4b4b] font-semibold mb-3 text-[11px] tracking-[5px]">
                                     HYUNDAI DÁ JOGO
@@ -737,7 +737,7 @@ const Home: React.FC = () => {
                                     OFERTA IMPERDÍVEL!
                                 </span>
                                 <button
-                                    className="self-start w-24 h-10 rounded-sm bg-pallet-blue text-white font-semibold"
+                                    className="self-start w-24 h-10 rounded-sm bg-pallet-blue text-white font-semibold hover:bg-[#2a6bcc] transition-colors ease-in-out delay-75"
                                     type="button"
                                 >
                                     Confira
