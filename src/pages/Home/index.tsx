@@ -1386,6 +1386,18 @@ const Home: React.FC = () => {
                             </a>
                         </div>
                     </div>
+                    <button
+                        /* onClick={() => setShowLoyalty4(!showLoyalty4)} */
+                        type="button"
+                        className={clsx(
+                            "relative left-[97.3%] bottom-48 border-none flex justify-center items-center bg-white bg-opacity-90 text-pallet-blue text-2xl w-16 h-16 rounded-full hover:shadow-lg hover:shadow-slate-500 transition-shadow ease-in-out delay-75",
+                            {
+                                "-left-8": showLoyalty4,
+                            }
+                        )}
+                    >
+                        {showLoyalty4 ? <FcPrevious /> : <FcNext />}
+                    </button>
                 </div>
             </section>
         </div>
