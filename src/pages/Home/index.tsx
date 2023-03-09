@@ -847,7 +847,7 @@ const Home: React.FC = () => {
                                 target="_blank"
                                 rel="noreferrer"
                                 className={clsx(
-                                    "w-[170px] h-[160px] flex flex-col justify-center items-center border-r border-b border-gray-300 rounded-md",
+                                    "w-[170px] h-[160px] flex flex-col justify-around items-center border-r border-b border-gray-300 rounded-md",
                                     {
                                         "bg-pallet-blue": category[1],
                                     }
@@ -872,7 +872,7 @@ const Home: React.FC = () => {
                                     />
                                 </div>
                                 <p
-                                    className={clsx("font-proxima mt-2", {
+                                    className={clsx("font-proxima", {
                                         "text-white": category[1],
                                     })}
                                 >
@@ -884,7 +884,7 @@ const Home: React.FC = () => {
                                 target="_blank"
                                 rel="noreferrer"
                                 className={clsx(
-                                    "w-[170px] h-[160px] flex flex-col justify-center items-center border-r border-b border-gray-300 rounded-md",
+                                    "w-[170px] h-[160px] flex flex-col justify-around items-center border-r border-b border-gray-300 rounded-md",
                                     {
                                         "bg-pallet-blue": category[2],
                                     }
@@ -909,7 +909,7 @@ const Home: React.FC = () => {
                                     />
                                 </div>
                                 <p
-                                    className={clsx("font-proxima mt-2", {
+                                    className={clsx("font-proxima", {
                                         "text-white": category[2],
                                     })}
                                 >
@@ -923,7 +923,7 @@ const Home: React.FC = () => {
                                 target="_blank"
                                 rel="noreferrer"
                                 className={clsx(
-                                    "w-[170px] h-[160px] flex flex-col justify-center items-center border-r border-b border-gray-300 rounded-md",
+                                    "w-[170px] h-[160px] flex flex-col justify-around items-center border-r border-b border-gray-300 rounded-md",
                                     {
                                         "bg-pallet-blue": category[3],
                                     }
@@ -948,7 +948,7 @@ const Home: React.FC = () => {
                                     />
                                 </div>
                                 <p
-                                    className={clsx("font-proxima mt-2", {
+                                    className={clsx("font-proxima", {
                                         "text-white": category[3],
                                     })}
                                 >
@@ -960,7 +960,7 @@ const Home: React.FC = () => {
                                 target="_blank"
                                 rel="noreferrer"
                                 className={clsx(
-                                    "w-[170px] h-[160px] flex flex-col justify-center items-center border-r border-b border-gray-300 rounded-md",
+                                    "w-[170px] h-[160px] flex flex-col justify-around items-center border-r border-b border-gray-300 rounded-md",
                                     {
                                         "bg-pallet-blue": category[4],
                                     }
@@ -985,7 +985,7 @@ const Home: React.FC = () => {
                                     />
                                 </div>
                                 <p
-                                    className={clsx("font-proxima mt-2", {
+                                    className={clsx("font-proxima", {
                                         "text-white": category[4],
                                     })}
                                 >
@@ -999,7 +999,7 @@ const Home: React.FC = () => {
                                 target="_blank"
                                 rel="noreferrer"
                                 className={clsx(
-                                    "w-[170px] h-[160px] flex flex-col justify-center items-center border-r border-b border-gray-300 rounded-md",
+                                    "w-[170px] h-[160px] flex flex-col justify-around items-center border-r border-b border-gray-300 rounded-md",
                                     {
                                         "bg-pallet-blue": category[5],
                                     }
@@ -1025,7 +1025,7 @@ const Home: React.FC = () => {
                                 </div>
                                 <p
                                     className={clsx(
-                                        "font-proxima mt-2 text-center w-[80%]",
+                                        "font-proxima text-center w-[80%]",
                                         {
                                             "text-white": category[5],
                                         }
@@ -1039,7 +1039,7 @@ const Home: React.FC = () => {
                                 target="_blank"
                                 rel="noreferrer"
                                 className={clsx(
-                                    "w-[170px] h-[160px] flex flex-col justify-center items-center border-r border-b border-gray-300 rounded-md",
+                                    "w-[170px] h-[160px] flex flex-col justify-around items-center border-r border-b border-gray-300 rounded-md",
                                     {
                                         "bg-pallet-blue": category[6],
                                     }
@@ -1065,7 +1065,7 @@ const Home: React.FC = () => {
                                 </div>
                                 <p
                                     className={clsx(
-                                        "font-proxima mt-2 text-center",
+                                        "font-proxima text-center",
                                         {
                                             "text-white": category[6],
                                         }
@@ -1081,7 +1081,7 @@ const Home: React.FC = () => {
                                 target="_blank"
                                 rel="noreferrer"
                                 className={clsx(
-                                    "w-[170px] h-[160px] flex flex-col justify-center items-center border-r border-b border-gray-300 rounded-md",
+                                    "w-[170px] h-[160px] flex flex-col justify-around items-center border-r border-b border-gray-300 rounded-md",
                                     {
                                         "bg-pallet-blue": category[7],
                                     }
@@ -1106,7 +1106,7 @@ const Home: React.FC = () => {
                                     />
                                 </div>
                                 <p
-                                    className={clsx("font-proxima mt-2", {
+                                    className={clsx("font-proxima", {
                                         "text-white": category[7],
                                     })}
                                 >
@@ -1118,7 +1118,7 @@ const Home: React.FC = () => {
                                 target="_blank"
                                 rel="noreferrer"
                                 className={clsx(
-                                    "w-[170px] h-[160px] flex flex-col justify-center items-center border-r border-b border-gray-300 rounded-md",
+                                    "w-[170px] h-[160px] flex flex-col justify-around items-center border-r border-b border-gray-300 rounded-md",
                                     {
                                         "bg-pallet-blue": category[8],
                                     }
@@ -1144,7 +1144,7 @@ const Home: React.FC = () => {
                                 </div>
                                 <p
                                     className={clsx(
-                                        "font-proxima mt-2 text-center w-[80%]",
+                                        "font-proxima text-center w-[80%]",
                                         {
                                             "text-white": category[8],
                                         }
@@ -1160,7 +1160,7 @@ const Home: React.FC = () => {
                                 target="_blank"
                                 rel="noreferrer"
                                 className={clsx(
-                                    "w-[170px] h-[160px] flex flex-col justify-center items-center border-r border-b border-gray-300 rounded-md",
+                                    "w-[170px] h-[160px] flex flex-col justify-around items-center border-r border-b border-gray-300 rounded-md",
                                     {
                                         "bg-pallet-blue": category[9],
                                     }
@@ -1185,7 +1185,7 @@ const Home: React.FC = () => {
                                     />
                                 </div>
                                 <p
-                                    className={clsx("font-proxima mt-2", {
+                                    className={clsx("font-proxima", {
                                         "text-white": category[9],
                                     })}
                                 >
@@ -1197,7 +1197,7 @@ const Home: React.FC = () => {
                                 target="_blank"
                                 rel="noreferrer"
                                 className={clsx(
-                                    "w-[170px] h-[160px] flex flex-col justify-center items-center border-r border-b border-gray-300 rounded-md",
+                                    "w-[170px] h-[160px] flex flex-col justify-around items-center border-r border-b border-gray-300 rounded-md",
                                     {
                                         "bg-pallet-blue": category[10],
                                     }
@@ -1223,7 +1223,7 @@ const Home: React.FC = () => {
                                 </div>
                                 <p
                                     className={clsx(
-                                        "font-proxima mt-2 text-center",
+                                        "font-proxima text-center",
                                         {
                                             "text-white": category[10],
                                         }
@@ -1239,7 +1239,7 @@ const Home: React.FC = () => {
                                 target="_blank"
                                 rel="noreferrer"
                                 className={clsx(
-                                    "w-[170px] h-[160px] flex flex-col justify-center items-center border-r border-b border-gray-300 rounded-md",
+                                    "w-[170px] h-[160px] flex flex-col justify-around items-center border-r border-b border-gray-300 rounded-md",
                                     {
                                         "bg-pallet-blue": category[11],
                                     }
@@ -1264,7 +1264,7 @@ const Home: React.FC = () => {
                                     />
                                 </div>
                                 <p
-                                    className={clsx("font-proxima mt-2", {
+                                    className={clsx("font-proxima", {
                                         "text-white": category[11],
                                     })}
                                 >
@@ -1276,7 +1276,7 @@ const Home: React.FC = () => {
                                 target="_blank"
                                 rel="noreferrer"
                                 className={clsx(
-                                    "w-[170px] h-[160px] flex flex-col justify-center items-center border-r border-b border-gray-300 rounded-md",
+                                    "w-[170px] h-[160px] flex flex-col justify-around items-center border-r border-b border-gray-300 rounded-md",
                                     {
                                         "bg-pallet-blue": category[12],
                                     }
@@ -1301,7 +1301,7 @@ const Home: React.FC = () => {
                                     />
                                 </div>
                                 <p
-                                    className={clsx("font-proxima mt-2", {
+                                    className={clsx("font-proxima", {
                                         "text-white": category[12],
                                     })}
                                 >
@@ -1315,7 +1315,7 @@ const Home: React.FC = () => {
                                 target="_blank"
                                 rel="noreferrer"
                                 className={clsx(
-                                    "w-[170px] h-[160px] flex flex-col justify-center items-center border-r border-b border-gray-300 rounded-md",
+                                    "w-[170px] h-[160px] flex flex-col justify-around items-center border-r border-b border-gray-300 rounded-md",
                                     {
                                         "bg-pallet-blue": category[13],
                                     }
@@ -1340,7 +1340,7 @@ const Home: React.FC = () => {
                                     />
                                 </div>
                                 <p
-                                    className={clsx("font-proxima mt-2 w-[90%] text-center", {
+                                    className={clsx("font-proxima w-[90%] text-center", {
                                         "text-white": category[13],
                                     })}
                                 >
@@ -1352,7 +1352,7 @@ const Home: React.FC = () => {
                                 target="_blank"
                                 rel="noreferrer"
                                 className={clsx(
-                                    "w-[170px] h-[160px] flex flex-col justify-center items-center border-r border-b border-gray-300 rounded-md",
+                                    "w-[170px] h-[160px] flex flex-col justify-around items-center border-r border-b border-gray-300 rounded-md",
                                     {
                                         "bg-pallet-blue": category[14],
                                     }
@@ -1377,7 +1377,7 @@ const Home: React.FC = () => {
                                     />
                                 </div>
                                 <p
-                                    className={clsx("font-proxima mt-2", {
+                                    className={clsx("font-proxima", {
                                         "text-white": category[14],
                                     })}
                                 >
