@@ -5,6 +5,7 @@ import clsx from "clsx";
 import gsap from "gsap";
 import { FcNext, FcPrevious } from "react-icons/fc";
 import { MdNavigateNext } from "react-icons/md";
+import { GiSteeringWheel } from "react-icons/gi";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -40,10 +41,81 @@ const offerInit: IOffer = {
     offer5: false,
 };
 
+interface iCategory {
+    1: boolean;
+    2: boolean;
+    3: boolean;
+    4: boolean;
+    5: boolean;
+    6: boolean;
+    7: boolean;
+    8: boolean;
+    9: boolean;
+    10: boolean;
+    11: boolean;
+    12: boolean;
+    13: boolean;
+    14: boolean;
+    15: boolean;
+    16: boolean;
+    17: boolean;
+    18: boolean;
+    19: boolean;
+    20: boolean;
+    21: boolean;
+    22: boolean;
+    23: boolean;
+    24: boolean;
+    25: boolean;
+    26: boolean;
+    27: boolean;
+    28: boolean;
+    29: boolean;
+    30: boolean;
+    31: boolean;
+    32: boolean;
+}
+
+const initCatergory: iCategory = {
+    1: false,
+    2: false,
+    3: false,
+    4: false,
+    5: false,
+    6: false,
+    7: false,
+    8: false,
+    9: false,
+    10: false,
+    11: false,
+    12: false,
+    13: false,
+    14: false,
+    15: false,
+    16: false,
+    17: false,
+    18: false,
+    19: false,
+    20: false,
+    21: false,
+    22: false,
+    23: false,
+    24: false,
+    25: false,
+    26: false,
+    27: false,
+    28: false,
+    29: false,
+    30: false,
+    31: false,
+    32: false,
+};
+
 const Home: React.FC = () => {
     const [showNavigation, setShowNavigation] = useState<boolean>(false);
     const [showInfoOffer, setShowInfoOffer] = useState<IOffer>(offerInit);
     const [showLoyalty4, setShowLoyalty4] = useState<boolean>(false);
+    const [category, setCategory] = useState<iCategory>(initCatergory);
 
     const loyaltyRef4 = useRef(null);
     const loyaltyRef1 = useRef(null);
@@ -748,6 +820,507 @@ const Home: React.FC = () => {
                                 alt="Hyundai"
                                 className="w-[280px] h-[250px] rounded-r-[4px]"
                             />
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section className="w-screen h-[389px] flex items-center justify-center">
+                <div className="w-[87%] h-[389px]">
+                    <div className="pl-1 mb-[22px]">
+                        <h2 className="text-[26px] font-light text-[#666]">
+                            Categorias populares
+                        </h2>
+                    </div>
+                    <div className="flex">
+                        <div>
+                            <a
+                                href="https://www.mercadolivre.com.br/"
+                                target="_blank"
+                                rel="noreferrer"
+                                className={clsx("w-[170px] h-[160px] flex flex-col justify-center items-center border-r border-b border-gray-300 rounded-md", {
+                                    "bg-pallet-blue":category[1]
+                                })}
+                                onMouseOver={() =>
+                                    setCategory({ ...initCatergory, 1: true })
+                                }
+                                onMouseOut={() =>
+                                    setCategory({ ...initCatergory})
+                                }
+                                onFocus={() =>
+                                    setCategory({ ...initCatergory, 1: true })
+                                }
+                                onBlur={() =>
+                                    setCategory({ ...initCatergory })
+                                }
+                            >
+                                <div>
+                                    <GiSteeringWheel
+                                        size={50}
+                                        className={clsx("text-pallet-blue", {
+                                            "text-white":category[1]
+                                        })}
+                                    />
+                                </div>
+                                <p className={clsx("font-proxima mt-2", {
+                                    "text-white":category[1]
+                                })}>
+                                    Acessórios para Veículos
+                                </p>
+                            </a>
+                            <a
+                                href="https://www.mercadolivre.com.br/"
+                                target="_blank"
+                                rel="noreferrer"
+                                className={clsx("w-[170px] h-[160px] flex flex-col justify-center items-center border-r border-b border-gray-300 rounded-md", {
+                                    "bg-pallet-blue":category[2]
+                                })}
+                                onMouseOver={() =>
+                                    setCategory({ ...initCatergory, 2: true })
+                                }
+                                onMouseOut={() =>
+                                    setCategory({ ...initCatergory})
+                                }
+                                onFocus={() =>
+                                    setCategory({ ...initCatergory, 2: true })
+                                }
+                                onBlur={() =>
+                                    setCategory({ ...initCatergory })
+                                }
+                            >
+                                <div>
+                                    <GiSteeringWheel
+                                        size={50}
+                                        className={clsx("text-pallet-blue", {
+                                            "text-white":category[2]
+                                        })}
+                                    />
+                                </div>
+                                <p className={clsx("font-proxima mt-2", {
+                                    "text-white":category[2]
+                                })}>
+                                    Acessórios para Veículos
+                                </p>
+                            </a>
+                        </div>
+                        <div>
+                            <a
+                                href="https://www.mercadolivre.com.br/"
+                                target="_blank"
+                                rel="noreferrer"
+                                className={clsx("w-[170px] h-[160px] flex flex-col justify-center items-center border-r border-b border-gray-300 rounded-md", {
+                                    "bg-pallet-blue":category[3]
+                                })}
+                                onMouseOver={() =>
+                                    setCategory({ ...initCatergory, 3: true })
+                                }
+                                onMouseOut={() =>
+                                    setCategory({ ...initCatergory})
+                                }
+                                onFocus={() =>
+                                    setCategory({ ...initCatergory, 3: true })
+                                }
+                                onBlur={() =>
+                                    setCategory({ ...initCatergory })
+                                }
+                            >
+                                <div>
+                                    <GiSteeringWheel
+                                        size={50}
+                                        className={clsx("text-pallet-blue", {
+                                            "text-white":category[3]
+                                        })}
+                                    />
+                                </div>
+                                <p className={clsx("font-proxima mt-2", {
+                                    "text-white":category[3]
+                                })}>
+                                    Acessórios para Veículos
+                                </p>
+                            </a>
+                            <a
+                                href="https://www.mercadolivre.com.br/"
+                                target="_blank"
+                                rel="noreferrer"
+                                className={clsx("w-[170px] h-[160px] flex flex-col justify-center items-center border-r border-b border-gray-300 rounded-md", {
+                                    "bg-pallet-blue":category[4]
+                                })}
+                                onMouseOver={() =>
+                                    setCategory({ ...initCatergory, 4: true })
+                                }
+                                onMouseOut={() =>
+                                    setCategory({ ...initCatergory})
+                                }
+                                onFocus={() =>
+                                    setCategory({ ...initCatergory, 4: true })
+                                }
+                                onBlur={() =>
+                                    setCategory({ ...initCatergory })
+                                }
+                            >
+                                <div>
+                                    <GiSteeringWheel
+                                        size={50}
+                                        className={clsx("text-pallet-blue", {
+                                            "text-white":category[4]
+                                        })}
+                                    />
+                                </div>
+                                <p className={clsx("font-proxima mt-2", {
+                                    "text-white":category[4]
+                                })}>
+                                    Acessórios para Veículos
+                                </p>
+                            </a>
+                        </div>
+                        <div>
+                            <a
+                                href="https://www.mercadolivre.com.br/"
+                                target="_blank"
+                                rel="noreferrer"
+                                className={clsx("w-[170px] h-[160px] flex flex-col justify-center items-center border-r border-b border-gray-300 rounded-md", {
+                                    "bg-pallet-blue":category[5]
+                                })}
+                                onMouseOver={() =>
+                                    setCategory({ ...initCatergory, 5: true })
+                                }
+                                onMouseOut={() =>
+                                    setCategory({ ...initCatergory})
+                                }
+                                onFocus={() =>
+                                    setCategory({ ...initCatergory, 5: true })
+                                }
+                                onBlur={() =>
+                                    setCategory({ ...initCatergory })
+                                }
+                            >
+                                <div>
+                                    <GiSteeringWheel
+                                        size={50}
+                                        className={clsx("text-pallet-blue", {
+                                            "text-white":category[5]
+                                        })}
+                                    />
+                                </div>
+                                <p className={clsx("font-proxima mt-2", {
+                                    "text-white":category[5]
+                                })}>
+                                    Acessórios para Veículos
+                                </p>
+                            </a>
+                            <a
+                                href="https://www.mercadolivre.com.br/"
+                                target="_blank"
+                                rel="noreferrer"
+                                className={clsx("w-[170px] h-[160px] flex flex-col justify-center items-center border-r border-b border-gray-300 rounded-md", {
+                                    "bg-pallet-blue":category[6]
+                                })}
+                                onMouseOver={() =>
+                                    setCategory({ ...initCatergory, 6: true })
+                                }
+                                onMouseOut={() =>
+                                    setCategory({ ...initCatergory})
+                                }
+                                onFocus={() =>
+                                    setCategory({ ...initCatergory, 6: true })
+                                }
+                                onBlur={() =>
+                                    setCategory({ ...initCatergory })
+                                }
+                            >
+                                <div>
+                                    <GiSteeringWheel
+                                        size={50}
+                                        className={clsx("text-pallet-blue", {
+                                            "text-white":category[6]
+                                        })}
+                                    />
+                                </div>
+                                <p className={clsx("font-proxima mt-2", {
+                                    "text-white":category[6]
+                                })}>
+                                    Acessórios para Veículos
+                                </p>
+                            </a>
+                        </div>
+                        <div>
+                            <a
+                                href="https://www.mercadolivre.com.br/"
+                                target="_blank"
+                                rel="noreferrer"
+                                className={clsx("w-[170px] h-[160px] flex flex-col justify-center items-center border-r border-b border-gray-300 rounded-md", {
+                                    "bg-pallet-blue":category[7]
+                                })}
+                                onMouseOver={() =>
+                                    setCategory({ ...initCatergory, 7: true })
+                                }
+                                onMouseOut={() =>
+                                    setCategory({ ...initCatergory})
+                                }
+                                onFocus={() =>
+                                    setCategory({ ...initCatergory, 7: true })
+                                }
+                                onBlur={() =>
+                                    setCategory({ ...initCatergory })
+                                }
+                            >
+                                <div>
+                                    <GiSteeringWheel
+                                        size={50}
+                                        className={clsx("text-pallet-blue", {
+                                            "text-white":category[7]
+                                        })}
+                                    />
+                                </div>
+                                <p className={clsx("font-proxima mt-2", {
+                                    "text-white":category[7]
+                                })}>
+                                    Acessórios para Veículos
+                                </p>
+                            </a>
+                            <a
+                                href="https://www.mercadolivre.com.br/"
+                                target="_blank"
+                                rel="noreferrer"
+                                className={clsx("w-[170px] h-[160px] flex flex-col justify-center items-center border-r border-b border-gray-300 rounded-md", {
+                                    "bg-pallet-blue":category[8]
+                                })}
+                                onMouseOver={() =>
+                                    setCategory({ ...initCatergory, 8: true })
+                                }
+                                onMouseOut={() =>
+                                    setCategory({ ...initCatergory})
+                                }
+                                onFocus={() =>
+                                    setCategory({ ...initCatergory, 8: true })
+                                }
+                                onBlur={() =>
+                                    setCategory({ ...initCatergory })
+                                }
+                            >
+                                <div>
+                                    <GiSteeringWheel
+                                        size={50}
+                                        className={clsx("text-pallet-blue", {
+                                            "text-white":category[8]
+                                        })}
+                                    />
+                                </div>
+                                <p className={clsx("font-proxima mt-2", {
+                                    "text-white":category[8]
+                                })}>
+                                    Acessórios para Veículos
+                                </p>
+                            </a>
+                        </div>
+                        <div>
+                            <a
+                                href="https://www.mercadolivre.com.br/"
+                                target="_blank"
+                                rel="noreferrer"
+                                className={clsx("w-[170px] h-[160px] flex flex-col justify-center items-center border-r border-b border-gray-300 rounded-md", {
+                                    "bg-pallet-blue":category[9]
+                                })}
+                                onMouseOver={() =>
+                                    setCategory({ ...initCatergory, 9: true })
+                                }
+                                onMouseOut={() =>
+                                    setCategory({ ...initCatergory})
+                                }
+                                onFocus={() =>
+                                    setCategory({ ...initCatergory, 9: true })
+                                }
+                                onBlur={() =>
+                                    setCategory({ ...initCatergory })
+                                }
+                            >
+                                <div>
+                                    <GiSteeringWheel
+                                        size={50}
+                                        className={clsx("text-pallet-blue", {
+                                            "text-white":category[9]
+                                        })}
+                                    />
+                                </div>
+                                <p className={clsx("font-proxima mt-2", {
+                                    "text-white":category[9]
+                                })}>
+                                    Acessórios para Veículos
+                                </p>
+                            </a>
+                            <a
+                                href="https://www.mercadolivre.com.br/"
+                                target="_blank"
+                                rel="noreferrer"
+                                className={clsx("w-[170px] h-[160px] flex flex-col justify-center items-center border-r border-b border-gray-300 rounded-md", {
+                                    "bg-pallet-blue":category[10]
+                                })}
+                                onMouseOver={() =>
+                                    setCategory({ ...initCatergory, 10: true })
+                                }
+                                onMouseOut={() =>
+                                    setCategory({ ...initCatergory})
+                                }
+                                onFocus={() =>
+                                    setCategory({ ...initCatergory, 10: true })
+                                }
+                                onBlur={() =>
+                                    setCategory({ ...initCatergory })
+                                }
+                            >
+                                <div>
+                                    <GiSteeringWheel
+                                        size={50}
+                                        className={clsx("text-pallet-blue", {
+                                            "text-white":category[10]
+                                        })}
+                                    />
+                                </div>
+                                <p className={clsx("font-proxima mt-2", {
+                                    "text-white":category[10]
+                                })}>
+                                    Acessórios para Veículos
+                                </p>
+                            </a>
+                        </div>
+                        <div>
+                            <a
+                                href="https://www.mercadolivre.com.br/"
+                                target="_blank"
+                                rel="noreferrer"
+                                className={clsx("w-[170px] h-[160px] flex flex-col justify-center items-center border-r border-b border-gray-300 rounded-md", {
+                                    "bg-pallet-blue":category[11]
+                                })}
+                                onMouseOver={() =>
+                                    setCategory({ ...initCatergory, 11: true })
+                                }
+                                onMouseOut={() =>
+                                    setCategory({ ...initCatergory})
+                                }
+                                onFocus={() =>
+                                    setCategory({ ...initCatergory, 11: true })
+                                }
+                                onBlur={() =>
+                                    setCategory({ ...initCatergory })
+                                }
+                            >
+                                <div>
+                                    <GiSteeringWheel
+                                        size={50}
+                                        className={clsx("text-pallet-blue", {
+                                            "text-white":category[11]
+                                        })}
+                                    />
+                                </div>
+                                <p className={clsx("font-proxima mt-2", {
+                                    "text-white":category[11]
+                                })}>
+                                    Acessórios para Veículos
+                                </p>
+                            </a>
+                            <a
+                                href="https://www.mercadolivre.com.br/"
+                                target="_blank"
+                                rel="noreferrer"
+                                className={clsx("w-[170px] h-[160px] flex flex-col justify-center items-center border-r border-b border-gray-300 rounded-md", {
+                                    "bg-pallet-blue":category[12]
+                                })}
+                                onMouseOver={() =>
+                                    setCategory({ ...initCatergory, 12: true })
+                                }
+                                onMouseOut={() =>
+                                    setCategory({ ...initCatergory})
+                                }
+                                onFocus={() =>
+                                    setCategory({ ...initCatergory, 12: true })
+                                }
+                                onBlur={() =>
+                                    setCategory({ ...initCatergory })
+                                }
+                            >
+                                <div>
+                                    <GiSteeringWheel
+                                        size={50}
+                                        className={clsx("text-pallet-blue", {
+                                            "text-white":category[12]
+                                        })}
+                                    />
+                                </div>
+                                <p className={clsx("font-proxima mt-2", {
+                                    "text-white":category[12]
+                                })}>
+                                    Acessórios para Veículos
+                                </p>
+                            </a>
+                        </div>
+                        <div>
+                            <a
+                                href="https://www.mercadolivre.com.br/"
+                                target="_blank"
+                                rel="noreferrer"
+                                className={clsx("w-[170px] h-[160px] flex flex-col justify-center items-center border-r border-b border-gray-300 rounded-md", {
+                                    "bg-pallet-blue":category[13]
+                                })}
+                                onMouseOver={() =>
+                                    setCategory({ ...initCatergory, 13: true })
+                                }
+                                onMouseOut={() =>
+                                    setCategory({ ...initCatergory})
+                                }
+                                onFocus={() =>
+                                    setCategory({ ...initCatergory, 13: true })
+                                }
+                                onBlur={() =>
+                                    setCategory({ ...initCatergory })
+                                }
+                            >
+                                <div>
+                                    <GiSteeringWheel
+                                        size={50}
+                                        className={clsx("text-pallet-blue", {
+                                            "text-white":category[13]
+                                        })}
+                                    />
+                                </div>
+                                <p className={clsx("font-proxima mt-2", {
+                                    "text-white":category[13]
+                                })}>
+                                    Acessórios para Veículos
+                                </p>
+                            </a>
+                            <a
+                                href="https://www.mercadolivre.com.br/"
+                                target="_blank"
+                                rel="noreferrer"
+                                className={clsx("w-[170px] h-[160px] flex flex-col justify-center items-center border-r border-b border-gray-300 rounded-md", {
+                                    "bg-pallet-blue":category[14]
+                                })}
+                                onMouseOver={() =>
+                                    setCategory({ ...initCatergory, 14: true })
+                                }
+                                onMouseOut={() =>
+                                    setCategory({ ...initCatergory})
+                                }
+                                onFocus={() =>
+                                    setCategory({ ...initCatergory, 14: true })
+                                }
+                                onBlur={() =>
+                                    setCategory({ ...initCatergory })
+                                }
+                            >
+                                <div>
+                                    <GiSteeringWheel
+                                        size={50}
+                                        className={clsx("text-pallet-blue", {
+                                            "text-white":category[14]
+                                        })}
+                                    />
+                                </div>
+                                <p className={clsx("font-proxima mt-2", {
+                                    "text-white":category[14]
+                                })}>
+                                    Acessórios para Veículos
+                                </p>
+                            </a>
                         </div>
                     </div>
                 </div>
