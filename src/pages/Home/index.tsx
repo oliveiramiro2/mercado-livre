@@ -872,34 +872,52 @@ const Home: React.FC = () => {
                         <h2 className="text-[26px] font-light text-[#666]">
                             Categorias populares
                         </h2>
-                        <div className="flex items-center mr-1 gap-x-2">
-                            <div
-                                className={clsx(
-                                    "h-[6px] w-[6px] transition-colors rounded-full bg-gray-500 bg-opacity-20",
-                                    {
-                                        "bg-[#3483fa] bg-opacity-100":
-                                            showCategory === 0,
-                                    }
-                                )}
-                            />
-                            <div
-                                className={clsx(
-                                    "h-[6px] w-[6px] transition-colors rounded-full bg-gray-500 bg-opacity-20",
-                                    {
-                                        "bg-[#3483fa] bg-opacity-100":
-                                            showCategory === 1,
-                                    }
-                                )}
-                            />
-                            <div
-                                className={clsx(
-                                    "h-[6px] w-[6px] transition-colors rounded-full bg-gray-500 bg-opacity-20",
-                                    {
-                                        "bg-[#3483fa] bg-opacity-100":
-                                            showCategory === 2,
-                                    }
-                                )}
-                            />
+                        <div className="flex items-center mr-1">
+                            <button
+                                type="button"
+                                onClick={() => setShowCategory(0)}
+                                className="pl-1 pr-1"
+                            >
+                                <div
+                                    className={clsx(
+                                        "h-[6px] w-[6px] transition-colors rounded-full bg-gray-500 bg-opacity-20",
+                                        {
+                                            "bg-pallet-blue bg-opacity-95":
+                                                showCategory === 0,
+                                        }
+                                    )}
+                                />
+                            </button>
+                            <button
+                                type="button"
+                                onClick={() => setShowCategory(1)}
+                                className="pl-1 pr-1"
+                            >
+                                <div
+                                    className={clsx(
+                                        "h-[6px] w-[6px] transition-colors rounded-full bg-gray-500 bg-opacity-20",
+                                        {
+                                            "bg-pallet-blue bg-opacity-95":
+                                                showCategory === 1,
+                                        }
+                                    )}
+                                />
+                            </button>
+                            <button
+                                type="button"
+                                onClick={() => setShowCategory(2)}
+                                className="pl-1 pr-1"
+                            >
+                                <div
+                                    className={clsx(
+                                        "h-[6px] w-[6px] transition-colors rounded-full bg-gray-500 bg-opacity-20",
+                                        {
+                                            "bg-pallet-blue bg-opacity-95":
+                                                showCategory === 2,
+                                        }
+                                    )}
+                                />
+                            </button>
                         </div>
                     </div>
                     <div className="w-full overflow-x-hidden bg-white rounded">
