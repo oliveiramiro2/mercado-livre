@@ -867,12 +867,12 @@ const Home: React.FC = () => {
                 </div>
             </section>
             <section className="w-screen h-[420px] flex items-center justify-center">
-                <div className="max-w-[87.5%] h-[389px] bg-white rounded-lg mb-5">
+                <div className="max-w-[87.5%] h-[389px] rounded-lg mb-5">
                     <div className="pl-1 mb-[22px] ml-2 mt-2 flex justify-between">
                         <h2 className="text-[26px] font-light text-[#666]">
                             Categorias populares
                         </h2>
-                        <div className="flex items-center mr-1 gap-x-1">
+                        <div className="flex items-center mr-1 gap-x-2">
                             <div
                                 className={clsx(
                                     "h-[6px] w-[6px] transition-colors rounded-full bg-gray-500 bg-opacity-20",
@@ -902,7 +902,7 @@ const Home: React.FC = () => {
                             />
                         </div>
                     </div>
-                    <div className="w-full overflow-x-hidden">
+                    <div className="w-full overflow-x-hidden bg-white rounded">
                         <div
                             className={clsx(
                                 "flex transition-all ease-in-out delay-200 relative",
@@ -2559,15 +2559,67 @@ const Home: React.FC = () => {
                     )}
                 </div>
             </section>
-            <div className="w-screen h-8 mt-8 flex justify-center">
+            <div className="w-screen mt-20 flex border-b border-gray-200 flex-col justify-center items-center">
                 <button
                     type="button"
-                    className="bg-white pl-5 pr-5 rounded-t-md"
+                    className="bg-[#fff9f9] h-8 pl-5 pr-5 rounded-t-md"
                 >
                     <p className="font-proxima text-[#666] text-sm flex gap-x-1">
-                        Mais informações <IoIosArrowUp color="#777" size={14} className="relative top-[2px]" />
+                        Mais informações{" "}
+                        <IoIosArrowUp
+                            color="#777"
+                            size={14}
+                            className="relative top-[2px]"
+                        />
                     </p>
                 </button>
+                <div className="bg-[#fff9f9] w-screen">
+                    <div>
+                        <h3>Sobre o</h3>
+                        <ul>
+                            <li>
+                                <a href="http://https://www.mercadolivre.com.br/">
+                                    Mercado Livre
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://https://www.mercadolivre.com.br/">
+                                    Investor relations
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://https://www.mercadolivre.com.br/">
+                                    Tendências
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://https://www.mercadolivre.com.br/">
+                                    Sustentabilidade
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    {/* <div>
+                        <h3>Outros sites</h3>
+                        <ul></ul>
+                    </div>
+                    <div>
+                        <h3>Contato</h3>
+                        <ul></ul>
+                    </div>
+                    <div>
+                        <h3>Redes sociais</h3>
+                        <ul></ul>
+                    </div>
+                    <div>
+                        <h3>Minha conta</h3>
+                        <ul></ul>
+                    </div>
+                    <div>
+                        <h3>Mercado Pontos</h3>
+                        <ul></ul>
+                    </div> */}
+                </div>
             </div>
             <footer className="bg-white flex justify-center pt-3 pb-3">
                 <div className="w-[87%]">
