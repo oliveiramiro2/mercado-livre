@@ -872,15 +872,33 @@ const Home: React.FC = () => {
                             Categorias populares
                         </h2>
                         <div className="flex items-center mr-1 gap-x-1">
-                            <div className={clsx("h-[6px] w-[6px] transition-colors rounded-full bg-gray-500 bg-opacity-20", {
-                                "bg-[#3483fa] bg-opacity-100":showCategory === 0,
-                            })} />
-                            <div className={clsx("h-[6px] w-[6px] transition-colors rounded-full bg-gray-500 bg-opacity-20", {
-                                "bg-[#3483fa] bg-opacity-100":showCategory === 1,
-                            })} />
-                            <div className={clsx("h-[6px] w-[6px] transition-colors rounded-full bg-gray-500 bg-opacity-20", {
-                                "bg-[#3483fa] bg-opacity-100":showCategory === 2,
-                            })} />
+                            <div
+                                className={clsx(
+                                    "h-[6px] w-[6px] transition-colors rounded-full bg-gray-500 bg-opacity-20",
+                                    {
+                                        "bg-[#3483fa] bg-opacity-100":
+                                            showCategory === 0,
+                                    }
+                                )}
+                            />
+                            <div
+                                className={clsx(
+                                    "h-[6px] w-[6px] transition-colors rounded-full bg-gray-500 bg-opacity-20",
+                                    {
+                                        "bg-[#3483fa] bg-opacity-100":
+                                            showCategory === 1,
+                                    }
+                                )}
+                            />
+                            <div
+                                className={clsx(
+                                    "h-[6px] w-[6px] transition-colors rounded-full bg-gray-500 bg-opacity-20",
+                                    {
+                                        "bg-[#3483fa] bg-opacity-100":
+                                            showCategory === 2,
+                                    }
+                                )}
+                            />
                         </div>
                     </div>
                     <div className="w-full overflow-x-hidden">
@@ -2528,15 +2546,72 @@ const Home: React.FC = () => {
                         <button
                             onClick={() => handleShowCategory(false)}
                             type="button"
-                            className={clsx("relative -left-[25px] bottom-64 border-none flex justify-center items-center bg-white bg-opacity-90 text-pallet-blue text-2xl w-16 h-16 rounded-full hover:shadow-lg hover:shadow-slate-500 transition-shadow ease-in-out delay-75", {
-                                "bottom-[12rem]":showCategory === 2,
-                            })}
+                            className={clsx(
+                                "relative -left-[25px] bottom-64 border-none flex justify-center items-center bg-white bg-opacity-90 text-pallet-blue text-2xl w-16 h-16 rounded-full hover:shadow-lg hover:shadow-slate-500 transition-shadow ease-in-out delay-75",
+                                {
+                                    "bottom-[12rem]": showCategory === 2,
+                                }
+                            )}
                         >
                             <FcPrevious />
                         </button>
                     )}
                 </div>
             </section>
+            <footer className="bg-white flex justify-center mt-8 pt-3 pb-3">
+                <div className="w-[87%]">
+                    <div className="flex gap-x-6">
+                        <a
+                            className="font-proxima text-[13px] text-[#333]"
+                            href="http://https://www.mercadolivre.com.br/"
+                        >
+                            Trabalhe conosco
+                        </a>
+                        <a
+                            className="font-proxima text-[13px] text-[#333]"
+                            href="http://https://www.mercadolivre.com.br/"
+                        >
+                            Termos e condições
+                        </a>
+                        <a
+                            className="font-proxima text-[13px] text-[#333]"
+                            href="http://https://www.mercadolivre.com.br/"
+                        >
+                            Como cuidamos da sua privacidade
+                        </a>
+                        <a
+                            className="font-proxima text-[13px] text-[#333]"
+                            href="http://https://www.mercadolivre.com.br/"
+                        >
+                            Acessibilidade
+                        </a>
+                        <a
+                            className="font-proxima text-[13px] text-[#333]"
+                            href="http://https://www.mercadolivre.com.br/"
+                        >
+                            Contato
+                        </a>
+                        <a
+                            className="font-proxima text-[13px] text-[#333]"
+                            href="http://https://www.mercadolivre.com.br/"
+                        >
+                            Informações sobre seguros
+                        </a>
+                    </div>
+                    <div>
+                        <p className="font-proxima text-xs text-[#999] mt-2">
+                            Copyright © 1999-2023 Ebazar.com.br LTDA.
+                        </p>
+                    </div>
+                    <div>
+                        <p className="font-proxima text-xs text-[#999]">
+                            CNPJ n.º 03.007.331/0001-41 / Av. das Nações Unidas,
+                            nº 3.003, Bonfim, Osasco/SP - CEP 06233-903 -
+                            empresa do grupo Mercado Livre.
+                        </p>
+                    </div>
+                </div>
+            </footer>
         </div>
     );
 };
