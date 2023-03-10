@@ -2577,12 +2577,68 @@ const Home: React.FC = () => {
                     )}
                 </div>
             </section>
-            <div className="w-screen mt-20 flex border-b border-gray-200 flex-col justify-center items-center">
+            <section className="w-screen mt-20 bg-white h-[300px] pt-10 pb-8 flex justify-evenly">
+                <div className="flex flex-col items-center w-[23%]">
+                    <img
+                        src="https://http2.mlstatic.com/storage/homes-korriban/assets/images/ecosystem/payment.svg"
+                        alt="Pagamento"
+                        className="h-[20%] mb-5"
+                    />
+                    <div className="flex flex-col items-center gap-y-2">
+                        <h2 className="font-proxima text-[#4b4b4b] text-xl">Escolha como pagar</h2>
+                        <span className="text-center font-proxima text-[#999] text-[15px]">
+                            Com o Mercado Pago, você paga com cartão, boleto ou
+                            Pix. Você também pode pagar em até 12x no boleto com
+                            o Mercado Crédito.
+                        </span>
+                        <a href="https://www.mercadolivre.com.br/" className="text-pallet-blue relative -bottom-5 font-proxima">
+                            Como pagar com Mercado Pago
+                        </a>
+                    </div>
+                </div>
+                <div className="flex flex-col items-center w-[29%]">
+                    <img
+                        src="https://http2.mlstatic.com/storage/homes-korriban/assets/images/ecosystem/shipping.svg"
+                        alt="Frete Gratis"
+                        className="h-[20%] mb-5"
+                    />
+                    <div className="flex flex-col items-center gap-y-2">
+                        <h2 className="font-proxima text-[#4b4b4b] text-xl">Frete grátis a partir de R$ 79</h2>
+                        <span className="border-r border-l border-gray pr-16 pl-16 text-center font-proxima text-[#999] text-[15px]">
+                            Só por estar cadastrado no Mercado Livre, você tem
+                            frete grátis em milhares de produtos. É um benefício
+                            do Mercado Pontos.
+                        </span>
+                        <a href="https://www.mercadolivre.com.br/" className="text-pallet-blue relative bottom-0 font-proxima">
+                            Saiba mais sobre este benefício
+                        </a>
+                    </div>
+                </div>
+                <div className="flex flex-col items-center w-[23%]">
+                    <img
+                        src="https://http2.mlstatic.com/storage/homes-korriban/assets/images/ecosystem/protected.svg"
+                        alt="Seguro"
+                        className="h-[20%] mb-5"
+                    />
+                    <div className="flex flex-col items-center gap-y-2">
+                        <h2 className="font-proxima text-[#4b4b4b] text-xl">Segurança, do início ao fim</h2>
+                        <span className="text-center font-proxima text-[#999] text-[15px]">
+                            Você não gostou do que comprou? Devolva! No Mercado
+                            Livre não há nada que você não possa fazer, porque
+                            você está sempre protegido.
+                        </span>
+                        <a href="https://www.mercadolivre.com.br/" className="text-pallet-blue relative -bottom-5 font-proxima">
+                            Como te protegemos
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <div className="w-screen flex bg-white border-b border-gray-200 flex-col justify-center items-center">
                 <button
                     type="button"
-                    className="bg-[#fff9f9] h-8 pl-5 pr-5 rounded-t-md"
+                    className="bg-[#f3f3f0] h-8 pl-5 pr-5 rounded-t-md relative top-1"
                 >
-                    <p className="font-proxima text-[#666] text-sm flex gap-x-1">
+                    <p className="font-proxima text-[#666] text-sm flex gap-x-1 font-semibold">
                         Mais informações{" "}
                         <IoIosArrowUp
                             color="#777"
@@ -2591,52 +2647,251 @@ const Home: React.FC = () => {
                         />
                     </p>
                 </button>
-                <div className="bg-[#fff9f9] w-screen">
-                    <div>
-                        <h3>Sobre o</h3>
-                        <ul>
-                            <li>
-                                <a href="http://https://www.mercadolivre.com.br/">
-                                    Mercado Livre
-                                </a>
-                            </li>
-                            <li>
-                                <a href="http://https://www.mercadolivre.com.br/">
-                                    Investor relations
-                                </a>
-                            </li>
-                            <li>
-                                <a href="http://https://www.mercadolivre.com.br/">
-                                    Tendências
-                                </a>
-                            </li>
-                            <li>
-                                <a href="http://https://www.mercadolivre.com.br/">
-                                    Sustentabilidade
-                                </a>
-                            </li>
-                        </ul>
+                <div className="bg-[#f3f3f0] w-screen flex justify-center pt-10 pb-8 border-t border-gray-200">
+                    <div className="w-[87%] flex justify-around">
+                        <div className="">
+                            <h3 className="font-proxima text-[#333] mb-[14px] font-medium text-sm">
+                                Sobre o
+                            </h3>
+                            <ul>
+                                <li>
+                                    <a
+                                        href="https://www.mercadolivre.com.br/"
+                                        className="font-proxima text-[#999] font-light text-sm hover:underline"
+                                    >
+                                        Mercado Livre
+                                    </a>
+                                </li>
+                                <li>
+                                    <a
+                                        href="https://www.mercadolivre.com.br/"
+                                        className="font-proxima text-[#999] font-light text-sm hover:underline"
+                                    >
+                                        Investor relations
+                                    </a>
+                                </li>
+                                <li>
+                                    <a
+                                        href="https://www.mercadolivre.com.br/"
+                                        className="font-proxima text-[#999] font-light text-sm hover:underline"
+                                    >
+                                        Tendências
+                                    </a>
+                                </li>
+                                <li>
+                                    <a
+                                        href="https://www.mercadolivre.com.br/"
+                                        className="font-proxima text-[#999] font-light text-sm hover:underline"
+                                    >
+                                        Sustentabilidade
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 className="font-proxima text-[#333] mb-[14px] font-medium text-sm">
+                                Outros sites
+                            </h3>
+                            <ul>
+                                <li>
+                                    <a
+                                        href="https://www.mercadolivre.com.br/"
+                                        className="font-proxima text-[#999] font-light text-sm hover:underline"
+                                    >
+                                        Desenvolvedores
+                                    </a>
+                                </li>
+                                <li>
+                                    <a
+                                        href="https://www.mercadolivre.com.br/"
+                                        className="font-proxima text-[#999] font-light text-sm hover:underline"
+                                    >
+                                        Mercado Pago
+                                    </a>
+                                </li>
+                                <li>
+                                    <a
+                                        href="https://www.mercadolivre.com.br/"
+                                        className="font-proxima text-[#999] font-light text-sm hover:underline"
+                                    >
+                                        Mercado Envios
+                                    </a>
+                                </li>
+                                <li>
+                                    <a
+                                        href="https://www.mercadolivre.com.br/"
+                                        className="font-proxima text-[#999] font-light text-sm hover:underline"
+                                    >
+                                        Mercado Shops
+                                    </a>
+                                </li>
+                                <li>
+                                    <a
+                                        href="https://www.mercadolivre.com.br/"
+                                        className="font-proxima text-[#999] font-light text-sm hover:underline"
+                                    >
+                                        Mercado Ads
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 className="font-proxima text-[#333] mb-[14px] font-medium text-sm">
+                                Contato
+                            </h3>
+                            <ul>
+                                <li>
+                                    <a
+                                        href="https://www.mercadolivre.com.br/"
+                                        className="font-proxima text-[#999] font-light text-sm hover:underline"
+                                    >
+                                        Comprar
+                                    </a>
+                                </li>
+                                <li>
+                                    <a
+                                        href="https://www.mercadolivre.com.br/"
+                                        className="font-proxima text-[#999] font-light text-sm hover:underline"
+                                    >
+                                        Vender
+                                    </a>
+                                </li>
+                                <li>
+                                    <a
+                                        href="https://www.mercadolivre.com.br/"
+                                        className="font-proxima text-[#999] font-light text-sm hover:underline"
+                                    >
+                                        Solução de problemas
+                                    </a>
+                                </li>
+                                <li>
+                                    <a
+                                        href="https://www.mercadolivre.com.br/"
+                                        className="font-proxima text-[#999] font-light text-sm hover:underline"
+                                    >
+                                        Segurança
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 className="font-proxima text-[#333] mb-[14px] font-medium text-sm">
+                                Redes sociais
+                            </h3>
+                            <ul>
+                                <li>
+                                    <a
+                                        href="https://www.mercadolivre.com.br/"
+                                        className="font-proxima text-[#999] font-light text-sm hover:underline"
+                                    >
+                                        Twitter
+                                    </a>
+                                </li>
+                                <li>
+                                    <a
+                                        href="https://www.mercadolivre.com.br/"
+                                        className="font-proxima text-[#999] font-light text-sm hover:underline"
+                                    >
+                                        Facebook
+                                    </a>
+                                </li>
+                                <li>
+                                    <a
+                                        href="https://www.mercadolivre.com.br/"
+                                        className="font-proxima text-[#999] font-light text-sm hover:underline"
+                                    >
+                                        Instagram
+                                    </a>
+                                </li>
+                                <li>
+                                    <a
+                                        href="https://www.mercadolivre.com.br/"
+                                        className="font-proxima text-[#999] font-light text-sm hover:underline"
+                                    >
+                                        YouTube
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 className="font-proxima text-[#333] mb-[14px] font-medium text-sm">
+                                Minha conta
+                            </h3>
+                            <ul>
+                                <li>
+                                    <a
+                                        href="https://www.mercadolivre.com.br/"
+                                        className="font-proxima text-[#999] font-light text-sm hover:underline"
+                                    >
+                                        Entre
+                                    </a>
+                                </li>
+                                <li>
+                                    <a
+                                        href="https://www.mercadolivre.com.br/"
+                                        className="font-proxima text-[#999] font-light text-sm hover:underline"
+                                    >
+                                        Vender
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 className="font-proxima text-[#333] mb-[14px] font-medium text-sm">
+                                Mercado Pontos
+                            </h3>
+                            <ul>
+                                <li>
+                                    <a
+                                        href="https://www.mercadolivre.com.br/"
+                                        className="font-proxima text-[#999] font-light text-sm hover:underline"
+                                    >
+                                        Nivel 6
+                                    </a>
+                                </li>
+                                <li>
+                                    <a
+                                        href="https://www.mercadolivre.com.br/"
+                                        className="font-proxima text-[#999] font-light text-sm hover:underline"
+                                    >
+                                        Disney+
+                                    </a>
+                                </li>
+                                <li>
+                                    <a
+                                        href="https://www.mercadolivre.com.br/"
+                                        className="font-proxima text-[#999] font-light text-sm hover:underline"
+                                    >
+                                        Star+
+                                    </a>
+                                </li>
+                                <li>
+                                    <a
+                                        href="https://www.mercadolivre.com.br/"
+                                        className="font-proxima text-[#999] font-light text-sm hover:underline"
+                                    >
+                                        HBO MAX
+                                    </a>
+                                </li>
+                                <li>
+                                    <a
+                                        href="https://www.mercadolivre.com.br/"
+                                        className="font-proxima text-[#999] font-light text-sm hover:underline"
+                                    >
+                                        Paramount+
+                                    </a>
+                                </li>
+                                <li>
+                                    <a
+                                        href="https://www.mercadolivre.com.br/"
+                                        className="font-proxima text-[#999] font-light text-sm hover:underline"
+                                    >
+                                        Deezer
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                    {/* <div>
-                        <h3>Outros sites</h3>
-                        <ul></ul>
-                    </div>
-                    <div>
-                        <h3>Contato</h3>
-                        <ul></ul>
-                    </div>
-                    <div>
-                        <h3>Redes sociais</h3>
-                        <ul></ul>
-                    </div>
-                    <div>
-                        <h3>Minha conta</h3>
-                        <ul></ul>
-                    </div>
-                    <div>
-                        <h3>Mercado Pontos</h3>
-                        <ul></ul>
-                    </div> */}
                 </div>
             </div>
             <footer className="bg-white flex justify-center pt-3 pb-3">
