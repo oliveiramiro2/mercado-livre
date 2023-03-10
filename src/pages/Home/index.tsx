@@ -2668,7 +2668,7 @@ const Home: React.FC = () => {
                     </div>
                 </div>
             </section>
-            <div className="w-screen flex bg-white border-b border-gray-200 flex-col justify-center items-center">
+            <section className="w-screen flex bg-white border-b border-gray-200 flex-col justify-center items-center">
                 <button
                     type="button"
                     className="bg-[#f3f3f0] h-8 pl-5 pr-5 rounded-t-md relative top-1"
@@ -2934,7 +2934,7 @@ const Home: React.FC = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
             <footer className="bg-white z-20 flex justify-center pt-3 pb-3">
                 <div className="w-[87%]">
                     <div className="flex gap-x-6">
