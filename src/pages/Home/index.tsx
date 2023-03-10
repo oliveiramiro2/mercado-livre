@@ -865,17 +865,28 @@ const Home: React.FC = () => {
                     </div>
                 </div>
             </section>
-            <section className="w-screen h-[389px] flex items-center justify-center">
+            <section className="w-screen h-[420px] flex items-center justify-center">
                 <div className="max-w-[87.5%] h-[389px] bg-white rounded-lg mb-5">
-                    <div className="pl-1 mb-[22px] ml-2 mt-2">
+                    <div className="pl-1 mb-[22px] ml-2 mt-2 flex justify-between">
                         <h2 className="text-[26px] font-light text-[#666]">
                             Categorias populares
                         </h2>
+                        <div className="flex items-center mr-1 gap-x-1">
+                            <div className={clsx("h-[6px] w-[6px] transition-colors rounded-full bg-gray-500 bg-opacity-20", {
+                                "bg-[#3483fa] bg-opacity-100":showCategory === 0,
+                            })} />
+                            <div className={clsx("h-[6px] w-[6px] transition-colors rounded-full bg-gray-500 bg-opacity-20", {
+                                "bg-[#3483fa] bg-opacity-100":showCategory === 1,
+                            })} />
+                            <div className={clsx("h-[6px] w-[6px] transition-colors rounded-full bg-gray-500 bg-opacity-20", {
+                                "bg-[#3483fa] bg-opacity-100":showCategory === 2,
+                            })} />
+                        </div>
                     </div>
                     <div className="w-full overflow-x-hidden">
                         <div
                             className={clsx(
-                                "flex transition-all ease-linear delay-200 relative",
+                                "flex transition-all ease-in-out delay-200 relative",
                                 {
                                     "right-0": showCategory === 0,
                                     "right-[100%]": showCategory === 1,
