@@ -245,6 +245,25 @@ const Home: React.FC = () => {
         else if (!right && showCategory > 0) setShowCategory(showCategory - 1);
     };
 
+    const handleSemiFooter: Function = (): void => {
+        if (!showSemiFooter) {
+            gsap.to(".semi-footer", {
+                yPercent: 200,
+                ease: "easeInOut",
+                duration: 0.5,
+                display: "none",
+            });
+        } else {
+            gsap.to(".semi-footer", {
+                yPercent: 0,
+                ease: "easeInOut",
+                duration: 0.5,
+                display: "flex",
+            });
+        }
+        setShowSemiFooter(!showSemiFooter);
+    };
+
     return (
         <div className="flex flex-col w-screen min-h-screen bg-[#ebebeb]">
             <Header />
@@ -2653,30 +2672,23 @@ const Home: React.FC = () => {
                 <button
                     type="button"
                     className="bg-[#f3f3f0] h-8 pl-5 pr-5 rounded-t-md relative top-1"
-                    onClick={() => setShowSemiFooter(!showSemiFooter)}
+                    onClick={() => handleSemiFooter()}
                 >
                     <p className="font-proxima text-[#666] text-sm flex gap-x-1 font-semibold">
-                        Mais informações{" "}
+                        {!showSemiFooter ? "Menos" : "Mais"} informações{" "}
                         <IoIosArrowUp
                             color="#777"
                             size={14}
                             className={clsx(
                                 "relative top-[2px] transition-transform delay-150 duration-300 ease",
                                 {
-                                    "rotate-180": showSemiFooter,
+                                    "rotate-180": !showSemiFooter,
                                 }
                             )}
                         />
                     </p>
                 </button>
-                <div
-                    className={clsx(
-                        "bg-[#f3f3f0] w-screen visible transition-opacity ease-in-out duration-500 delay-300 flex justify-center pt-10 pb-8 border-t border-gray-200",
-                        {
-                            "invisible opacity-0 hidden": showSemiFooter,
-                        }
-                    )}
-                >
+                <div className="semi-footer z-10 bg-[#f3f3f0] w-screen visible transition-opacity ease-in-out duration-500 delay-300 flex justify-center pt-10 pb-8 border-t border-gray-200">
                     <div className="w-[87%] flex justify-around">
                         <div className="">
                             <h3 className="font-proxima text-[#333] mb-[14px] font-medium text-sm">
@@ -2923,7 +2935,7 @@ const Home: React.FC = () => {
                     </div>
                 </div>
             </div>
-            <footer className="bg-white flex justify-center pt-3 pb-3">
+            <footer className="bg-white z-20 flex justify-center pt-3 pb-3">
                 <div className="w-[87%]">
                     <div className="flex gap-x-6">
                         <a
