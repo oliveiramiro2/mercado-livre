@@ -153,6 +153,7 @@ const Home: React.FC = () => {
     const [showLoyalty4, setShowLoyalty4] = useState<boolean>(false);
     const [category, setCategory] = useState<iCategory>(initCatergory);
     const [showCategory, setShowCategory] = useState<number>(0);
+    const [showSemiFooter, setShowSemiFooter] = useState<boolean>(false);
 
     const loyaltyRef4 = useRef(null);
     const loyaltyRef1 = useRef(null);
@@ -2585,13 +2586,18 @@ const Home: React.FC = () => {
                         className="h-[20%] mb-5"
                     />
                     <div className="flex flex-col items-center gap-y-2">
-                        <h2 className="font-proxima text-[#4b4b4b] text-xl">Escolha como pagar</h2>
+                        <h2 className="font-proxima text-[#4b4b4b] text-xl">
+                            Escolha como pagar
+                        </h2>
                         <span className="text-center font-proxima text-[#999] text-[15px]">
                             Com o Mercado Pago, você paga com cartão, boleto ou
                             Pix. Você também pode pagar em até 12x no boleto com
                             o Mercado Crédito.
                         </span>
-                        <a href="https://www.mercadolivre.com.br/" className="text-pallet-blue relative -bottom-5 font-proxima">
+                        <a
+                            href="https://www.mercadolivre.com.br/"
+                            className="text-pallet-blue relative -bottom-5 font-proxima"
+                        >
                             Como pagar com Mercado Pago
                         </a>
                     </div>
@@ -2603,13 +2609,18 @@ const Home: React.FC = () => {
                         className="h-[20%] mb-5"
                     />
                     <div className="flex flex-col items-center gap-y-2">
-                        <h2 className="font-proxima text-[#4b4b4b] text-xl">Frete grátis a partir de R$ 79</h2>
+                        <h2 className="font-proxima text-[#4b4b4b] text-xl">
+                            Frete grátis a partir de R$ 79
+                        </h2>
                         <span className="border-r border-l border-gray pr-16 pl-16 text-center font-proxima text-[#999] text-[15px]">
                             Só por estar cadastrado no Mercado Livre, você tem
                             frete grátis em milhares de produtos. É um benefício
                             do Mercado Pontos.
                         </span>
-                        <a href="https://www.mercadolivre.com.br/" className="text-pallet-blue relative bottom-0 font-proxima">
+                        <a
+                            href="https://www.mercadolivre.com.br/"
+                            className="text-pallet-blue relative bottom-0 font-proxima"
+                        >
                             Saiba mais sobre este benefício
                         </a>
                     </div>
@@ -2621,13 +2632,18 @@ const Home: React.FC = () => {
                         className="h-[20%] mb-5"
                     />
                     <div className="flex flex-col items-center gap-y-2">
-                        <h2 className="font-proxima text-[#4b4b4b] text-xl">Segurança, do início ao fim</h2>
+                        <h2 className="font-proxima text-[#4b4b4b] text-xl">
+                            Segurança, do início ao fim
+                        </h2>
                         <span className="text-center font-proxima text-[#999] text-[15px]">
                             Você não gostou do que comprou? Devolva! No Mercado
                             Livre não há nada que você não possa fazer, porque
                             você está sempre protegido.
                         </span>
-                        <a href="https://www.mercadolivre.com.br/" className="text-pallet-blue relative -bottom-5 font-proxima">
+                        <a
+                            href="https://www.mercadolivre.com.br/"
+                            className="text-pallet-blue relative -bottom-5 font-proxima"
+                        >
                             Como te protegemos
                         </a>
                     </div>
@@ -2637,17 +2653,30 @@ const Home: React.FC = () => {
                 <button
                     type="button"
                     className="bg-[#f3f3f0] h-8 pl-5 pr-5 rounded-t-md relative top-1"
+                    onClick={() => setShowSemiFooter(!showSemiFooter)}
                 >
                     <p className="font-proxima text-[#666] text-sm flex gap-x-1 font-semibold">
                         Mais informações{" "}
                         <IoIosArrowUp
                             color="#777"
                             size={14}
-                            className="relative top-[2px]"
+                            className={clsx(
+                                "relative top-[2px] transition-transform delay-150 duration-300 ease",
+                                {
+                                    "rotate-180": showSemiFooter,
+                                }
+                            )}
                         />
                     </p>
                 </button>
-                <div className="bg-[#f3f3f0] w-screen flex justify-center pt-10 pb-8 border-t border-gray-200">
+                <div
+                    className={clsx(
+                        "bg-[#f3f3f0] w-screen visible transition-opacity ease-in-out duration-500 delay-300 flex justify-center pt-10 pb-8 border-t border-gray-200",
+                        {
+                            "invisible opacity-0 hidden": showSemiFooter,
+                        }
+                    )}
+                >
                     <div className="w-[87%] flex justify-around">
                         <div className="">
                             <h3 className="font-proxima text-[#333] mb-[14px] font-medium text-sm">
