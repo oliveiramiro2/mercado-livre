@@ -41,6 +41,7 @@ import { FcNext, FcPrevious } from "react-icons/fc";
 import { CgSmartHomeRefrigerator } from "react-icons/cg";
 import { SlScreenDesktop } from "react-icons/sl";
 import { HiSquaresPlus } from "react-icons/hi2";
+import { IoIosArrowUp } from "react-icons/io";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -2558,7 +2559,17 @@ const Home: React.FC = () => {
                     )}
                 </div>
             </section>
-            <footer className="bg-white flex justify-center mt-8 pt-3 pb-3">
+            <div className="w-screen h-8 mt-8 flex justify-center">
+                <button
+                    type="button"
+                    className="bg-white pl-5 pr-5 rounded-t-md"
+                >
+                    <p className="font-proxima text-[#666] text-sm flex gap-x-1">
+                        Mais informações <IoIosArrowUp color="#777" size={14} className="relative top-[2px]" />
+                    </p>
+                </button>
+            </div>
+            <footer className="bg-white flex justify-center pt-3 pb-3">
                 <div className="w-[87%]">
                     <div className="flex gap-x-6">
                         <a
