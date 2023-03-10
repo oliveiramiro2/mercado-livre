@@ -10,11 +10,37 @@ import {
     GiBearFace,
     GiSofa,
     GiSmartphone,
+    GiSoccerBall,
+    GiBalloons,
+    GiRetroController,
+    GiFactory,
+    GiTicket,
+    GiViolin,
+    GiWatch,
+    GiBookCover,
+    GiHeartPlus,
 } from "react-icons/gi";
-import { BsHourglassSplit, BsCameraFill } from "react-icons/bs";
+import {
+    MdNavigateNext,
+    MdPets,
+    MdPalette,
+    MdEngineering,
+} from "react-icons/md";
+import {
+    FaTractor,
+    FaBaby,
+    FaTshirt,
+    FaCar,
+    FaMicrophone,
+    FaTools,
+    FaMusic,
+    FaUsers,
+} from "react-icons/fa";
+import { BsHourglassSplit, BsCameraFill, BsBuilding } from "react-icons/bs";
 import { FcNext, FcPrevious } from "react-icons/fc";
-import { MdNavigateNext, MdPets, MdPalette } from "react-icons/md";
-import { FaTractor, FaBaby, FaTshirt, FaCar } from "react-icons/fa";
+import { CgSmartHomeRefrigerator } from "react-icons/cg";
+import { SlScreenDesktop } from "react-icons/sl";
+import { HiSquaresPlus } from "react-icons/hi2";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -853,6 +879,7 @@ const Home: React.FC = () => {
                                 {
                                     "right-0": showCategory === 0,
                                     "right-[100%]": showCategory === 1,
+                                    "right-[128.6%]": showCategory === 2,
                                 }
                             )}
                         >
@@ -1588,7 +1615,7 @@ const Home: React.FC = () => {
                                     }
                                 >
                                     <div>
-                                        <GiSofa
+                                        <MdEngineering
                                             size={50}
                                             className={clsx(
                                                 "text-pallet-blue",
@@ -1606,7 +1633,7 @@ const Home: React.FC = () => {
                                             }
                                         )}
                                     >
-                                        Casa, Móveis e decoração
+                                        Construção
                                     </p>
                                 </a>
                                 <a
@@ -1639,7 +1666,7 @@ const Home: React.FC = () => {
                                     }
                                 >
                                     <div>
-                                        <GiSmartphone
+                                        <CgSmartHomeRefrigerator
                                             size={50}
                                             className={clsx(
                                                 "text-pallet-blue",
@@ -1654,7 +1681,824 @@ const Home: React.FC = () => {
                                             "text-white": category[16],
                                         })}
                                     >
-                                        Celulares e Telefones
+                                        Eletrodomésticos
+                                    </p>
+                                </a>
+                            </div>
+                            <div>
+                                <a
+                                    href="https://www.mercadolivre.com.br/"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className={clsx(
+                                        "w-[170px] h-[160px] flex flex-col justify-around items-center border-r border-b border-gray-300 rounded-md",
+                                        {
+                                            "bg-pallet-blue": category[17],
+                                        }
+                                    )}
+                                    onMouseOver={() =>
+                                        setCategory({
+                                            ...initCatergory,
+                                            17: true,
+                                        })
+                                    }
+                                    onMouseOut={() =>
+                                        setCategory({ ...initCatergory })
+                                    }
+                                    onFocus={() =>
+                                        setCategory({
+                                            ...initCatergory,
+                                            17: true,
+                                        })
+                                    }
+                                    onBlur={() =>
+                                        setCategory({ ...initCatergory })
+                                    }
+                                >
+                                    <div>
+                                        <FaMicrophone
+                                            size={50}
+                                            className={clsx(
+                                                "text-pallet-blue",
+                                                {
+                                                    "text-white": category[17],
+                                                }
+                                            )}
+                                        />
+                                    </div>
+                                    <p
+                                        className={clsx(
+                                            "font-proxima w-[90%] text-center",
+                                            {
+                                                "text-white": category[17],
+                                            }
+                                        )}
+                                    >
+                                        Eletrônicos, Áudio e Vídeo
+                                    </p>
+                                </a>
+                                <a
+                                    href="https://www.mercadolivre.com.br/"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className={clsx(
+                                        "w-[170px] h-[160px] flex flex-col justify-around items-center border-r border-b border-gray-300 rounded-md",
+                                        {
+                                            "bg-pallet-blue": category[18],
+                                        }
+                                    )}
+                                    onMouseOver={() =>
+                                        setCategory({
+                                            ...initCatergory,
+                                            18: true,
+                                        })
+                                    }
+                                    onMouseOut={() =>
+                                        setCategory({ ...initCatergory })
+                                    }
+                                    onFocus={() =>
+                                        setCategory({
+                                            ...initCatergory,
+                                            18: true,
+                                        })
+                                    }
+                                    onBlur={() =>
+                                        setCategory({ ...initCatergory })
+                                    }
+                                >
+                                    <div>
+                                        <GiSoccerBall
+                                            size={50}
+                                            className={clsx(
+                                                "text-pallet-blue",
+                                                {
+                                                    "text-white": category[18],
+                                                }
+                                            )}
+                                        />
+                                    </div>
+                                    <p
+                                        className={clsx("font-proxima", {
+                                            "text-white": category[18],
+                                        })}
+                                    >
+                                        Esportes e Fitness
+                                    </p>
+                                </a>
+                            </div>
+                            <div>
+                                <a
+                                    href="https://www.mercadolivre.com.br/"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className={clsx(
+                                        "w-[170px] h-[160px] flex flex-col justify-around items-center border-r border-b border-gray-300 rounded-md",
+                                        {
+                                            "bg-pallet-blue": category[19],
+                                        }
+                                    )}
+                                    onMouseOver={() =>
+                                        setCategory({
+                                            ...initCatergory,
+                                            19: true,
+                                        })
+                                    }
+                                    onMouseOut={() =>
+                                        setCategory({ ...initCatergory })
+                                    }
+                                    onFocus={() =>
+                                        setCategory({
+                                            ...initCatergory,
+                                            19: true,
+                                        })
+                                    }
+                                    onBlur={() =>
+                                        setCategory({ ...initCatergory })
+                                    }
+                                >
+                                    <div>
+                                        <FaTools
+                                            size={50}
+                                            className={clsx(
+                                                "text-pallet-blue",
+                                                {
+                                                    "text-white": category[19],
+                                                }
+                                            )}
+                                        />
+                                    </div>
+                                    <p
+                                        className={clsx(
+                                            "font-proxima w-[90%] text-center",
+                                            {
+                                                "text-white": category[19],
+                                            }
+                                        )}
+                                    >
+                                        Ferramentas
+                                    </p>
+                                </a>
+                                <a
+                                    href="https://www.mercadolivre.com.br/"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className={clsx(
+                                        "w-[170px] h-[160px] flex flex-col justify-around items-center border-r border-b border-gray-300 rounded-md",
+                                        {
+                                            "bg-pallet-blue": category[20],
+                                        }
+                                    )}
+                                    onMouseOver={() =>
+                                        setCategory({
+                                            ...initCatergory,
+                                            20: true,
+                                        })
+                                    }
+                                    onMouseOut={() =>
+                                        setCategory({ ...initCatergory })
+                                    }
+                                    onFocus={() =>
+                                        setCategory({
+                                            ...initCatergory,
+                                            20: true,
+                                        })
+                                    }
+                                    onBlur={() =>
+                                        setCategory({ ...initCatergory })
+                                    }
+                                >
+                                    <div>
+                                        <GiBalloons
+                                            size={50}
+                                            className={clsx(
+                                                "text-pallet-blue",
+                                                {
+                                                    "text-white": category[20],
+                                                }
+                                            )}
+                                        />
+                                    </div>
+                                    <p
+                                        className={clsx("font-proxima", {
+                                            "text-white": category[20],
+                                        })}
+                                    >
+                                        Festas e Lembrancinhas
+                                    </p>
+                                </a>
+                            </div>
+                            <div>
+                                <a
+                                    href="https://www.mercadolivre.com.br/"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className={clsx(
+                                        "w-[170px] h-[160px] flex flex-col justify-around items-center border-r border-b border-gray-300 rounded-md",
+                                        {
+                                            "bg-pallet-blue": category[21],
+                                        }
+                                    )}
+                                    onMouseOver={() =>
+                                        setCategory({
+                                            ...initCatergory,
+                                            21: true,
+                                        })
+                                    }
+                                    onMouseOut={() =>
+                                        setCategory({ ...initCatergory })
+                                    }
+                                    onFocus={() =>
+                                        setCategory({
+                                            ...initCatergory,
+                                            21: true,
+                                        })
+                                    }
+                                    onBlur={() =>
+                                        setCategory({ ...initCatergory })
+                                    }
+                                >
+                                    <div>
+                                        <GiRetroController
+                                            size={50}
+                                            className={clsx(
+                                                "text-pallet-blue",
+                                                {
+                                                    "text-white": category[21],
+                                                }
+                                            )}
+                                        />
+                                    </div>
+                                    <p
+                                        className={clsx(
+                                            "font-proxima w-[90%] text-center",
+                                            {
+                                                "text-white": category[21],
+                                            }
+                                        )}
+                                    >
+                                        Games
+                                    </p>
+                                </a>
+                                <a
+                                    href="https://www.mercadolivre.com.br/"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className={clsx(
+                                        "w-[170px] h-[160px] flex flex-col justify-around items-center border-r border-b border-gray-300 rounded-md",
+                                        {
+                                            "bg-pallet-blue": category[22],
+                                        }
+                                    )}
+                                    onMouseOver={() =>
+                                        setCategory({
+                                            ...initCatergory,
+                                            22: true,
+                                        })
+                                    }
+                                    onMouseOut={() =>
+                                        setCategory({ ...initCatergory })
+                                    }
+                                    onFocus={() =>
+                                        setCategory({
+                                            ...initCatergory,
+                                            22: true,
+                                        })
+                                    }
+                                    onBlur={() =>
+                                        setCategory({ ...initCatergory })
+                                    }
+                                >
+                                    <div>
+                                        <BsBuilding
+                                            size={50}
+                                            className={clsx(
+                                                "text-pallet-blue",
+                                                {
+                                                    "text-white": category[22],
+                                                }
+                                            )}
+                                        />
+                                    </div>
+                                    <p
+                                        className={clsx("font-proxima", {
+                                            "text-white": category[22],
+                                        })}
+                                    >
+                                        Imóveis
+                                    </p>
+                                </a>
+                            </div>
+                            <div>
+                                <a
+                                    href="https://www.mercadolivre.com.br/"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className={clsx(
+                                        "w-[170px] h-[160px] flex flex-col justify-around items-center border-r border-b border-gray-300 rounded-md",
+                                        {
+                                            "bg-pallet-blue": category[23],
+                                        }
+                                    )}
+                                    onMouseOver={() =>
+                                        setCategory({
+                                            ...initCatergory,
+                                            23: true,
+                                        })
+                                    }
+                                    onMouseOut={() =>
+                                        setCategory({ ...initCatergory })
+                                    }
+                                    onFocus={() =>
+                                        setCategory({
+                                            ...initCatergory,
+                                            23: true,
+                                        })
+                                    }
+                                    onBlur={() =>
+                                        setCategory({ ...initCatergory })
+                                    }
+                                >
+                                    <div>
+                                        <GiFactory
+                                            size={50}
+                                            className={clsx(
+                                                "text-pallet-blue",
+                                                {
+                                                    "text-white": category[23],
+                                                }
+                                            )}
+                                        />
+                                    </div>
+                                    <p
+                                        className={clsx(
+                                            "font-proxima w-[90%] text-center",
+                                            {
+                                                "text-white": category[23],
+                                            }
+                                        )}
+                                    >
+                                        Indústria e Comércio
+                                    </p>
+                                </a>
+                                <a
+                                    href="https://www.mercadolivre.com.br/"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className={clsx(
+                                        "w-[170px] h-[160px] flex flex-col justify-around items-center border-r border-b border-gray-300 rounded-md",
+                                        {
+                                            "bg-pallet-blue": category[24],
+                                        }
+                                    )}
+                                    onMouseOver={() =>
+                                        setCategory({
+                                            ...initCatergory,
+                                            24: true,
+                                        })
+                                    }
+                                    onMouseOut={() =>
+                                        setCategory({ ...initCatergory })
+                                    }
+                                    onFocus={() =>
+                                        setCategory({
+                                            ...initCatergory,
+                                            24: true,
+                                        })
+                                    }
+                                    onBlur={() =>
+                                        setCategory({ ...initCatergory })
+                                    }
+                                >
+                                    <div>
+                                        <SlScreenDesktop
+                                            size={50}
+                                            className={clsx(
+                                                "text-pallet-blue",
+                                                {
+                                                    "text-white": category[24],
+                                                }
+                                            )}
+                                        />
+                                    </div>
+                                    <p
+                                        className={clsx("font-proxima", {
+                                            "text-white": category[24],
+                                        })}
+                                    >
+                                        Informática
+                                    </p>
+                                </a>
+                            </div>
+                            <div>
+                                <a
+                                    href="https://www.mercadolivre.com.br/"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className={clsx(
+                                        "w-[170px] h-[160px] flex flex-col justify-around items-center border-r border-b border-gray-300 rounded-md",
+                                        {
+                                            "bg-pallet-blue": category[25],
+                                        }
+                                    )}
+                                    onMouseOver={() =>
+                                        setCategory({
+                                            ...initCatergory,
+                                            25: true,
+                                        })
+                                    }
+                                    onMouseOut={() =>
+                                        setCategory({ ...initCatergory })
+                                    }
+                                    onFocus={() =>
+                                        setCategory({
+                                            ...initCatergory,
+                                            25: true,
+                                        })
+                                    }
+                                    onBlur={() =>
+                                        setCategory({ ...initCatergory })
+                                    }
+                                >
+                                    <div>
+                                        <GiTicket
+                                            size={50}
+                                            className={clsx(
+                                                "text-pallet-blue",
+                                                {
+                                                    "text-white": category[25],
+                                                }
+                                            )}
+                                        />
+                                    </div>
+                                    <p
+                                        className={clsx(
+                                            "font-proxima w-[90%] text-center",
+                                            {
+                                                "text-white": category[25],
+                                            }
+                                        )}
+                                    >
+                                        Ingressos
+                                    </p>
+                                </a>
+                                <a
+                                    href="https://www.mercadolivre.com.br/"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className={clsx(
+                                        "w-[170px] h-[160px] flex flex-col justify-around items-center border-r border-b border-gray-300 rounded-md",
+                                        {
+                                            "bg-pallet-blue": category[26],
+                                        }
+                                    )}
+                                    onMouseOver={() =>
+                                        setCategory({
+                                            ...initCatergory,
+                                            26: true,
+                                        })
+                                    }
+                                    onMouseOut={() =>
+                                        setCategory({ ...initCatergory })
+                                    }
+                                    onFocus={() =>
+                                        setCategory({
+                                            ...initCatergory,
+                                            26: true,
+                                        })
+                                    }
+                                    onBlur={() =>
+                                        setCategory({ ...initCatergory })
+                                    }
+                                >
+                                    <div>
+                                        <GiViolin
+                                            size={50}
+                                            className={clsx(
+                                                "text-pallet-blue",
+                                                {
+                                                    "text-white": category[26],
+                                                }
+                                            )}
+                                        />
+                                    </div>
+                                    <p
+                                        className={clsx("font-proxima", {
+                                            "text-white": category[26],
+                                        })}
+                                    >
+                                        Instrumentos Musicais
+                                    </p>
+                                </a>
+                            </div>
+                            <div>
+                                <a
+                                    href="https://www.mercadolivre.com.br/"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className={clsx(
+                                        "w-[170px] h-[160px] flex flex-col justify-around items-center border-r border-b border-gray-300 rounded-md",
+                                        {
+                                            "bg-pallet-blue": category[27],
+                                        }
+                                    )}
+                                    onMouseOver={() =>
+                                        setCategory({
+                                            ...initCatergory,
+                                            27: true,
+                                        })
+                                    }
+                                    onMouseOut={() =>
+                                        setCategory({ ...initCatergory })
+                                    }
+                                    onFocus={() =>
+                                        setCategory({
+                                            ...initCatergory,
+                                            27: true,
+                                        })
+                                    }
+                                    onBlur={() =>
+                                        setCategory({ ...initCatergory })
+                                    }
+                                >
+                                    <div>
+                                        <GiWatch
+                                            size={50}
+                                            className={clsx(
+                                                "text-pallet-blue",
+                                                {
+                                                    "text-white": category[27],
+                                                }
+                                            )}
+                                        />
+                                    </div>
+                                    <p
+                                        className={clsx(
+                                            "font-proxima w-[90%] text-center",
+                                            {
+                                                "text-white": category[27],
+                                            }
+                                        )}
+                                    >
+                                        Joias e Relógios
+                                    </p>
+                                </a>
+                                <a
+                                    href="https://www.mercadolivre.com.br/"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className={clsx(
+                                        "w-[170px] h-[160px] flex flex-col justify-around items-center border-r border-b border-gray-300 rounded-md",
+                                        {
+                                            "bg-pallet-blue": category[28],
+                                        }
+                                    )}
+                                    onMouseOver={() =>
+                                        setCategory({
+                                            ...initCatergory,
+                                            28: true,
+                                        })
+                                    }
+                                    onMouseOut={() =>
+                                        setCategory({ ...initCatergory })
+                                    }
+                                    onFocus={() =>
+                                        setCategory({
+                                            ...initCatergory,
+                                            28: true,
+                                        })
+                                    }
+                                    onBlur={() =>
+                                        setCategory({ ...initCatergory })
+                                    }
+                                >
+                                    <div>
+                                        <GiBookCover
+                                            size={50}
+                                            className={clsx(
+                                                "text-pallet-blue",
+                                                {
+                                                    "text-white": category[28],
+                                                }
+                                            )}
+                                        />
+                                    </div>
+                                    <p
+                                        className={clsx(
+                                            "font-proxima w-[90%] text-center",
+                                            {
+                                                "text-white": category[28],
+                                            }
+                                        )}
+                                    >
+                                        Livros, Revistas e Comics
+                                    </p>
+                                </a>
+                            </div>
+                            <div>
+                                <a
+                                    href="https://www.mercadolivre.com.br/"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className={clsx(
+                                        "w-[170px] h-[160px] flex flex-col justify-around items-center border-r border-b border-gray-300 rounded-md",
+                                        {
+                                            "bg-pallet-blue": category[29],
+                                        }
+                                    )}
+                                    onMouseOver={() =>
+                                        setCategory({
+                                            ...initCatergory,
+                                            29: true,
+                                        })
+                                    }
+                                    onMouseOut={() =>
+                                        setCategory({ ...initCatergory })
+                                    }
+                                    onFocus={() =>
+                                        setCategory({
+                                            ...initCatergory,
+                                            29: true,
+                                        })
+                                    }
+                                    onBlur={() =>
+                                        setCategory({ ...initCatergory })
+                                    }
+                                >
+                                    <div>
+                                        <FaMusic
+                                            size={50}
+                                            className={clsx(
+                                                "text-pallet-blue",
+                                                {
+                                                    "text-white": category[29],
+                                                }
+                                            )}
+                                        />
+                                    </div>
+                                    <p
+                                        className={clsx(
+                                            "font-proxima w-[90%] text-center",
+                                            {
+                                                "text-white": category[29],
+                                            }
+                                        )}
+                                    >
+                                        Música, Filmes e Seriados
+                                    </p>
+                                </a>
+                                <a
+                                    href="https://www.mercadolivre.com.br/"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className={clsx(
+                                        "w-[170px] h-[160px] flex flex-col justify-around items-center border-r border-b border-gray-300 rounded-md",
+                                        {
+                                            "bg-pallet-blue": category[30],
+                                        }
+                                    )}
+                                    onMouseOver={() =>
+                                        setCategory({
+                                            ...initCatergory,
+                                            30: true,
+                                        })
+                                    }
+                                    onMouseOut={() =>
+                                        setCategory({ ...initCatergory })
+                                    }
+                                    onFocus={() =>
+                                        setCategory({
+                                            ...initCatergory,
+                                            30: true,
+                                        })
+                                    }
+                                    onBlur={() =>
+                                        setCategory({ ...initCatergory })
+                                    }
+                                >
+                                    <div>
+                                        <GiHeartPlus
+                                            size={50}
+                                            className={clsx(
+                                                "text-pallet-blue",
+                                                {
+                                                    "text-white": category[30],
+                                                }
+                                            )}
+                                        />
+                                    </div>
+                                    <p
+                                        className={clsx(
+                                            "font-proxima w-[90%] text-center",
+                                            {
+                                                "text-white": category[30],
+                                            }
+                                        )}
+                                    >
+                                        Saúde
+                                    </p>
+                                </a>
+                            </div>
+                            <div>
+                                <a
+                                    href="https://www.mercadolivre.com.br/"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className={clsx(
+                                        "w-[170px] h-[160px] flex flex-col justify-around items-center border-r border-b border-gray-300 rounded-md",
+                                        {
+                                            "bg-pallet-blue": category[31],
+                                        }
+                                    )}
+                                    onMouseOver={() =>
+                                        setCategory({
+                                            ...initCatergory,
+                                            31: true,
+                                        })
+                                    }
+                                    onMouseOut={() =>
+                                        setCategory({ ...initCatergory })
+                                    }
+                                    onFocus={() =>
+                                        setCategory({
+                                            ...initCatergory,
+                                            31: true,
+                                        })
+                                    }
+                                    onBlur={() =>
+                                        setCategory({ ...initCatergory })
+                                    }
+                                >
+                                    <div>
+                                        <FaUsers
+                                            size={50}
+                                            className={clsx(
+                                                "text-pallet-blue",
+                                                {
+                                                    "text-white": category[31],
+                                                }
+                                            )}
+                                        />
+                                    </div>
+                                    <p
+                                        className={clsx(
+                                            "font-proxima w-[90%] text-center",
+                                            {
+                                                "text-white": category[31],
+                                            }
+                                        )}
+                                    >
+                                        Serviços
+                                    </p>
+                                </a>
+                                <a
+                                    href="https://www.mercadolivre.com.br/"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className={clsx(
+                                        "w-[170px] h-[160px] flex flex-col justify-around items-center border-r border-b border-gray-300 rounded-md",
+                                        {
+                                            "bg-pallet-blue": category[32],
+                                        }
+                                    )}
+                                    onMouseOver={() =>
+                                        setCategory({
+                                            ...initCatergory,
+                                            32: true,
+                                        })
+                                    }
+                                    onMouseOut={() =>
+                                        setCategory({ ...initCatergory })
+                                    }
+                                    onFocus={() =>
+                                        setCategory({
+                                            ...initCatergory,
+                                            32: true,
+                                        })
+                                    }
+                                    onBlur={() =>
+                                        setCategory({ ...initCatergory })
+                                    }
+                                >
+                                    <div>
+                                        <HiSquaresPlus
+                                            size={50}
+                                            className={clsx(
+                                                "text-pallet-blue",
+                                                {
+                                                    "text-white": category[32],
+                                                }
+                                            )}
+                                        />
+                                    </div>
+                                    <p
+                                        className={clsx(
+                                            "font-proxima w-[90%] text-center",
+                                            {
+                                                "text-white": category[32],
+                                            }
+                                        )}
+                                    >
+                                        Mais Categorias
                                     </p>
                                 </a>
                             </div>
@@ -1673,7 +2517,9 @@ const Home: React.FC = () => {
                         <button
                             onClick={() => handleShowCategory(false)}
                             type="button"
-                            className="relative -left-[25px] bottom-64 border-none flex justify-center items-center bg-white bg-opacity-90 text-pallet-blue text-2xl w-16 h-16 rounded-full hover:shadow-lg hover:shadow-slate-500 transition-shadow ease-in-out delay-75"
+                            className={clsx("relative -left-[25px] bottom-64 border-none flex justify-center items-center bg-white bg-opacity-90 text-pallet-blue text-2xl w-16 h-16 rounded-full hover:shadow-lg hover:shadow-slate-500 transition-shadow ease-in-out delay-75", {
+                                "bottom-[12rem]":showCategory === 2,
+                            })}
                         >
                             <FcPrevious />
                         </button>
