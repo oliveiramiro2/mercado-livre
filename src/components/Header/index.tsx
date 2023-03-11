@@ -30,7 +30,7 @@ const Header: React.FC = () => {
                         </div>
                     </a>
                 </div>
-                <div className="hidden max-md:flex absolute top-[3%] left-[5%]">
+                <div className="hidden max-md:flex absolute top-[3%] right-[5%]">
                     <button type="button" className="cursor-pointer">
                         <GiHamburgerMenu />
                     </button>
