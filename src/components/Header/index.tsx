@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { IoIosSearch } from "react-icons/io";
 import { CiLocationOn } from "react-icons/ci";
 import { BiChevronDown } from "react-icons/bi";
@@ -11,6 +11,8 @@ const disneyPlus =
     "https://http2.mlstatic.com/D_NQ_618580-MLA52432822706_112022-OO.webp";
 
 const Header: React.FC = () => {
+    const [showMenu, setShowMenu] = useState<boolean>(false);
+
     return (
         <header className="h-[100px] w-screen flex flex-col bg-pallet-yellow pt-2 pl-20 pr-20">
             <div className="flex gap-x-14 max-sm:gap-x-0">
