@@ -6,6 +6,7 @@ module.exports = {
             colors: {
                 "pallet-yellow": "#fff159",
                 "pallet-blue": "#3483fa",
+                "pallet-black-opacity1": "#000000cc",
             },
             fontFamily: {
                 proxima: ["'Proxima Nova'"],

@@ -1,9 +1,22 @@
 import React, { useState } from "react";
-import { IoIosSearch, IoMdClose } from "react-icons/io";
+import {
+    AiOutlineUser,
+    AiOutlineHome,
+    AiOutlineClockCircle,
+    AiOutlineStar,
+    AiOutlineShop,
+    AiOutlineUnorderedList,
+    AiOutlineTag,
+} from "react-icons/ai";
+import { IoIosSearch, IoMdClose, IoMdPaper } from "react-icons/io";
 import { CiLocationOn } from "react-icons/ci";
 import { BiChevronDown } from "react-icons/bi";
 import { FiShoppingCart } from "react-icons/fi";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { GrTag } from "react-icons/gr";
+import { TfiHeadphoneAlt, TfiDownload } from "react-icons/tfi";
+import { TbShirt } from "react-icons/tb";
+import { FaGlobeAmericas } from "react-icons/fa";
 
 const logo =
     "https://http2.mlstatic.com/frontend-assets/ml-web-navigation/ui-navigation/5.21.22/mercadolibre/logo-pt__large_plus.png";
@@ -14,8 +27,17 @@ const Header: React.FC = () => {
     const [showMenu, setShowMenu] = useState<boolean>(false);
 
     return (
-        <header className="h-[100px] w-screen flex flex-col bg-pallet-yellow pt-2 pl-20 pr-20">
+        <header className="min-h-[100px] w-screen flex flex-col bg-pallet-yellow pt-2 max-md:pl-0 max-md:pr-0 pl-20 pr-20">
             <div className="flex gap-x-14 max-sm:gap-x-0">
+                <div className="hidden max-md:flex absolute top-4 left-1">
+                    <a href="https://www.mercadolivre.com.br/">
+                        <img
+                            src="https://http2.mlstatic.com/frontend-assets/ml-web-navigation/ui-navigation/5.22.8/mercadolibre/logo__small@2x.png"
+                            alt="Logo"
+                            className="h-6 w-10"
+                        />
+                    </a>
+                </div>
                 <div className="flex max-md:hidden">
                     <a href="https://www.mercadolivre.com.br/">
                         <div
@@ -32,17 +54,8 @@ const Header: React.FC = () => {
                         </div>
                     </a>
                 </div>
-                <div className="hidden max-md:flex absolute top-[3%] right-[5%]">
-                    <button
-                        type="button"
-                        className="cursor-pointer"
-                        onClick={() => setShowMenu(!showMenu)}
-                    >
-                        {showMenu ? <IoMdClose /> : <GiHamburgerMenu />}
-                    </button>
-                </div>
                 <div className="flex max-xl:justify-center gap-x-14 w-full">
-                    <div className="bg-white pl-2 pr-2 h-[38px] max-w-[600px] w-full min-2xl:w-[600px] flex rounded-sm shadow-md border-l-2 border-r-2 border-b border-[#fffb005d]">
+                    <div className="bg-white pl-2 pr-2 h-[38px] max-w-[600px] max-md:w-[75%] w-full min-2xl:w-[600px] flex rounded-sm shadow-md border-l-2 border-r-2 border-b border-[#fffb005d]">
                         <input
                             type="text"
                             className="outline-none h-[34px] relative top-[2px] w-full pl-2 font-proxima placeholder:text-gray-300 placeholder:font-thin placeholder:font-proxima"
@@ -52,11 +65,20 @@ const Header: React.FC = () => {
                             <button type="button" className="pl-3 pr-1 h-4/5">
                                 <IoIosSearch
                                     color="#888585"
-                                    className="relative bottom-1"
+                                    className="relative"
                                     size={21}
                                 />
                             </button>
                         </div>
+                    </div>
+                    <div className="hidden max-md:flex absolute top-[3%] right-[3%]">
+                        <button
+                            type="button"
+                            className="cursor-pointer"
+                            onClick={() => setShowMenu(!showMenu)}
+                        >
+                            {showMenu ? <IoMdClose /> : <GiHamburgerMenu />}
+                        </button>
                     </div>
                     <div className="flex max-xl:hidden">
                         <a href="https://www.mercadolivre.com.br/assinaturas/nivel-6#origin=banner-menu#DEAL_ID=&S=MKT&V=7&T=MENU&L=LOYALTYNIVEL6T3_NIVEL6&origin=banner-menu&me.position=0&me.bu_line=26&me.flow=-1&me.bu=3&me.audience=all&me.content_id=BANNER_MENU_NIVEL_1A5&me.component_id=banner_menu_web_ml&me.logic=user_journey">
@@ -69,7 +91,7 @@ const Header: React.FC = () => {
                     </div>
                 </div>
             </div>
-            <div className="flex">
+            <div className="flex w-screen">
                 <button
                     type="button"
                     className="mr-16 w-[100px] h-10 relative top-2 left-2 transition-all ease-out delay-100 hover:border border-[#eadd61] rounded max-xl:absolute max-xl:top-[8.5%] max-xl:left-[9%] max-sm:hidden"
@@ -84,42 +106,79 @@ const Header: React.FC = () => {
                         </span>
                     </div>
                 </button>
-                <ul className="flex mt-4 gap-x-5 relative left-[2%] justify-center max-sm:static max-md:left-[12%] max-sm:gap-x-2 max-lg:left-[15%] max-xl:w-full">
-                    <li className="ml-[6px] relative top-2 cursor-pointer">
-                        <div className="flex items-center">
-                            <span className="font-proxima tracking-wider text-[#00000080] text-sm max-sm:text-xs">
-                                Categorias
-                            </span>
-                            <BiChevronDown color="#9e9d9d" size={17} />
+                {showMenu ? (
+                    <div className="w-screen h-full pl-4 pt-1 flex flex-col">
+                        <div className="w-screen pl-4 pt-1 flex">
+                            <div className="w-12 h-12 rounded-full  bg-[#ededed] flex items-center justify-center">
+                                <AiOutlineUser size={40} color="#ccc" />
+                            </div>
+                            <div className="pl-3">
+                                <p className="font-proxima text-lg text-[#333] font-bold">
+                                    Bem-vindo
+                                </p>
+                                <p className="font-proxima text-sm text-[#00000073]">
+                                    Entra na sua conta para ver suas compras,
+                                    favoritos etc.
+                                </p>
+                            </div>
                         </div>
-                    </li>
-                    <li className="relative top-1 cursor-pointer min-w-[100px]">
-                        <span className="font-proxima tracking-wider text-[#00000080] text-sm max-sm:text-xs">
-                            Ofertas do dia
-                        </span>
-                    </li>
-                    <li className="relative top-1 cursor-pointer">
-                        <span className="font-proxima tracking-wider text-[#00000080] text-sm max-sm:text-xs">
-                            Histórico
-                        </span>
-                    </li>
-                    <li className="relative top-1 cursor-pointer">
-                        <span className="font-proxima tracking-wider text-[#00000080] text-sm max-sm:text-xs">
-                            Moda
-                        </span>
-                    </li>
-                    <li className="relative top-1 cursor-pointer">
-                        <span className="font-proxima tracking-wider text-[#00000080] text-sm max-sm:text-xs">
-                            Vender
-                        </span>
-                    </li>
-                    <li className="relative top-1 cursor-pointer">
-                        <span className="font-proxima tracking-wider text-[#00000080] text-sm max-sm:text-xs">
-                            Contato
-                        </span>
-                    </li>
-                </ul>
-                <ul className="flex w-full justify-end items-center gap-x-5 mr-5 mt-5 max-xl:hidden">
+                        <div className="flex gap-x-1 mb-3 ml-5 mt-3">
+                            <button
+                                type="button"
+                                className="w-[40%] h-9 rounded-md bg-pallet-blue"
+                            >
+                                <span className="font-proxima text-white">
+                                    Entre
+                                </span>
+                            </button>
+                            <button
+                                type="button"
+                                className="w-[40%] h-9 rounded-md bg-white border border-pallet-blue"
+                            >
+                                <span className="font-proxima text-pallet-blue">
+                                    Crie a sua conta
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                ) : (
+                    <ul className="flex mt-4 gap-x-5 relative left-[2%] justify-center max-sm:static max-md:left-[12%] max-sm:gap-x-2 max-xl:w-full">
+                        <li className="ml-[6px] relative top-2 cursor-pointer">
+                            <div className="flex items-center">
+                                <span className="font-proxima tracking-wider text-[#00000080] text-sm max-sm:text-xs">
+                                    Categorias
+                                </span>
+                                <BiChevronDown color="#9e9d9d" size={17} />
+                            </div>
+                        </li>
+                        <li className="relative top-1 cursor-pointer min-w-[100px]">
+                            <span className="font-proxima tracking-wider text-[#00000080] text-sm max-sm:text-xs">
+                                Ofertas do dia
+                            </span>
+                        </li>
+                        <li className="relative top-1 cursor-pointer">
+                            <span className="font-proxima tracking-wider text-[#00000080] text-sm max-sm:text-xs">
+                                Histórico
+                            </span>
+                        </li>
+                        <li className="relative top-1 cursor-pointer">
+                            <span className="font-proxima tracking-wider text-[#00000080] text-sm max-sm:text-xs">
+                                Moda
+                            </span>
+                        </li>
+                        <li className="relative top-1 cursor-pointer">
+                            <span className="font-proxima tracking-wider text-[#00000080] text-sm max-sm:text-xs">
+                                Vender
+                            </span>
+                        </li>
+                        <li className="relative top-1 cursor-pointer">
+                            <span className="font-proxima tracking-wider text-[#00000080] text-sm max-sm:text-xs">
+                                Contato
+                            </span>
+                        </li>
+                    </ul>
+                )}
+                <ul className="flex w-full max-w-[39%] justify-end items-center gap-x-5 mr-5 mt-5 max-xl:hidden">
                     <li>
                         <span className="font-proxima cursor-pointer tracking-wider text-[#00000080] text-sm">
                             Crie sua conta
@@ -140,6 +199,186 @@ const Header: React.FC = () => {
                     </li>
                 </ul>
             </div>
+            {showMenu && (
+                <div className="bg-white">
+                    <ul className="mt-7 pb-9 pl-10 flex flex-col gap-y-4 border-b border-gray-300">
+                        <li>
+                            <a
+                                href="https://www.mercadolivre.com.br/"
+                                className="flex items-end gap-x-3"
+                            >
+                                <AiOutlineHome
+                                    className="text-pallet-black-opacity1"
+                                    size={25}
+                                />
+                                <span className="font-proxima text-sm text-pallet-black-opacity1">
+                                    Início
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="https://www.mercadolivre.com.br/"
+                                className="flex items-end gap-x-3"
+                            >
+                                <GrTag
+                                    className="text-pallet-black-opacity1"
+                                    size={21}
+                                />
+                                <span className="font-proxima text-sm text-pallet-black-opacity1">
+                                    Ofertas do dia
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="https://www.mercadolivre.com.br/"
+                                className="flex items-end gap-x-3"
+                            >
+                                <AiOutlineClockCircle
+                                    className="text-pallet-black-opacity1"
+                                    size={25}
+                                />
+                                <span className="font-proxima text-sm text-pallet-black-opacity1">
+                                    Histórico
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="https://www.mercadolivre.com.br/"
+                                className="flex items-end gap-x-3"
+                            >
+                                <TfiHeadphoneAlt
+                                    className="text-pallet-black-opacity1"
+                                    size={23}
+                                />
+                                <span className="font-proxima text-sm text-pallet-black-opacity1">
+                                    Contato
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul className="mt-7 pb-9 pl-10 flex flex-col gap-y-4 border-b border-gray-300">
+                        <li>
+                            <a
+                                href="https://www.mercadolivre.com.br/"
+                                className="flex items-end gap-x-3"
+                            >
+                                <TbShirt
+                                    className="text-pallet-black-opacity1"
+                                    size={25}
+                                />
+                                <span className="font-proxima text-sm text-pallet-black-opacity1">
+                                    Moda
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="https://www.mercadolivre.com.br/"
+                                className="flex items-end gap-x-3"
+                            >
+                                <AiOutlineStar
+                                    className="text-pallet-black-opacity1"
+                                    size={25}
+                                />
+                                <span className="font-proxima text-sm text-pallet-black-opacity1">
+                                    Mais vendidos
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="https://www.mercadolivre.com.br/"
+                                className="flex items-end gap-x-3"
+                            >
+                                <FaGlobeAmericas
+                                    className="text-pallet-black-opacity1"
+                                    size={23}
+                                />
+                                <span className="font-proxima text-sm text-pallet-black-opacity1">
+                                    Compra Internacional
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="https://www.mercadolivre.com.br/"
+                                className="flex items-end gap-x-3"
+                            >
+                                <AiOutlineShop
+                                    className="text-pallet-black-opacity1"
+                                    size={25}
+                                />
+                                <span className="font-proxima text-sm text-pallet-black-opacity1">
+                                    Lojas oficiais
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="https://www.mercadolivre.com.br/"
+                                className="flex items-end gap-x-3"
+                            >
+                                <AiOutlineUnorderedList
+                                    className="text-pallet-black-opacity1"
+                                    size={25}
+                                />
+                                <span className="font-proxima text-sm text-pallet-black-opacity1">
+                                    Categorias
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul className="mt-7 pb-9 pl-10 flex flex-col gap-y-4 border-b border-gray-300">
+                        <li>
+                            <a
+                                href="https://www.mercadolivre.com.br/"
+                                className="flex items-end gap-x-3"
+                            >
+                                <IoMdPaper
+                                    className="text-pallet-black-opacity1"
+                                    size={25}
+                                />
+                                <span className="font-proxima text-sm text-pallet-black-opacity1">
+                                    Resumo
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="https://www.mercadolivre.com.br/"
+                                className="flex items-end gap-x-3"
+                            >
+                                <AiOutlineTag
+                                    className="text-pallet-black-opacity1"
+                                    size={25}
+                                />
+                                <span className="font-proxima text-sm text-pallet-black-opacity1">
+                                    Vender
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul className="mt-7 pb-9 pl-10 flex flex-col gap-y-4 border-b border-gray-300">
+                        <li>
+                            <a
+                                href="https://www.mercadolivre.com.br/"
+                                className="flex items-end gap-x-3"
+                            >
+                                <TfiDownload
+                                    className="text-pallet-black-opacity1"
+                                    size={19}
+                                />
+                                <span className="font-proxima text-sm text-pallet-black-opacity1">
+                                    Compre e venda com o app!
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            )}
         </header>
     );
 };
