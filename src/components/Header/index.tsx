@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { IoIosSearch } from "react-icons/io";
+import { IoIosSearch, IoMdClose } from "react-icons/io";
 import { CiLocationOn } from "react-icons/ci";
 import { BiChevronDown } from "react-icons/bi";
 import { FiShoppingCart } from "react-icons/fi";
@@ -33,8 +33,12 @@ const Header: React.FC = () => {
                     </a>
                 </div>
                 <div className="hidden max-md:flex absolute top-[3%] right-[5%]">
-                    <button type="button" className="cursor-pointer">
-                        <GiHamburgerMenu />
+                    <button
+                        type="button"
+                        className="cursor-pointer"
+                        onClick={() => setShowMenu(!showMenu)}
+                    >
+                        {showMenu ? <IoMdClose /> : <GiHamburgerMenu />}
                     </button>
                 </div>
                 <div className="flex max-xl:justify-center gap-x-14 w-full">
