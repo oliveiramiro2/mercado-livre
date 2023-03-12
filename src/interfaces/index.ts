@@ -35,4 +35,5 @@ export interface IPropsPaymentMidContent {
     alt: string;
     title: string;
     description: string;
+    key?: number;
 }
