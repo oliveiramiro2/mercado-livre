@@ -29,3 +29,10 @@ export interface IPhotosSwiper {
     alt: string;
     id: number;
 }
+
+export interface IPropsPaymentMidContent {
+    link: string;
+    alt: string;
+    title: string;
+    description: string;
+}
