@@ -23,3 +23,9 @@ export interface IPropsMidSecondLevelHeader {
 export interface IPropsRightSecondLevelHeader {
     text: string;
 }
+
+export interface IPhotosSwiper {
+    link: string;
+    alt: string;
+    id: number;
+}
