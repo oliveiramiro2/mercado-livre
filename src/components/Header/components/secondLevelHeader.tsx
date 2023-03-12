@@ -4,7 +4,33 @@ import { CiLocationOn } from "react-icons/ci";
 import { BiChevronDown } from "react-icons/bi";
 import { FiShoppingCart } from "react-icons/fi";
 
-import { IPropsSecondLevelHeader } from "../../../interfaces";
+import {
+    IPropsMidSecondLevelHeader,
+    IPropsRightSecondLevelHeader,
+    IPropsSecondLevelHeader,
+} from "../../../interfaces";
+import { midHeader } from "../../../utils/vars";
+
+const ContainMidListHeader: React.FC<IPropsMidSecondLevelHeader> = ({
+    text,
+    classVariant,
+}) => (
+    <li className={`relative top-1 cursor-pointer ${classVariant}`}>
+        <span className="font-proxima tracking-wider text-pallet-black-opacity2 text-sm max-sm:text-xs">
+            {text}
+        </span>
+    </li>
+);
+
+const ContainRightListHeader: React.FC<IPropsRightSecondLevelHeader> = ({
+    text,
+}) => (
+    <li>
+        <span className="font-proxima cursor-pointer tracking-wider text-pallet-black-opacity2 text-sm">
+            {text}
+        </span>
+    </li>
+);
 
 const SecondLevelHeader: React.FC<IPropsSecondLevelHeader> = ({ showMenu }) => (
     <div className="flex w-screen">
@@ -14,7 +40,7 @@ const SecondLevelHeader: React.FC<IPropsSecondLevelHeader> = ({ showMenu }) => (
         >
             <div className="w-[101px] h-8 flex justify-start text-left">
                 <CiLocationOn size={30} />
-                <span className="text-xs font-proxima relative top-1 font-thin text-[#00000080]">
+                <span className="text-xs font-proxima relative top-1 font-thin text-pallet-black-opacity2">
                     Informe seu{" "}
                     <span className="relative bottom-[2px] text-[13px]">
                         CEP
@@ -59,55 +85,25 @@ const SecondLevelHeader: React.FC<IPropsSecondLevelHeader> = ({ showMenu }) => (
             <ul className="flex mt-4 gap-x-5 relative left-[2%] justify-center max-sm:static max-md:left-[12%] max-sm:gap-x-2 max-xl:w-full">
                 <li className="ml-[6px] relative top-2 cursor-pointer">
                     <div className="flex items-center">
-                        <span className="font-proxima tracking-wider text-[#00000080] text-sm max-sm:text-xs">
+                        <span className="font-proxima tracking-wider text-pallet-black-opacity2 text-sm max-sm:text-xs">
                             Categorias
                         </span>
                         <BiChevronDown color="#9e9d9d" size={17} />
                     </div>
                 </li>
-                <li className="relative top-1 cursor-pointer min-w-[100px]">
-                    <span className="font-proxima tracking-wider text-[#00000080] text-sm max-sm:text-xs">
-                        Ofertas do dia
-                    </span>
-                </li>
-                <li className="relative top-1 cursor-pointer">
-                    <span className="font-proxima tracking-wider text-[#00000080] text-sm max-sm:text-xs">
-                        Histórico
-                    </span>
-                </li>
-                <li className="relative top-1 cursor-pointer">
-                    <span className="font-proxima tracking-wider text-[#00000080] text-sm max-sm:text-xs">
-                        Moda
-                    </span>
-                </li>
-                <li className="relative top-1 cursor-pointer">
-                    <span className="font-proxima tracking-wider text-[#00000080] text-sm max-sm:text-xs">
-                        Vender
-                    </span>
-                </li>
-                <li className="relative top-1 cursor-pointer">
-                    <span className="font-proxima tracking-wider text-[#00000080] text-sm max-sm:text-xs">
-                        Contato
-                    </span>
-                </li>
+                {midHeader.map(value => (
+                    <ContainMidListHeader
+                        key={value.id}
+                        text={value.text}
+                        classVariant={value.classVariant}
+                    />
+                ))}
             </ul>
         )}
         <ul className="flex w-full max-w-[39%] justify-end items-center gap-x-5 mr-5 mt-5 max-xl:hidden">
-            <li>
-                <span className="font-proxima cursor-pointer tracking-wider text-[#00000080] text-sm">
-                    Crie sua conta
-                </span>
-            </li>
-            <li>
-                <span className="font-proxima cursor-pointer tracking-wider text-[#00000080] text-sm">
-                    Entre
-                </span>
-            </li>
-            <li>
-                <span className="font-proxima cursor-pointer tracking-wider text-[#00000080] text-sm">
-                    Compras
-                </span>
-            </li>
+            <ContainRightListHeader text="Crie sua conta" />
+            <ContainRightListHeader text="Entre" />
+            <ContainRightListHeader text="Compras" />
             <li className="font-proxima cursor-pointer">
                 <FiShoppingCart color="#00000080" size={18} />
             </li>
