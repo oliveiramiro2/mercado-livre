@@ -19,18 +19,138 @@
 .swiper-button-next, .swiper-button-prev {
     scale: 0.3;
     background: #fff;
-    width: 150px;
-    height: 200px;
+    width: 180px;
+    height: 250px;
+    position: absolute;
+    top: 25%;
 }
 
 .swiper-button-next {
-    left: 92.3%;
-    top: 30%;
     border-radius: 100px 0 0 100px;
 }
 
 .swiper-button-prev {
-    left: -4.5%;
-    top: 30%;
     border-radius: 0 100px 100px 0;
+}
+
+
+@media (min-width: 1300px) {
+    .swiper-button-next {
+        right: -3.5%;
+    }
+
+    .swiper-button-prev {
+        left: -5%;
+    }
+}
+
+@media (max-width: 1300px) {
+    .swiper-button-next {
+        right: -4%;
+    }
+
+    .swiper-button-prev {
+        left: -5.5%;
+    }
+}
+
+
+@media (max-width: 1200px) {
+    .swiper-button-next {
+        right: -4.5%;
+    }
+
+    .swiper-button-prev {
+        left: -6%;
+    }
+}
+
+@media (max-width: 1100px) {
+    .swiper-button-next {
+        right: -5.2%;
+    }
+
+    .swiper-button-prev {
+        left: -7%;
+    }
+}
+
+@media (max-width: 900px) {
+    .swiper-button-next {
+        right: -7%;
+    }
+
+    .swiper-button-prev {
+        left: -9%;
+    }
+}
+
+@media (max-width: 660px) {
+    .swiper-button-next {
+        right: -9%;
+    }
+
+    .swiper-button-prev {
+        left: -11%;
+    }
+}
+
+@media (max-width: 560px) {
+    .swiper-button-next {
+        right: -11%;
+    }
+
+    .swiper-button-prev {
+        left: -14%;
+    }
+}
+
+@media (max-width: 500px) {
+    .swiper-button-next {
+        right: -12.5%;
+    }
+
+    .swiper-button-prev {
+        left: -16%;
+    }
+}
+
+@media (max-width: 410px) {
+    .swiper-button-next {
+        right: -18%;
+    }
+
+    .swiper-button-prev {
+        left: -18%;
+    }
+}
+
+@media (max-width: 360px) {
+    .swiper-button-next {
+        right: -22%;
+    }
+
+    .swiper-button-prev {
+        left: -22%;
+    }
+}
+
+@media (max-width: 360px) {
+    .swiper-button-next {
+        right: -25%;
+    }
+
+    .swiper-button-prev {
+        left: -25%;
+    }
+}
+
+@media (max-width: 250px) {
+    .swiper-button-next {
+        right: -32%;
+    }
+
+    .swiper-button-prev {
+        left: -32%;
+    }
 }
