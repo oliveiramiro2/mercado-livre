@@ -1,9 +1,9 @@
 import React from "react";
 
 const PaymentSection: React.FC = () => (
-        <section className="w-screen h-[170px] flex justify-center items-center">
-            <div className="bg-white w-[87%] h-[90px] flex shadow-lg shadow-slate-500">
-                <div className="w-[260px] h-[90px] border-r border-[#eee] p-1 flex">
+        <section className="w-screen min-h-[170px] max-xl:mb-10 max-xl:mt-10 flex justify-center items-center">
+            <div className="bg-white w-[87%] gap-y-6 min-h-[90px] flex shadow-lg shadow-slate-500 max-xl:flex-wrap">
+                <div className="w-[260px] h-[90px] max-sm:border-none border-r border-[#eee] p-1 flex">
                     <div className="w-1 h-full bg-pallet-blue" />
                     <div className="w-full text-left flex flex-col justify-center pl-4">
                         <p className="text-xl text-[#333]">
