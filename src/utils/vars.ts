@@ -1,4 +1,16 @@
-import { IPropsMidSecondLevelHeader, IPhotosSwiper, IPropsPaymentMidContent, IOffer } from "../interfaces"
+import { IPropsMidSecondLevelHeader, IPhotosSwiper, IPropsPaymentMidContent, IOffer, IPropsContentTodayOffer } from "../interfaces"
+import {
+    offer12,
+    offer11,
+    offer21,
+    offer22,
+    offer31,
+    offer32,
+    offer41,
+    offer42,
+    offer51,
+    offer52,
+} from "../utils/imgsImported";
 
 export const midHeader: IPropsMidSecondLevelHeader[] = [
     {text: "Ofertas do dia", classVariant: "min-w-[100px]", id: 0},
@@ -49,3 +61,11 @@ export const offerInit: IOffer = {
     offer4: false,
     offer5: false,
 };
+
+export const offerTodayContent: IPropsContentTodayOffer[] = [
+    {alt: "oferta 1", link: "https://http2.mlstatic.com/D_Q_NP_802413-MLA50710963248_072022-AB.webp", id: 1, img1: offer11, img2: offer12},
+    {alt: "oferta 2", link: "https://http2.mlstatic.com/D_Q_NP_927250-MLB52007266563_102022-AB.webp", id: 2, img1: offer21, img2: offer22},
+    {alt: "oferta 3", link: "https://http2.mlstatic.com/D_Q_NP_908551-MLB53668961915_022023-AB.webp", id: 3, img1: offer31, img2: offer32},
+    {alt: "oferta 4", link: "https://http2.mlstatic.com/D_Q_NP_775529-MLB51802661099_102022-AB.webp", id: 4, img1: offer41, img2: offer42},
+    {alt: "oferta 5", link: "https://http2.mlstatic.com/D_Q_NP_781836-MLB52319224650_112022-AB.webp", id: 5, img1: offer51, img2: offer52},
+]
