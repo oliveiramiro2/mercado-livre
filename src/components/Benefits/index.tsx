@@ -77,7 +77,7 @@ const Benefits: React.FC = () => {
                         Conferir todas as vantagens
                     </a>
                 </div>
-                <div className="flex gap-x-4 cursor-pointer flex-wrap">
+                <div className="flex gap-x-4 cursor-pointer">
                     <div
                         ref={loyaltyRef1}
                         className={clsx("w-96 h-[260px]", {
