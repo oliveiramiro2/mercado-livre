@@ -9,7 +9,7 @@ const TodayOffers: React.FC = () => {
 
     return (
         <section className="flex justify-center">
-            <div className="w-[87%] h-[460px]">
+            <div className="w-[87%] min-h-[460px]">
                 <div className="flex gap-x-3">
                     <h2 className="text-[26px] text-[#666] font-thin">
                         Ofertas do dia
@@ -21,7 +21,7 @@ const TodayOffers: React.FC = () => {
                         Ver todas
                     </a>
                 </div>
-                <div className="flex mt-4">
+                <div className="flex mt-4 max-xl:flex-wrap max-xl:gap-y-5">
                     {offerTodayContent.map(value => (
                         <ContainTodayOffer
                             alt={value.alt}

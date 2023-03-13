@@ -51,14 +51,14 @@ const ContainTodayOffer: React.FC<IPropsContainTodayOffer> = ({
 
     return (
     <div
-        className="w-[366px] cursor-pointer"
+        className="w-[366px] cursor-pointer max-xl:w-[210px]"
         onMouseOver={() => handleShowOffer(id, true)}
         onMouseOut={() => handleShowOffer(id, false)}
         onFocus={() => handleShowOffer(id, true)}
         onBlur={() => handleShowOffer(id, false)}
     >
         <div
-            className={clsx("flex flex-col w-[224px]", {
+            className={clsx("flex flex-col w-[224px] max-xl:w-[200px]", {
                 "shadow-xl shadow-zinc-400 delay-100 transition-shadow ease-linear":
                     showInfoOffer,
             })}
