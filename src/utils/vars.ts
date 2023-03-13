@@ -1,4 +1,4 @@
-import { IPropsMidSecondLevelHeader, IPhotosSwiper, IPropsPaymentMidContent } from "../interfaces"
+import { IPropsMidSecondLevelHeader, IPhotosSwiper, IPropsPaymentMidContent, IOffer } from "../interfaces"
 
 export const midHeader: IPropsMidSecondLevelHeader[] = [
     {text: "Ofertas do dia", classVariant: "min-w-[100px]", id: 0},
@@ -41,3 +41,11 @@ export const containMidPaymentContent: IPropsPaymentMidContent[] = [
         key: 2,
     },
 ]
+
+export const offerInit: IOffer = {
+    offer1: false,
+    offer2: false,
+    offer3: false,
+    offer4: false,
+    offer5: false,
+};

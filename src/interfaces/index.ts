@@ -37,3 +37,11 @@ export interface IPropsPaymentMidContent {
     description: string;
     key?: number;
 }
+
+export interface IOffer {
+    offer1: boolean;
+    offer2: boolean;
+    offer3: boolean;
+    offer4: boolean;
+    offer5: boolean;
+}
