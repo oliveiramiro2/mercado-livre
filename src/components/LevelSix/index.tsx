@@ -1,23 +1,11 @@
 import React from "react";
 
-import { IPropsContainLevelSix } from "../../interfaces";
 import { levelSixContent } from "../../utils/vars";
-
-const ContainLevelSix: React.FC<IPropsContainLevelSix> = ({
-    alt,
-    link,
-    text,
-    classWidth,
-}) => (
-    <div className={`h-[74px] flex items-center ${classWidth}`}>
-        <img src={link} alt={alt} />
-        <span className="text-base ml-4 mr-4">{text}</span>
-    </div>
-);
+import ContainLevelSix from "./components/containLevelSix";
 
 const LevelSix: React.FC = () => (
-    <section className="w-screen h-[420px] flex items-center justify-center">
-        <div className="w-[87%] h-[340px] rounded-lg shadow-lg shadow-slate-500">
+    <section className="w-screen min-h-[420px] flex items-center justify-center">
+        <div className="w-[87%] min-h-[340px] rounded-lg shadow-lg shadow-slate-500">
             <div className="w-full flex h-[87px] rounded-t-lg pt-4 pr-6 pb-4 pl-6 bg-gradient-to-r from-[#a90f90] via-[#a90f90] to-[#0c1a51]  shadow-lg shadow-slate-500">
                 <div className="flex w-full items-center">
                     <span className="text-white text-[26px]">
@@ -41,7 +29,7 @@ const LevelSix: React.FC = () => (
                     </div>
                 </div>
             </div>
-            <div className="w-full h-[172px] bg-white p-6 border-b border-gray-200">
+            <div className="w-full min-h-[172px] bg-white p-6 border-b border-gray-200">
                 <div>
                     <span className="text-[20px]">
                         Conte com os melhores benefícios no Mercado Livre e do
