@@ -47,8 +47,8 @@ export interface IOffer {
 }
 
 export interface IPropsContainTodayOffer {
-    handleShowOffer: Function;
-    showInfoOffer: () => boolean;
+    setShowInfoOffer: Function;
+    showInfoOffer: IOffer;
     link: string;
     alt: string;
     id: number;

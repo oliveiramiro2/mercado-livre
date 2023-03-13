@@ -1,74 +1,11 @@
 import React, { useState } from "react";
-import clsx from "clsx";
 
-import { IOffer, IPropsContainTodayOffer } from "../../interfaces";
+import { IOffer } from "../../interfaces";
 import { offerInit, offerTodayContent } from "../../utils/vars";
-
-const ContainTodayOffer: React.FC<IPropsContainTodayOffer> = ({
-    handleShowOffer,
-    showInfoOffer,
-    link,
-    alt,
-    id,
-    img1,
-    img2,
-}) => (
-    <div
-        className="w-[366px] cursor-pointer"
-        onMouseOver={() => handleShowOffer(id, true)}
-        onMouseOut={() => handleShowOffer(id, false)}
-        onFocus={() => handleShowOffer(id, true)}
-        onBlur={() => handleShowOffer(id, false)}
-    >
-        <div
-            className={clsx("flex flex-col w-[224px]", {
-                "shadow-xl shadow-zinc-400 delay-100 transition-shadow ease-linear":
-                    showInfoOffer,
-            })}
-        >
-            <img src={link} alt={alt} className="w-56 h-56" />
-            <img src={showInfoOffer() ? img2 : img1} alt={alt} />
-        </div>
-    </div>
-);
+import ContainTodayOffer from "./components/containTodayOffer";
 
 const TodayOffers: React.FC = () => {
     const [showInfoOffer, setShowInfoOffer] = useState<IOffer>(offerInit);
-
-    const handleShowOffer: Function = (index: number, action: boolean): void => {
-        switch (index) {
-            case 1:
-                setShowInfoOffer({ ...offerInit, offer1: action });
-                break;
-            case 2:
-                setShowInfoOffer({ ...offerInit, offer2: action });
-                break;
-            case 3:
-                setShowInfoOffer({ ...offerInit, offer3: action });
-                break;
-            case 4:
-                setShowInfoOffer({ ...offerInit, offer4: action });
-                break;
-            default:
-                setShowInfoOffer({ ...offerInit, offer5: action });
-                break;
-        }
-    };
-
-    const hoverImgOffer: Function = (index: number): boolean => {
-        switch (index) {
-            case 1:
-                return showInfoOffer.offer1
-            case 2:
-                return showInfoOffer.offer2
-            case 3:
-                return showInfoOffer.offer3
-            case 4:
-                return showInfoOffer.offer4
-            default:
-                return showInfoOffer.offer5
-        }
-    };
 
     return (
         <section className="flex justify-center">
@@ -88,10 +25,10 @@ const TodayOffers: React.FC = () => {
                     {offerTodayContent.map(value => (
                         <ContainTodayOffer
                             alt={value.alt}
-                            handleShowOffer={handleShowOffer}
+                            setShowInfoOffer={setShowInfoOffer}
                             link={value.link}
                             id={value.id}
-                            showInfoOffer={() => hoverImgOffer(value.id)}
+                            showInfoOffer={showInfoOffer}
                             img1={value.img1}
                             img2={value.img2}
                             key={value.id}
