@@ -1,5 +1,20 @@
 import React from "react";
 
+import { IPropsContainLevelSix } from "../../interfaces";
+import { levelSixContent } from "../../utils/vars";
+
+const ContainLevelSix: React.FC<IPropsContainLevelSix> = ({
+    alt,
+    link,
+    text,
+    classWidth,
+}) => (
+    <div className={`h-[74px] flex items-center ${classWidth}`}>
+        <img src={link} alt={alt} />
+        <span className="text-base ml-4 mr-4">{text}</span>
+    </div>
+);
+
 const LevelSix: React.FC = () => (
     <section className="w-screen h-[420px] flex items-center justify-center">
         <div className="w-[87%] h-[340px] rounded-lg shadow-lg shadow-slate-500">
@@ -33,43 +48,15 @@ const LevelSix: React.FC = () => (
                         Mercado Pago
                     </span>
                     <div className="flex w-full mt-8">
-                        <div className="w-[273px] h-[74px] flex items-center">
-                            <img
-                                src="https://http2.mlstatic.com/resources/frontend/statics/loyal/partners/widget-l6/dplus.svg"
-                                alt="Disney Plus"
+                        {levelSixContent.map(value => (
+                            <ContainLevelSix
+                                alt={value.alt}
+                                classWidth={value.classWidth}
+                                link={value.link}
+                                text={value.text}
+                                key={value.id}
                             />
-                            <span className="text-base ml-4 mr-4">
-                                Disney+ sem custo
-                            </span>
-                        </div>
-                        <div className="w-[273px] h-[74px] flex items-center">
-                            <img
-                                src="https://http2.mlstatic.com/resources/frontend/statics/loyal/partners/widget-l6/starplus.svg"
-                                alt="Star Plus"
-                            />
-                            <span className="text-base ml-4 mr-4">
-                                Star+ sem custo
-                            </span>
-                        </div>
-                        <div className="w-[300px] h-[74px] flex items-center">
-                            <img
-                                src="https://http2.mlstatic.com/resources/frontend/statics/loyal/v2/truckgiftv4@2x.png"
-                                alt="Frete Grátis"
-                            />
-                            <span className="text-sm ml-4 mr-4 tracking-tighter">
-                                Frete grátis e rápido a partir de R$ 79 e 45%
-                                OFF em fretes de menos de R$ 79
-                            </span>
-                        </div>
-                        <div className="w-[300px] h-[74px] flex items-center">
-                            <img
-                                src="https://http2.mlstatic.com/resources/frontend/statics/loyal/ultrapasse-widget@2x.png"
-                                alt="Descontos"
-                            />
-                            <span className="text-base ml-4 mr-4">
-                                60% OFF no Ultrapasse e outros benefícios
-                            </span>
-                        </div>
+                        ))}
                     </div>
                 </div>
             </div>

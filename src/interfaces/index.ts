@@ -63,3 +63,11 @@ export interface IPropsContentTodayOffer {
     img1: string;
     img2: string;
 }
+
+export interface IPropsContainLevelSix {
+    alt: string;
+    link: string;
+    text: string;
+    classWidth: string;
+    id?: number;
+}
