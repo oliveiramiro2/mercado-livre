@@ -98,7 +98,7 @@ const Benefits: React.FC = () => {
 
     return (
         <section className="w-screen min-h-[400px] flex items-center justify-center">
-            <div className="w-[87%] min-h-[320px] border border-black">
+            <div className="w-[87%] min-h-[320px]">
                 <div className="flex gap-x-5 mb-[22px]">
                     <h2 className="text-[26px] font-light">
                         Benefícios do Mercado Pontos
