@@ -3,6 +3,39 @@ import gsap from "gsap";
 import clsx from "clsx";
 import { FcNext, FcPrevious } from "react-icons/fc";
 
+import { IPropsContainBenefits } from "../../interfaces";
+
+const ContainBenefits: React.FC<IPropsContainBenefits> = ({
+    alt,
+    link1,
+    link2,
+    text1,
+    text2,
+    text3,
+}) => (
+    <div>
+        <img src={link1} alt={alt} className="w-96 h-[250px] rounded-md" />
+        <div className="relative bottom-[100px] left-[13px]">
+            <div className="flex">
+                <img src={link2} alt="icon" className="w-20 h-20 rounded-lg" />
+                <div className="flex flex-col justify-center pl-4">
+                    {text1.length > 1 && (
+                        <span className="text-[12px] font-semibold text-white">
+                            {text1}
+                        </span>
+                    )}
+                    <span className="text-[22px] font-semibold text-white">
+                        {text2}
+                    </span>
+                    <span className="text-white text-lg tracking-wide">
+                        {text3}
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+);
+
 const Benefits: React.FC = () => {
     const [showLoyalty4, setShowLoyalty4] = useState<boolean>(false);
 
@@ -84,7 +117,7 @@ const Benefits: React.FC = () => {
                             hidden: showLoyalty4,
                         })}
                     >
-                        <img
+                        {/* <img
                             src="https://http2.mlstatic.com/resources/frontend/statics/loyal/partners/disney/hub-widget-disney-star/Widget_Multicontent_Latam_768-x-566px.jpg"
                             alt="Disney e Star Plus"
                             className="w-96 h-[250px] rounded-md"
@@ -105,7 +138,8 @@ const Benefits: React.FC = () => {
                                     </span>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
+                        
                     </div>
                     <div className="w-96 h-[260px] cursor-pointer">
                         <img

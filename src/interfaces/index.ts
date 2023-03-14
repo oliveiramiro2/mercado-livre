@@ -71,3 +71,13 @@ export interface IPropsContainLevelSix {
     classWidth: string;
     id?: number;
 }
+
+export interface IPropsContainBenefits {
+    id?: number;
+    link1: string;
+    link2: string;
+    alt: string;
+    text1: string;
+    text2: string;
+    text3: string;
+}
