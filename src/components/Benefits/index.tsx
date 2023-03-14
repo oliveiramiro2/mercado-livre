@@ -14,8 +14,8 @@ const ContainBenefits: React.FC<IPropsContainBenefits> = ({
     text3,
 }) => (
     <div>
-        <img src={link1} alt={alt} className="w-96 h-[250px] rounded-md" />
-        <div className="relative bottom-[100px] left-[13px]">
+        <img src={link1} alt={alt} className="w-96 h-[250px] rounded-md cursor-pointer" />
+        <div className="relative bottom-[100px] left-[13px] cursor-pointer">
             <div className="flex">
                 <img src={link2} alt="icon" className="w-20 h-20 rounded-lg" />
                 <div className="flex flex-col justify-center pl-4">
@@ -98,7 +98,7 @@ const Benefits: React.FC = () => {
 
     return (
         <section className="w-screen min-h-[400px] flex items-center justify-center">
-            <div className="w-[87%] min-h-[320px]">
+            <div className="w-[87%] min-h-[320px] border border-black">
                 <div className="flex gap-x-5 mb-[22px]">
                     <h2 className="text-[26px] font-light">
                         Benefícios do Mercado Pontos
@@ -113,122 +113,53 @@ const Benefits: React.FC = () => {
                 <div className="flex gap-x-4">
                     <div
                         ref={loyaltyRef1}
-                        className={clsx("w-96 h-[260px] cursor-pointer", {
+                        className={clsx("w-96 h-[260px]", {
                             hidden: showLoyalty4,
                         })}
                     >
-                        {/* <img
-                            src="https://http2.mlstatic.com/resources/frontend/statics/loyal/partners/disney/hub-widget-disney-star/Widget_Multicontent_Latam_768-x-566px.jpg"
+                        <ContainBenefits
                             alt="Disney e Star Plus"
-                            className="w-96 h-[250px] rounded-md"
+                            link1="https://http2.mlstatic.com/resources/frontend/statics/loyal/partners/disney/hub-widget-disney-star/Widget_Multicontent_Latam_768-x-566px.jpg"
+                            link2="https://http2.mlstatic.com/resources/frontend/statics/loyal/partners/disneyplus/comboplus-square.jpg"
+                            text1=""
+                            text2="Sem custo com o nível 6"
+                            text3="Disney+ e Star+"
                         />
-                        <div className="relative bottom-[100px] left-[13px]">
-                            <div className="flex">
-                                <img
-                                    src="https://http2.mlstatic.com/resources/frontend/statics/loyal/partners/disneyplus/comboplus-square.jpg"
-                                    alt="icon"
-                                    className="w-20 h-20 rounded-lg"
-                                />
-                                <div className="flex flex-col justify-center pl-4">
-                                    <span className="text-[22px] font-semibold text-white">
-                                        Sem custo com o nível 6
-                                    </span>
-                                    <span className="text-white text-lg tracking-wide">
-                                        Disney+ e Star+
-                                    </span>
-                                </div>
-                            </div>
-                        </div> */}
-                        <ContainBenefits alt="" link1="" link2="" text1="" text2="" text3="" />
                     </div>
-                    <div className="w-96 h-[260px] cursor-pointer">
-                        {/* <img
-                            src="https://http2.mlstatic.com/resources/frontend/statics/loyal/partners/hbo/widget/HBOMax_widgetmulti_mobdsk_mlb_@2x.webp"
+                    <div className="w-96 h-[260px]">
+                        <ContainBenefits
                             alt="HBO Max"
-                            className="w-96 h-[250px] rounded-md"
+                            link1="https://http2.mlstatic.com/resources/frontend/statics/loyal/partners/hbo/widget/HBOMax_widgetmulti_mobdsk_mlb_@2x.webp"
+                            link2="https://http2.mlstatic.com/resources/frontend/statics/loyal/partners/hbomax/logo/logoSquare@2x.png?v=1"
+                            text1="7 DIAS GRÁTIS"
+                            text2="Até 50% OFF"
+                            text3="HBO Max"
                         />
-                        <div className="relative bottom-[100px] left-[13px]">
-                            <div className="flex">
-                                <img
-                                    src="https://http2.mlstatic.com/resources/frontend/statics/loyal/partners/hbomax/logo/logoSquare@2x.png?v=1"
-                                    alt="Icon"
-                                    className="w-20 h-20 rounded-lg"
-                                />
-                                <div className="flex flex-col justify-center pl-4">
-                                    <span className="text-[12px] font-semibold text-white">
-                                        7 DIAS GRÁTIS
-                                    </span>
-                                    <span className="text-[22px] font-semibold text-white">
-                                        Até 50% OFF
-                                    </span>
-                                    <span className="text-white text-lg tracking-wide">
-                                        HBO Max
-                                    </span>
-                                </div>
-                            </div>
-                        </div> */}
-                        <ContainBenefits alt="" link1="" link2="" text1="" text2="" text3="" />
                     </div>
-                    <div className="w-96 h-[260px] cursor-pointer">
-                        {/* <img
-                            src="https://http2.mlstatic.com/resources/frontend/statics/loyal/partners/paramount/widgets/paramount_widgetmulti_mobdsk_mlb_@2x.jpg"
+                    <div className="w-96 h-[260px]">
+                        <ContainBenefits
                             alt="Paramount Plus"
-                            className="w-96 h-[250px] rounded-md"
+                            link1="https://http2.mlstatic.com/resources/frontend/statics/loyal/partners/paramount/widgets/paramount_widgetmulti_mobdsk_mlb_@2x.jpg"
+                            link2="https://http2.mlstatic.com/resources/frontend/statics/loyal/paramount/logos/paramount-logo-vdp-56-x-56-filled@2x.png"
+                            text1="7 DIAS GRÁTIS"
+                            text2="Até 50% OFF"
+                            text3="Paramount+"
                         />
-                        <div className="relative bottom-[100px] left-[13px]">
-                            <div className="flex">
-                                <img
-                                    src="https://http2.mlstatic.com/resources/frontend/statics/loyal/paramount/logos/paramount-logo-vdp-56-x-56-filled@2x.png"
-                                    alt="Icon"
-                                    className="w-20 h-20 rounded-lg"
-                                />
-                                <div className="flex flex-col justify-center pl-4">
-                                    <span className="text-[12px] font-semibold text-white">
-                                        7 DIAS GRÁTIS
-                                    </span>
-                                    <span className="text-[22px] font-semibold text-white">
-                                        Até 50% OFF
-                                    </span>
-                                    <span className="text-white text-lg tracking-wide">
-                                        Paramount+
-                                    </span>
-                                </div>
-                            </div>
-                        </div> */}
-                        <ContainBenefits alt="" link1="" link2="" text1="" text2="" text3="" />
                     </div>
                     <div
                         ref={loyaltyRef4}
-                        className={clsx("w-96 h-[260px] cursor-pointer", {
+                        className={clsx("w-96 h-[260px]", {
                             hidden: !showLoyalty4,
                         })}
                     >
-                        {/* <img
-                            src="https://http2.mlstatic.com/resources/frontend/statics/loyal/partners/vdp/deezer/deezer-widget-mlb@2x.jpg"
+                        <ContainBenefits
                             alt="Dreezer"
-                            className="w-96 h-[250px] rounded-md"
+                            link1="https://http2.mlstatic.com/resources/frontend/statics/loyal/partners/vdp/deezer/deezer-widget-mlb@2x.jpg"
+                            link2="https://http2.mlstatic.com/resources/frontend/statics/loyal/partners/deezer/deezer-logo-vdp-filled@2x.png"
+                            text1="7 DIAS GRÁTIS"
+                            text2="Até 50% OFF"
+                            text3="Deezer / App de música"
                         />
-                        <div className="relative bottom-[100px] left-[13px]">
-                            <div className="flex">
-                                <img
-                                    src="https://http2.mlstatic.com/resources/frontend/statics/loyal/partners/deezer/deezer-logo-vdp-filled@2x.png"
-                                    alt="Icon"
-                                    className="w-20 h-20 rounded-lg"
-                                />
-                                <div className="flex flex-col justify-center pl-4">
-                                    <span className="text-[12px] font-semibold text-white">
-                                        7 DIAS GRÁTIS
-                                    </span>
-                                    <span className="text-[22px] font-semibold text-white">
-                                        Até 50% OFF
-                                    </span>
-                                    <span className="text-white text-lg tracking-wide">
-                                        Deezer / App de música
-                                    </span>
-                                </div>
-                            </div>
-                        </div> */}
-                        <ContainBenefits alt="" link1="" link2="" text1="" text2="" text3="" />
                     </div>
                 </div>
                 <button
