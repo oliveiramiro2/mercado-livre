@@ -110,10 +110,10 @@ const Benefits: React.FC = () => {
                         Conferir todas as vantagens
                     </a>
                 </div>
-                <div className="flex gap-x-4 cursor-pointer">
+                <div className="flex gap-x-4">
                     <div
                         ref={loyaltyRef1}
-                        className={clsx("w-96 h-[260px]", {
+                        className={clsx("w-96 h-[260px] cursor-pointer", {
                             hidden: showLoyalty4,
                         })}
                     >
@@ -139,10 +139,10 @@ const Benefits: React.FC = () => {
                                 </div>
                             </div>
                         </div> */}
-                        
+                        <ContainBenefits alt="" link1="" link2="" text1="" text2="" text3="" />
                     </div>
                     <div className="w-96 h-[260px] cursor-pointer">
-                        <img
+                        {/* <img
                             src="https://http2.mlstatic.com/resources/frontend/statics/loyal/partners/hbo/widget/HBOMax_widgetmulti_mobdsk_mlb_@2x.webp"
                             alt="HBO Max"
                             className="w-96 h-[250px] rounded-md"
@@ -166,10 +166,11 @@ const Benefits: React.FC = () => {
                                     </span>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
+                        <ContainBenefits alt="" link1="" link2="" text1="" text2="" text3="" />
                     </div>
                     <div className="w-96 h-[260px] cursor-pointer">
-                        <img
+                        {/* <img
                             src="https://http2.mlstatic.com/resources/frontend/statics/loyal/partners/paramount/widgets/paramount_widgetmulti_mobdsk_mlb_@2x.jpg"
                             alt="Paramount Plus"
                             className="w-96 h-[250px] rounded-md"
@@ -193,7 +194,8 @@ const Benefits: React.FC = () => {
                                     </span>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
+                        <ContainBenefits alt="" link1="" link2="" text1="" text2="" text3="" />
                     </div>
                     <div
                         ref={loyaltyRef4}
@@ -201,7 +203,7 @@ const Benefits: React.FC = () => {
                             hidden: !showLoyalty4,
                         })}
                     >
-                        <img
+                        {/* <img
                             src="https://http2.mlstatic.com/resources/frontend/statics/loyal/partners/vdp/deezer/deezer-widget-mlb@2x.jpg"
                             alt="Dreezer"
                             className="w-96 h-[250px] rounded-md"
@@ -225,7 +227,8 @@ const Benefits: React.FC = () => {
                                     </span>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
+                        <ContainBenefits alt="" link1="" link2="" text1="" text2="" text3="" />
                     </div>
                 </div>
                 <button
