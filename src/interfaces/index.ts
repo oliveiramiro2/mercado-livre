@@ -73,11 +73,16 @@ export interface IPropsContainLevelSix {
 }
 
 export interface IPropsContainBenefits {
-    id?: number;
     link1: string;
     link2: string;
     alt: string;
     text1: string;
     text2: string;
     text3: string;
+    showLoyalty4?: boolean;
+    ref?: number;
+}
+
+export interface IContainBenefits extends IPropsContainBenefits {
+    id: number;
 }

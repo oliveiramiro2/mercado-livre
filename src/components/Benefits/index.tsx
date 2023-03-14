@@ -4,6 +4,7 @@ import clsx from "clsx";
 import { FcNext, FcPrevious } from "react-icons/fc";
 
 import { IPropsContainBenefits } from "../../interfaces";
+import { benefitsContent } from "../../utils/vars";
 
 const ContainBenefits: React.FC<IPropsContainBenefits> = ({
     alt,
@@ -12,33 +13,9 @@ const ContainBenefits: React.FC<IPropsContainBenefits> = ({
     text1,
     text2,
     text3,
-}) => (
-    <div>
-        <img src={link1} alt={alt} className="w-96 h-[250px] rounded-md cursor-pointer" />
-        <div className="relative bottom-[100px] left-[13px] cursor-pointer">
-            <div className="flex">
-                <img src={link2} alt="icon" className="w-20 h-20 rounded-lg" />
-                <div className="flex flex-col justify-center pl-4">
-                    {text1.length > 1 && (
-                        <span className="text-[12px] font-semibold text-white">
-                            {text1}
-                        </span>
-                    )}
-                    <span className="text-[22px] font-semibold text-white">
-                        {text2}
-                    </span>
-                    <span className="text-white text-lg tracking-wide">
-                        {text3}
-                    </span>
-                </div>
-            </div>
-        </div>
-    </div>
-);
-
-const Benefits: React.FC = () => {
-    const [showLoyalty4, setShowLoyalty4] = useState<boolean>(false);
-
+    showLoyalty4,
+    ref,
+}) => {
     const loyaltyRef4 = useRef(null);
     const loyaltyRef1 = useRef(null);
 
@@ -96,6 +73,58 @@ const Benefits: React.FC = () => {
         }
     }, [showLoyalty4]);
 
+    const ternaryCondition: Function = (): boolean => {
+        if (ref === undefined || showLoyalty4 === undefined) return false;
+        return showLoyalty4;
+    };
+
+    const refForContain = () => {
+        if (ref === undefined) return null;
+        if (ref === 1) return loyaltyRef1;
+        return loyaltyRef4;
+    };
+
+    return (
+        <div
+            ref={() => refForContain()}
+            className={clsx("w-96 h-[260px]", {
+                hidden: ref === ternaryCondition(),
+            })}
+        >
+            <img
+                src={link1}
+                alt={alt}
+                className="w-96 h-[250px] rounded-md cursor-pointer"
+            />
+            <div className="relative bottom-[100px] left-[13px] cursor-pointer">
+                <div className="flex">
+                    <img
+                        src={link2}
+                        alt="icon"
+                        className="w-20 h-20 rounded-lg"
+                    />
+                    <div className="flex flex-col justify-center pl-4">
+                        {text1.length > 1 && (
+                            <span className="text-[12px] font-semibold text-white">
+                                {text1}
+                            </span>
+                        )}
+                        <span className="text-[22px] font-semibold text-white">
+                            {text2}
+                        </span>
+                        <span className="text-white text-lg tracking-wide">
+                            {text3}
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+};
+
+const Benefits: React.FC = () => {
+    const [showLoyalty4, setShowLoyalty4] = useState<boolean>(false);
+
     return (
         <section className="w-screen min-h-[400px] flex items-center justify-center">
             <div className="w-[87%] min-h-[320px]">
@@ -111,7 +140,7 @@ const Benefits: React.FC = () => {
                     </a>
                 </div>
                 <div className="flex gap-x-4">
-                    <div
+                    {/* <div
                         ref={loyaltyRef1}
                         className={clsx("w-96 h-[260px]", {
                             hidden: showLoyalty4,
@@ -160,7 +189,20 @@ const Benefits: React.FC = () => {
                             text2="Até 50% OFF"
                             text3="Deezer / App de música"
                         />
-                    </div>
+                    </div> */}
+                    {benefitsContent.map(value => (
+                        <ContainBenefits
+                            alt={value.alt}
+                            link1={value.link1}
+                            link2={value.link2}
+                            text1={value.text1}
+                            text2={value.text2}
+                            text3={value.text3}
+                            ref={value.ref}
+                            showLoyalty4={showLoyalty4}
+                            key={value.id}
+                        />
+                    ))}
                 </div>
                 <button
                     onClick={() => setShowLoyalty4(!showLoyalty4)}
