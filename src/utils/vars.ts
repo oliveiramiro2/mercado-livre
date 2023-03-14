@@ -71,8 +71,8 @@ export const offerTodayContent: IPropsContentTodayOffer[] = [
 ]
 
 export const levelSixContent: IPropsContainLevelSix[] = [
-    {alt: "Disney Plus", classWidth: "w-[240px]", link: "https://http2.mlstatic.com/resources/frontend/statics/loyal/partners/widget-l6/dplus.svg", text: "Disney+ sem custo", id: 0},
-    {alt: "Star Plus", classWidth: "w-[220px]", link: "https://http2.mlstatic.com/resources/frontend/statics/loyal/partners/widget-l6/starplus.svg", text: "Star+ sem custo", id: 1},
-    {alt: "Frete Grátis", classWidth: "w-[380px]", link: "https://http2.mlstatic.com/resources/frontend/statics/loyal/v2/truckgiftv4@2x.png", text: "Frete grátis e rápido a partir de R$ 79 e 45% OFF em fretes de menos de R$ 79", id: 2},
-    {alt: "Descontos", classWidth: "w-[300px]", link: "https://http2.mlstatic.com/resources/frontend/statics/loyal/ultrapasse-widget@2x.png", text: "60% OFF no Ultrapasse e outros benefícios", id: 3},
+    {alt: "Disney Plus", classWidth: "w-[250px]", link: "https://http2.mlstatic.com/resources/frontend/statics/loyal/partners/widget-l6/dplus.svg", text: "Disney+ sem custo", id: 0},
+    {alt: "Star Plus", classWidth: "w-[250px]", link: "https://http2.mlstatic.com/resources/frontend/statics/loyal/partners/widget-l6/starplus.svg", text: "Star+ sem custo", id: 1},
+    {alt: "Frete Grátis", classWidth: "w-[300px]", link: "https://http2.mlstatic.com/resources/frontend/statics/loyal/v2/truckgiftv4@2x.png", text: "Frete grátis e rápido a partir de R$ 79 e 45% OFF em fretes de menos de R$ 79", id: 2},
+    {alt: "Descontos", classWidth: " w-[300px]", link: "https://http2.mlstatic.com/resources/frontend/statics/loyal/ultrapasse-widget@2x.png", text: "60% OFF no Ultrapasse e outros benefícios", id: 3},
 ]

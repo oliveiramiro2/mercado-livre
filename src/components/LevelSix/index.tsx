@@ -4,7 +4,7 @@ import { levelSixContent } from "../../utils/vars";
 import ContainLevelSix from "./components/containLevelSix";
 
 const LevelSix: React.FC = () => (
-    <section className="w-screen min-h-[420px] mt-5 flex items-center justify-center">
+    <section className="w-screen min-h-[420px] mt-5 flex items-center justify-center max-xl:mb-10">
         <div className="w-[87%] min-h-[340px] rounded-lg shadow-lg shadow-slate-500">
             <div className="w-full flex h-[87px] rounded-t-lg pt-4 pr-6 pb-4 pl-6 bg-gradient-to-r from-[#a90f90] via-[#a90f90] to-[#0c1a51]  shadow-lg shadow-slate-500">
                 <div className="flex w-full items-center">
@@ -35,7 +35,7 @@ const LevelSix: React.FC = () => (
                         Conte com os melhores benefícios no Mercado Livre e do
                         Mercado Pago
                     </span>
-                    <div className="flex w-full mt-8 max-xl:flex-wrap max-xl:gap-y-8">
+                    <div className="flex w-full mt-8 max-xl:flex-wrap max-xl:gap-y-8 max-2xl:gap-x-5">
                         {levelSixContent.map(value => (
                             <ContainLevelSix
                                 alt={value.alt}
