@@ -87,3 +87,11 @@ export interface IPropsContainBenefits {
 export interface IContainBenefits extends IPropsContainBenefits {
     id: number;
 }
+
+export interface IPropsCheckOutOffer {
+    text1: string;
+    text2: string;
+    text3: string;
+    alt: string;
+    link: string;
+}
