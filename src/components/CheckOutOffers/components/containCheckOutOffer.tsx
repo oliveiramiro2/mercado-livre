@@ -1,9 +1,9 @@
 import React from 'react'
 
-const containCheckOutOffer = () => {
+const ContainCheckOutOffer = () => {
   return (
     <div>containCheckOutOffer</div>
   )
 }
 
-export default containCheckOutOffer
+export default ContainCheckOutOffer
