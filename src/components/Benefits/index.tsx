@@ -14,7 +14,7 @@ const ContainBenefits: React.FC<IPropsContainBenefits> = ({
     text2,
     text3,
     showLoyalty4,
-    ref,
+    refIndex,
 }) => {
     const loyaltyRef4 = useRef(null);
     const loyaltyRef1 = useRef(null);
@@ -74,13 +74,14 @@ const ContainBenefits: React.FC<IPropsContainBenefits> = ({
     }, [showLoyalty4]);
 
     const ternaryCondition: Function = (): boolean => {
-        if (ref === undefined || showLoyalty4 === undefined) return false;
-        return showLoyalty4;
+        if (refIndex === undefined || showLoyalty4 === undefined) return false;
+        if (refIndex === 1) return showLoyalty4
+        return !showLoyalty4
     };
 
     const refForContain = () => {
-        if (ref === undefined) return null;
-        if (ref === 1) return loyaltyRef1;
+        if (refIndex === undefined) return null;
+        if (refIndex === 1) return loyaltyRef1;
         return loyaltyRef4;
     };
 
@@ -88,7 +89,7 @@ const ContainBenefits: React.FC<IPropsContainBenefits> = ({
         <div
             ref={() => refForContain()}
             className={clsx("w-96 h-[260px]", {
-                hidden: ref === ternaryCondition(),
+                hidden: ternaryCondition(),
             })}
         >
             <img
@@ -198,7 +199,7 @@ const Benefits: React.FC = () => {
                             text1={value.text1}
                             text2={value.text2}
                             text3={value.text3}
-                            ref={value.ref}
+                            refIndex={value.refIndex}
                             showLoyalty4={showLoyalty4}
                             key={value.id}
                         />

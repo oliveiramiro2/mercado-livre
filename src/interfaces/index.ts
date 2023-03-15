@@ -80,7 +80,7 @@ export interface IPropsContainBenefits {
     text2: string;
     text3: string;
     showLoyalty4?: boolean;
-    ref?: number;
+    refIndex?: number;
 }
 
 export interface IContainBenefits extends IPropsContainBenefits {
