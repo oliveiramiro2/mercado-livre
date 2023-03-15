@@ -47,6 +47,7 @@ import TodayOffers from "../../components/TodayOffers";
 import LevelSix from "../../components/LevelSix";
 import Benefits from "../../components/Benefits";
 import BrandOffer from "../../components/BrandOffer";
+import CheckOutOffers from "../../components/CheckOutOffers";
 
 interface iCategory {
     1: boolean;
@@ -156,7 +157,7 @@ const Home: React.FC = () => {
             <LevelSix />
             <Benefits />
             <BrandOffer />
-            
+            <CheckOutOffers />
             <section className="w-screen h-[420px] flex items-center justify-center">
                 <div className="max-w-[87.5%] h-[389px] rounded-lg mb-5">
                     <div className="pl-1 mb-[22px] ml-2 mt-2 flex justify-between">
