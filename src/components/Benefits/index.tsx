@@ -22,7 +22,7 @@ const Benefits: React.FC = () => {
                         Conferir todas as vantagens
                     </a>
                 </div>
-                <div className="flex gap-x-4">
+                <div className="flex gap-x-4 max-lg:flex-wrap">
                     {benefitsContent.map(value => (
                         <ContainBenefits
                             alt={value.alt}
@@ -42,7 +42,7 @@ const Benefits: React.FC = () => {
                     onClick={() => setShowLoyalty4(!showLoyalty4)}
                     type="button"
                     className={clsx(
-                        "relative left-[97.3%] border-none transition-transform ease-in-out duration-400 flex justify-center items-center bottom-40 bg-white bg-opacity-90 text-pallet-blue text-2xl w-16 h-16 rounded-full",
+                        "max-lg:hidden relative left-[97.3%] max-xl:left-[96.5%] max-md:left-[95%] border-none transition-transform ease-in-out duration-400 flex justify-center items-center bottom-40 bg-white bg-opacity-90 text-pallet-blue text-2xl w-16 h-16 max-lg:h-12 max-lg:w-12 rounded-full",
                         {
                             "rotate-180": showLoyalty4,
                             "rotate-0": !showLoyalty4,

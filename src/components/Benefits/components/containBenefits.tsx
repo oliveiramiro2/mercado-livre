@@ -12,11 +12,10 @@ const ContainBenefits: React.FC<IPropsContainBenefits> = ({
     text3,
     showLoyalty4,
     refIndex,
-    classAnimated
+    classAnimated,
 }) => {
-
     useEffect(() => {
-        if (showLoyalty4) {
+        if (showLoyalty4 && window.innerWidth > 1024) {
             gsap.fromTo(
                 ".animate1",
                 {
@@ -34,6 +33,44 @@ const ContainBenefits: React.FC<IPropsContainBenefits> = ({
                 {
                     opacity: 0,
                     xPercent: 100,
+                },
+                {
+                    opacity: 1,
+                    xPercent: 0,
+                    ease: "easeInOut",
+                }
+            );
+        } else if (!showLoyalty4 && window.innerWidth > 1024) {
+            gsap.fromTo(
+                ".animate2",
+                {
+                    opacity: 1,
+                    xPercent: 0,
+                },
+                {
+                    opacity: 0,
+                    xPercent: 100,
+                    ease: "easeInOut",
+                }
+            );
+            gsap.fromTo(
+                ".animate1",
+                {
+                    opacity: 0,
+                    xPercent: -100,
+                },
+                {
+                    opacity: 1,
+                    xPercent: 0,
+                    ease: "easeInOut",
+                }
+            );
+        } else if (showLoyalty4 && window.innerWidth < 1024) {
+            gsap.fromTo(
+                ".animate1",
+                {
+                    opacity: 0,
+                    xPercent: -100,
                 },
                 {
                     opacity: 1,
@@ -45,20 +82,8 @@ const ContainBenefits: React.FC<IPropsContainBenefits> = ({
             gsap.fromTo(
                 ".animate2",
                 {
-                    opacity: 1,
-                    xPercent: 0,
-                },
-                {
                     opacity: 0,
                     xPercent: 100,
-                    ease: "easeInOut",
-                }
-            );
-            gsap.fromTo(
-                ".animate1",
-                {
-                    opacity: 0,
-                    xPercent: -100,
                 },
                 {
                     opacity: 1,
@@ -67,18 +92,18 @@ const ContainBenefits: React.FC<IPropsContainBenefits> = ({
                 }
             );
         }
-    }, [showLoyalty4]);
+    }, [showLoyalty4, window.innerWidth]);
 
     const ternaryCondition: Function = (): boolean => {
         if (refIndex === undefined || showLoyalty4 === undefined) return false;
-        if (refIndex === 1) return showLoyalty4
-        return !showLoyalty4
+        if (refIndex === 1) return showLoyalty4;
+        return !showLoyalty4;
     };
 
     return (
         <div
-            className={clsx(`w-96 h-[260px] ${classAnimated}`, {
-                hidden: ternaryCondition(),
+            className={clsx(`w-96 h-[260px] border-black ${classAnimated}`, {
+                "hidden": ternaryCondition() && window.innerWidth > 1024,
             })}
         >
             <img
@@ -112,4 +137,4 @@ const ContainBenefits: React.FC<IPropsContainBenefits> = ({
     );
 };
 
-export default ContainBenefits
+export default ContainBenefits;
