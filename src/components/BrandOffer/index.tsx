@@ -2,8 +2,8 @@ import React from "react";
 import { MdNavigateNext } from "react-icons/md";
 
 const BrandOffer: React.FC = () => (
-    <section className="w-screen h-[380px] pt-16">
-        <div className="flex items-center justify-center cursor-pointer">
+    <section className="w-screen h-[380px] pt-16 max-xl:scale-95 max-lg:scale-75 max-md:scale-50">
+        <div className="flex items-center justify-center max-lg:relative max-lg:right-36 cursor-pointer">
             <div className="w-[87%] h-[250px] flex">
                 <img
                     src="https://http2.mlstatic.com/D_NQ_945960-MLA53711315255_022023-OO.jpg"
@@ -27,7 +27,7 @@ const BrandOffer: React.FC = () => (
                 </div>
             </div>
         </div>
-        <div className="relative bottom-40 left-[150px] p-3 pl-4 w-32 bg-white">
+        <div className="relative bottom-40 max-lg:left-[0px] max-md:-left-[50px] max-sm:-left-[70px] left-[150px] p-3 pl-4 w-32 bg-white">
             <img
                 src="https://http2.mlstatic.com/D_NQ_733938-MLA53711303917_022023-OO.jpg"
                 alt="Marisa"
