@@ -8,8 +8,8 @@ const ContainCheckOutOffer: React.FC<IPropsCheckOutOffer> = ({
     text2,
     text3,
 }) => (
-    <div className="rounded-[4px] w-[584px] h-[250px] bg-white flex justify-between items-center hover:shadow-xl hover:shadow-slate-500 transition-shadow ease-in-out delay-100 cursor-pointer">
-        <div className="w-[230px] h-[145px] flex flex-col justify-center text-start ml-8">
+    <div className="rounded-[4px] w-[584px] h-[250px] bg-white flex justify-between items-center hover:shadow-xl hover:shadow-slate-500 transition-shadow ease-in-out delay-100 cursor-pointer max-xl:scale-95 max-lg:scale-90 max-md:scale-75 max-md:relative max-md:right-[10%]">
+        <div className="min-w-[230px] h-[145px] flex flex-col justify-center text-start ml-8">
             <span className="text-[#4b4b4b] font-semibold mb-1 text-[11px] tracking-[5px]">
                 {text1}
             </span>

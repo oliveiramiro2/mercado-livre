@@ -3,12 +3,12 @@ import React from "react";
 import ContainCheckOutOffer from "./components/containCheckOutOffer";
 
 const CheckOutOffers: React.FC = () => (
-    <section className="w-screen h-[399px] flex items-center justify-center">
-        <div className="h-[318px] w-[87%]">
+    <section className="w-screen min-h-[399px] flex items-center justify-center">
+        <div className="min-h-[318px] w-[87%]">
             <div className="pl-1 mb-[22px]">
                 <h2 className="text-[26px] font-light text-[#666]">Confira</h2>
             </div>
-            <div className="rounded-[4px] flex justify-between">
+            <div className="rounded-[4px] flex justify-between max-xl:flex-wrap">
                 <ContainCheckOutOffer
                     alt="Entrega full"
                     link="https://http2.mlstatic.com/D_NQ_943131-MLA53860827873_022023-C.webp"
