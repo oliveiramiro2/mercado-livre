@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import gsap from "gsap";
 import clsx from "clsx";
 import { FcNext, FcPrevious } from "react-icons/fc";
@@ -15,14 +15,13 @@ const ContainBenefits: React.FC<IPropsContainBenefits> = ({
     text3,
     showLoyalty4,
     refIndex,
+    classAnimated
 }) => {
-    const loyaltyRef4 = useRef(null);
-    const loyaltyRef1 = useRef(null);
 
     useEffect(() => {
         if (showLoyalty4) {
             gsap.fromTo(
-                loyaltyRef1.current,
+                ".animate1",
                 {
                     opacity: 1,
                     xPercent: 0,
@@ -34,7 +33,7 @@ const ContainBenefits: React.FC<IPropsContainBenefits> = ({
                 }
             );
             gsap.fromTo(
-                loyaltyRef4.current,
+                ".animate2",
                 {
                     opacity: 0,
                     xPercent: 100,
@@ -47,7 +46,7 @@ const ContainBenefits: React.FC<IPropsContainBenefits> = ({
             );
         } else {
             gsap.fromTo(
-                loyaltyRef4.current,
+                ".animate2",
                 {
                     opacity: 1,
                     xPercent: 0,
@@ -59,7 +58,7 @@ const ContainBenefits: React.FC<IPropsContainBenefits> = ({
                 }
             );
             gsap.fromTo(
-                loyaltyRef1.current,
+                ".animate1",
                 {
                     opacity: 0,
                     xPercent: -100,
@@ -79,16 +78,9 @@ const ContainBenefits: React.FC<IPropsContainBenefits> = ({
         return !showLoyalty4
     };
 
-    const refForContain = () => {
-        if (refIndex === undefined) return null;
-        if (refIndex === 1) return loyaltyRef1;
-        return loyaltyRef4;
-    };
-
     return (
         <div
-            ref={() => refForContain()}
-            className={clsx("w-96 h-[260px]", {
+            className={clsx(`w-96 h-[260px] ${classAnimated}`, {
                 hidden: ternaryCondition(),
             })}
         >
@@ -141,56 +133,6 @@ const Benefits: React.FC = () => {
                     </a>
                 </div>
                 <div className="flex gap-x-4">
-                    {/* <div
-                        ref={loyaltyRef1}
-                        className={clsx("w-96 h-[260px]", {
-                            hidden: showLoyalty4,
-                        })}
-                    >
-                        <ContainBenefits
-                            alt="Disney e Star Plus"
-                            link1="https://http2.mlstatic.com/resources/frontend/statics/loyal/partners/disney/hub-widget-disney-star/Widget_Multicontent_Latam_768-x-566px.jpg"
-                            link2="https://http2.mlstatic.com/resources/frontend/statics/loyal/partners/disneyplus/comboplus-square.jpg"
-                            text1=""
-                            text2="Sem custo com o nível 6"
-                            text3="Disney+ e Star+"
-                        />
-                    </div>
-                    <div className="w-96 h-[260px]">
-                        <ContainBenefits
-                            alt="HBO Max"
-                            link1="https://http2.mlstatic.com/resources/frontend/statics/loyal/partners/hbo/widget/HBOMax_widgetmulti_mobdsk_mlb_@2x.webp"
-                            link2="https://http2.mlstatic.com/resources/frontend/statics/loyal/partners/hbomax/logo/logoSquare@2x.png?v=1"
-                            text1="7 DIAS GRÁTIS"
-                            text2="Até 50% OFF"
-                            text3="HBO Max"
-                        />
-                    </div>
-                    <div className="w-96 h-[260px]">
-                        <ContainBenefits
-                            alt="Paramount Plus"
-                            link1="https://http2.mlstatic.com/resources/frontend/statics/loyal/partners/paramount/widgets/paramount_widgetmulti_mobdsk_mlb_@2x.jpg"
-                            link2="https://http2.mlstatic.com/resources/frontend/statics/loyal/paramount/logos/paramount-logo-vdp-56-x-56-filled@2x.png"
-                            text1="7 DIAS GRÁTIS"
-                            text2="Até 50% OFF"
-                            text3="Paramount+"
-                        />
-                    </div>
-                    <div
-                        ref={loyaltyRef4}
-                        className={clsx("w-96 h-[260px]", {
-                            hidden: !showLoyalty4,
-                        })}
-                    >
-                        <ContainBenefits
-                            alt="Dreezer"
-                            link1="https://http2.mlstatic.com/resources/frontend/statics/loyal/partners/vdp/deezer/deezer-widget-mlb@2x.jpg"
-                            link2="https://http2.mlstatic.com/resources/frontend/statics/loyal/partners/deezer/deezer-logo-vdp-filled@2x.png"
-                            text1="7 DIAS GRÁTIS"
-                            text2="Até 50% OFF"
-                            text3="Deezer / App de música"
-                        />
-                    </div> */}
                     {benefitsContent.map(value => (
                         <ContainBenefits
                             alt={value.alt}
@@ -201,6 +143,7 @@ const Benefits: React.FC = () => {
                             text3={value.text3}
                             refIndex={value.refIndex}
                             showLoyalty4={showLoyalty4}
+                            classAnimated={value.classAnimated}
                             key={value.id}
                         />
                     ))}

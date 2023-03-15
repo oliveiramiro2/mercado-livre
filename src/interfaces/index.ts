@@ -81,6 +81,7 @@ export interface IPropsContainBenefits {
     text3: string;
     showLoyalty4?: boolean;
     refIndex?: number;
+    classAnimated: string;
 }
 
 export interface IContainBenefits extends IPropsContainBenefits {
