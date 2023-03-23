@@ -137,4 +137,6 @@ export interface IPropsContainCategory {
     text1: string;
     text2: string;
     index: number;
+    icon1: string;
+    icon2: string;
 }

@@ -1,3 +1,5 @@
+import * as Icons from 'react-icons/all';
+
 import { IPropsMidSecondLevelHeader, IPhotosSwiper, IPropsPaymentMidContent, IOffer, IPropsContentTodayOffer, IPropsContainLevelSix, IContainBenefits, iCategory } from "../interfaces"
 import {
     offer12,
@@ -117,4 +119,41 @@ export const initCatergory: iCategory = {
     30: false,
     31: false,
     32: false,
+};
+
+export const iconMapCategoty = {
+    GiSteeringWheel: Icons.GiSteeringWheel,
+    GiChefToque: Icons.GiChefToque,
+    GiLipstick: Icons.GiLipstick,
+    GiBearFace: Icons.GiBearFace,
+    GiSofa: Icons.GiSofa,
+    GiSmartphone: Icons.GiSmartphone,
+    GiSoccerBall: Icons.GiSoccerBall,
+    GiBalloons: Icons.GiBalloons,
+    GiRetroController: Icons.GiRetroController,
+    GiFactory: Icons.GiFactory,
+    GiTicket: Icons.GiTicket,
+    GiViolin: Icons.GiViolin,
+    GiWatch: Icons.GiWatch,
+    GiBookCover: Icons.GiBookCover,
+    GiHeartPlus: Icons.GiHeartPlus,
+    MdPets: Icons.MdPets,
+    MdPalette: Icons.MdPalette,
+    MdEngineering: Icons.MdEngineering,
+    FaTractor: Icons.FaTractor,
+    FaBaby: Icons.FaBaby,
+    FaTshirt: Icons.FaTshirt,
+    FaCar: Icons.FaCar,
+    FaMicrophone: Icons.FaMicrophone,
+    FaTools: Icons.FaTools,
+    FaMusic: Icons.FaMusic,
+    FaUsers: Icons.FaUsers,
+    BsHourglassSplit: Icons.BsHourglassSplit,
+    BsCameraFill: Icons.BsCameraFill,
+    BsBuilding: Icons.BsBuilding,
+    FcNext: Icons.FcNext,
+    FcPrevious: Icons.FcPrevious,
+    CgSmartHomeRefrigerator: Icons.CgSmartHomeRefrigerator,
+    SlScreenDesktop: Icons.SlScreenDesktop,
+    HiSquaresPlus: Icons.HiSquaresPlus,
 };

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import {
-    GiSteeringWheel,
     GiChefToque,
     GiLipstick,
     GiBearFace,
@@ -18,7 +17,6 @@ import {
 } from "react-icons/gi";
 import { MdPets, MdPalette, MdEngineering } from "react-icons/md";
 import {
-    FaTractor,
     FaBaby,
     FaTshirt,
     FaCar,
@@ -35,7 +33,19 @@ import { HiSquaresPlus } from "react-icons/hi2";
 import clsx from "clsx";
 
 import { iCategory, IPropsContainCategory } from "../../interfaces";
-import { initCatergory } from "../../utils/vars";
+import { iconMapCategoty, initCatergory } from "../../utils/vars";
+
+const DinamycIcon = ({ param, color }: { param: string, color: boolean }) => {
+  const IconComponent = (iconMapCategoty as any)[param];
+
+  if (!IconComponent) {
+    return null;
+  }
+
+  return <IconComponent size={50} className={clsx("text-pallet-blue", {
+    "text-white": color,
+})} />;
+};
 
 const ContainPopularCategory: React.FC<IPropsContainCategory> = ({
     category,
@@ -43,6 +53,8 @@ const ContainPopularCategory: React.FC<IPropsContainCategory> = ({
     text1,
     text2,
     index,
+    icon1,
+    icon2,
 }) => (
     <div>
         <a
@@ -71,11 +83,9 @@ const ContainPopularCategory: React.FC<IPropsContainCategory> = ({
             onBlur={() => setCategory({ ...initCatergory })}
         >
             <div>
-                <GiSteeringWheel
-                    size={50}
-                    className={clsx("text-pallet-blue", {
-                        "text-white": (category as any)[index-1],
-                    })}
+                <DinamycIcon
+                    param={icon1}
+                    color={(category as any)[index-1]}
                 />
             </div>
             <p
@@ -112,11 +122,9 @@ const ContainPopularCategory: React.FC<IPropsContainCategory> = ({
             onBlur={() => setCategory({ ...initCatergory })}
         >
             <div>
-                <FaTractor
-                    size={50}
-                    className={clsx("text-pallet-blue", {
-                        "text-white": (category as any)[index],
-                    })}
+                <DinamycIcon
+                    param={icon2}
+                    color={(category as any)[index]}
                 />
             </div>
             <p
@@ -299,6 +307,8 @@ const PopularCategories: React.FC = () => {
                             text1="Acessórios para Veículos"
                             text2="Agro"
                             index={1*2}
+                            icon1="GiSteeringWheel"
+                            icon2="FaTractor"
                         />
                         <div>
                             <a
