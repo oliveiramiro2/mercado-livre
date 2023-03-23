@@ -52,20 +52,20 @@ const ContainPopularCategory: React.FC<IPropsContainCategory> = ({
             className={clsx(
                 "w-[170px] h-[160px] flex flex-col justify-around items-center border-r border-b border-gray-300 rounded-md",
                 {
-                    "bg-pallet-blue": category[1],
+                    "bg-pallet-blue": category[index-1],
                 }
             )}
             onMouseOver={() =>
                 setCategory({
                     ...initCatergory,
-                    1: true,
+                    [index-1]: true,
                 })
             }
             onMouseOut={() => setCategory({ ...initCatergory })}
             onFocus={() =>
                 setCategory({
                     ...initCatergory,
-                    1: true,
+                    [index-1]: true,
                 })
             }
             onBlur={() => setCategory({ ...initCatergory })}
@@ -74,13 +74,13 @@ const ContainPopularCategory: React.FC<IPropsContainCategory> = ({
                 <GiSteeringWheel
                     size={50}
                     className={clsx("text-pallet-blue", {
-                        "text-white": category[1],
+                        "text-white": category[index-1],
                     })}
                 />
             </div>
             <p
                 className={clsx("font-proxima", {
-                    "text-white": category[1],
+                    "text-white": category[index-1],
                 })}
             >
                 {text1}
@@ -93,20 +93,20 @@ const ContainPopularCategory: React.FC<IPropsContainCategory> = ({
             className={clsx(
                 "w-[170px] h-[160px] flex flex-col justify-around items-center border-r border-b border-gray-300 rounded-md",
                 {
-                    "bg-pallet-blue": category[2],
+                    "bg-pallet-blue": category[index],
                 }
             )}
             onMouseOver={() =>
                 setCategory({
                     ...initCatergory,
-                    2: true,
+                    [index]: true,
                 })
             }
             onMouseOut={() => setCategory({ ...initCatergory })}
             onFocus={() =>
                 setCategory({
                     ...initCatergory,
-                    2: true,
+                    [index]: true,
                 })
             }
             onBlur={() => setCategory({ ...initCatergory })}
@@ -115,13 +115,13 @@ const ContainPopularCategory: React.FC<IPropsContainCategory> = ({
                 <FaTractor
                     size={50}
                     className={clsx("text-pallet-blue", {
-                        "text-white": category[2],
+                        "text-white": category[index],
                     })}
                 />
             </div>
             <p
                 className={clsx("font-proxima", {
-                    "text-white": category[2],
+                    "text-white": category[index],
                 })}
             >
                 {text2}
@@ -298,7 +298,7 @@ const PopularCategories: React.FC = () => {
                             setCategory={setCategory}
                             text1="Acessórios para Veículos"
                             text2="Agro"
-                            index={1}
+                            index={1*2}
                         />
                         <div>
                             <a
