@@ -52,7 +52,7 @@ const ContainPopularCategory: React.FC<IPropsContainCategory> = ({
             className={clsx(
                 "w-[170px] h-[160px] flex flex-col justify-around items-center border-r border-b border-gray-300 rounded-md",
                 {
-                    "bg-pallet-blue": category[index-1],
+                    "bg-pallet-blue": (category as any)[index-1],
                 }
             )}
             onMouseOver={() =>
@@ -74,13 +74,13 @@ const ContainPopularCategory: React.FC<IPropsContainCategory> = ({
                 <GiSteeringWheel
                     size={50}
                     className={clsx("text-pallet-blue", {
-                        "text-white": category[index-1],
+                        "text-white": (category as any)[index-1],
                     })}
                 />
             </div>
             <p
                 className={clsx("font-proxima", {
-                    "text-white": category[index-1],
+                    "text-white": (category as any)[index-1],
                 })}
             >
                 {text1}
@@ -93,7 +93,7 @@ const ContainPopularCategory: React.FC<IPropsContainCategory> = ({
             className={clsx(
                 "w-[170px] h-[160px] flex flex-col justify-around items-center border-r border-b border-gray-300 rounded-md",
                 {
-                    "bg-pallet-blue": category[index],
+                    "bg-pallet-blue": (category as any)[index],
                 }
             )}
             onMouseOver={() =>
@@ -115,13 +115,13 @@ const ContainPopularCategory: React.FC<IPropsContainCategory> = ({
                 <FaTractor
                     size={50}
                     className={clsx("text-pallet-blue", {
-                        "text-white": category[index],
+                        "text-white": (category as any)[index],
                     })}
                 />
             </div>
             <p
                 className={clsx("font-proxima", {
-                    "text-white": category[index],
+                    "text-white": (category as any)[index],
                 })}
             >
                 {text2}
