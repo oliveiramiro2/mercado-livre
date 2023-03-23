@@ -1,4 +1,4 @@
-import { IPropsMidSecondLevelHeader, IPhotosSwiper, IPropsPaymentMidContent, IOffer, IPropsContentTodayOffer, IPropsContainLevelSix, IContainBenefits } from "../interfaces"
+import { IPropsMidSecondLevelHeader, IPhotosSwiper, IPropsPaymentMidContent, IOffer, IPropsContentTodayOffer, IPropsContainLevelSix, IContainBenefits, iCategory } from "../interfaces"
 import {
     offer12,
     offer11,
@@ -83,3 +83,38 @@ export const benefitsContent: IContainBenefits[] = [
     {alt: "Paramount Plus", link1: "https://http2.mlstatic.com/resources/frontend/statics/loyal/partners/paramount/widgets/paramount_widgetmulti_mobdsk_mlb_@2x.jpg", link2: "https://http2.mlstatic.com/resources/frontend/statics/loyal/paramount/logos/paramount-logo-vdp-56-x-56-filled@2x.png", text1: "7 DIAS GRÁTIS", text2: "Até 50% OFF", text3: "Paramount+", id: 2, classAnimated: ""},
     {alt: "Dreezer", link1: "https://http2.mlstatic.com/resources/frontend/statics/loyal/partners/vdp/deezer/deezer-widget-mlb@2x.jpg", link2: "https://http2.mlstatic.com/resources/frontend/statics/loyal/partners/deezer/deezer-logo-vdp-filled@2x.png", text1: "7 DIAS GRÁTIS", text2: "Até 50% OFF", text3: "Deezer / App de música", id: 3, refIndex: 2, classAnimated: "animate2"},
 ]
+
+export const initCatergory: iCategory = {
+    1: false,
+    2: false,
+    3: false,
+    4: false,
+    5: false,
+    6: false,
+    7: false,
+    8: false,
+    9: false,
+    10: false,
+    11: false,
+    12: false,
+    13: false,
+    14: false,
+    15: false,
+    16: false,
+    17: false,
+    18: false,
+    19: false,
+    20: false,
+    21: false,
+    22: false,
+    23: false,
+    24: false,
+    25: false,
+    26: false,
+    27: false,
+    28: false,
+    29: false,
+    30: false,
+    31: false,
+    32: false,
+};
