@@ -130,3 +130,11 @@ export interface iCategory {
     31: boolean;
     32: boolean;
 }
+
+export interface IPropsContainCategory {
+    category: iCategory;
+    setCategory: Function;
+    text1: string;
+    text2: string;
+    index: number;
+}
