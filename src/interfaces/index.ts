@@ -157,3 +157,8 @@ export interface IPropsContainBenefitsApp {
     linkBenefit: string;
     id?: number;
 }
+
+export interface IPropsSemiFooter {
+    text: string;
+    id?: number;
+}

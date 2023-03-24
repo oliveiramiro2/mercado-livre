@@ -1,6 +1,6 @@
 import * as Icons from 'react-icons/all';
 
-import { IPropsMidSecondLevelHeader, IPhotosSwiper, IPropsPaymentMidContent, IOffer, IPropsContentTodayOffer, IPropsContainLevelSix, IContainBenefits, iCategory, IContainCategories, IPropsContainBenefitsApp } from "../interfaces"
+import { IPropsMidSecondLevelHeader, IPhotosSwiper, IPropsPaymentMidContent, IOffer, IPropsContentTodayOffer, IPropsContainLevelSix, IContainBenefits, iCategory, IContainCategories, IPropsContainBenefitsApp, IPropsSemiFooter } from "../interfaces"
 import {
     offer12,
     offer11,
@@ -181,4 +181,47 @@ export const allBenefitsApp: IPropsContainBenefitsApp[] = [
     {alt: "Pagamento", linkBenefit: "Como pagar com Mercado Pago", id: 0, title: "Escolha como pagar", link: "https://http2.mlstatic.com/storage/homes-korriban/assets/images/ecosystem/payment.svg", content: "Com o Mercado Pago, você paga com cartão, boleto ou Pix. Você também pode pagar em até 12x no boleto com o Mercado Crédito." },
     {alt: "Frete Gratis", linkBenefit: "Saiba mais sobre este benefício", id: 1, title: "Frete grátis a partir de R$ 79", link: "https://http2.mlstatic.com/storage/homes-korriban/assets/images/ecosystem/shipping.svg", content: "Só por estar cadastrado no Mercado Livre, você tem frete grátis em milhares de produtos. É um benefício do Mercado Pontos." },
     {alt: "Seguro", linkBenefit: "Segurança, do início ao fim", id: 2, title: "Como te protegemos", link: "https://http2.mlstatic.com/storage/homes-korriban/assets/images/ecosystem/protected.svg", content: "Você não gostou do que comprou? Devolva! No Mercado Livre não há nada que você não possa fazer, porque você está sempre protegido." },
+]
+
+export const semiFooter1: IPropsSemiFooter[] = [
+    {text: "Mercado Livre", id: 0},
+    {text: "Investor relations", id: 1},
+    {text: "Tendências", id: 2},
+    {text: "Sustentabilidade", id: 3},
+]
+
+export const semiFooter2: IPropsSemiFooter[] = [
+    {text: "Desenvolvedores", id: 0},
+    {text: "Mercado Pago", id: 1},
+    {text: "Mercado Envios", id: 2},
+    {text: "Mercado Shops", id: 3},
+    {text: "Mercado Ads", id: 4},
+]
+
+export const semiFooter3: IPropsSemiFooter[] = [
+    {text: "Comprar", id: 0},
+    {text: "Vender", id: 1},
+    {text: "Solução de problemas", id: 2},
+    {text: "Segurança", id: 3},
+]
+
+export const semiFooter4: IPropsSemiFooter[] = [
+    {text: "Twitter", id: 0},
+    {text: "Facebook", id: 1},
+    {text: "Instagram", id: 2},
+    {text: "YouTube", id: 3},
+]
+
+export const semiFooter5: IPropsSemiFooter[] = [
+    {text: "Entre", id: 0},
+    {text: "Vender", id: 1},
+]
+
+export const semiFooter6: IPropsSemiFooter[] = [
+    {text: "Nivel 6", id: 0},
+    {text: "Disney+", id: 1},
+    {text: "Star+", id: 2},
+    {text: "HBO MAX", id: 3},
+    {text: "Paramount+", id: 4},
+    {text: "Deezer", id: 5},
 ]
