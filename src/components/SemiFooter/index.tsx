@@ -3,7 +3,6 @@ import clsx from "clsx";
 import gsap from "gsap";
 
 import { IoIosArrowUp } from "react-icons/io";
-import { IPropsSemiFooter } from "../../interfaces";
 import {
     semiFooter1,
     semiFooter2,
@@ -12,17 +11,7 @@ import {
     semiFooter5,
     semiFooter6,
 } from "../../utils/vars";
-
-const ContainSemiFooter: React.FC<IPropsSemiFooter> = ({ text }) => (
-    <li>
-        <a
-            href="https://www.mercadolivre.com.br/"
-            className="font-proxima text-[#999] font-light text-sm hover:underline"
-        >
-            {text}
-        </a>
-    </li>
-);
+import ContainSemiFooter from "./components/containSemiFooter";
 
 const SemiFooter: React.FC = () => {
     const [showSemiFooter, setShowSemiFooter] = useState<boolean>(false);

@@ -1,9 +1,16 @@
-import React from 'react'
+import React from "react";
 
-const containSemiFooter = () => {
-  return (
-    <div>containSemiFooter</div>
-  )
-}
+import { IPropsSemiFooter } from "../../../interfaces";
 
-export default containSemiFooter
+const ContainSemiFooter: React.FC<IPropsSemiFooter> = ({ text }) => (
+    <li>
+        <a
+            href="https://www.mercadolivre.com.br/"
+            className="font-proxima text-[#999] font-light text-sm hover:underline"
+        >
+            {text}
+        </a>
+    </li>
+);
+
+export default ContainSemiFooter;
