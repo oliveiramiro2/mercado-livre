@@ -57,9 +57,9 @@ const SemiFooter: React.FC = () => {
                 </p>
             </button>
             <div className="semi-footer z-10 bg-[#f3f3f0] w-screen visible transition-opacity ease-in-out duration-500 delay-300 flex justify-center pt-10 pb-8 border-t border-gray-200">
-                <div className="w-[87%] flex justify-around">
+                <div className="w-[87%] flex justify-around max-md:justify-between max-md:flex-wrap">
                     <div className="">
-                        <h3 className="font-proxima text-[#333] mb-[14px] font-medium text-sm">
+                        <h3 className="font-proxima text-[#333] mb-[14px] font-medium text-sm max-md:text-[10px]">
                             Sobre o
                         </h3>
                         <ul>
@@ -72,7 +72,7 @@ const SemiFooter: React.FC = () => {
                         </ul>
                     </div>
                     <div>
-                        <h3 className="font-proxima text-[#333] mb-[14px] font-medium text-sm">
+                        <h3 className="font-proxima text-[#333] mb-[14px] font-medium text-sm max-md:text-[10px]">
                             Outros sites
                         </h3>
                         <ul>
@@ -85,7 +85,7 @@ const SemiFooter: React.FC = () => {
                         </ul>
                     </div>
                     <div>
-                        <h3 className="font-proxima text-[#333] mb-[14px] font-medium text-sm">
+                        <h3 className="font-proxima text-[#333] mb-[14px] font-medium text-sm max-md:text-[10px]">
                             Contato
                         </h3>
                         <ul>
@@ -98,7 +98,7 @@ const SemiFooter: React.FC = () => {
                         </ul>
                     </div>
                     <div>
-                        <h3 className="font-proxima text-[#333] mb-[14px] font-medium text-sm">
+                        <h3 className="font-proxima text-[#333] mb-[14px] font-medium text-sm max-md:text-[10px]">
                             Redes sociais
                         </h3>
                         <ul>
@@ -111,7 +111,7 @@ const SemiFooter: React.FC = () => {
                         </ul>
                     </div>
                     <div>
-                        <h3 className="font-proxima text-[#333] mb-[14px] font-medium text-sm">
+                        <h3 className="font-proxima text-[#333] mb-[14px] font-medium text-sm max-md:text-[10px]">
                             Minha conta
                         </h3>
                         <ul>
@@ -124,7 +124,7 @@ const SemiFooter: React.FC = () => {
                         </ul>
                     </div>
                     <div>
-                        <h3 className="font-proxima text-[#333] mb-[14px] font-medium text-sm">
+                        <h3 className="font-proxima text-[#333] mb-[14px] font-medium text-sm max-md:text-[10px]">
                             Mercado Pontos
                         </h3>
                         <ul>
