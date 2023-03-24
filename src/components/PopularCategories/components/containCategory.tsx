@@ -20,7 +20,7 @@ const ContainPopularCategory: React.FC<IPropsContainCategory> = ({
             target="_blank"
             rel="noreferrer"
             className={clsx(
-                "w-[170px] h-[160px] flex flex-col justify-around items-center border-r border-b border-gray-300 rounded-md",
+                "w-[170px] h-[160px] flex flex-col justify-around items-center max-xl:border-l border-r border-b border-gray-300 rounded-md",
                 {
                     "bg-pallet-blue": (category as any)[index - 1],
                 }
@@ -59,7 +59,7 @@ const ContainPopularCategory: React.FC<IPropsContainCategory> = ({
             target="_blank"
             rel="noreferrer"
             className={clsx(
-                "w-[170px] h-[160px] flex flex-col justify-around items-center border-r border-b border-gray-300 rounded-md",
+                "w-[170px] h-[160px] flex flex-col justify-around items-center max-xl:border-l border-r border-b border-gray-300 rounded-md",
                 {
                     "bg-pallet-blue": (category as any)[index],
                 }

@@ -16,13 +16,13 @@ const PopularCategories: React.FC = () => {
     };
 
     return (
-        <section className="w-screen h-[420px] flex items-center justify-center">
-            <div className="max-w-[87.5%] h-[389px] rounded-lg mb-5">
+        <section className="w-screen min-h-[420px] flex items-center justify-center">
+            <div className="max-w-[87.5%] min-h-[389px] rounded-lg mb-5">
                 <div className="pl-1 mb-[22px] ml-2 mt-2 flex justify-between">
                     <h2 className="text-[26px] font-light text-[#666]">
                         Categorias populares
                     </h2>
-                    <div className="flex items-center mr-1">
+                    <div className="flex max-xl:hidden items-center mr-1">
                         <button
                             type="button"
                             onClick={() => setShowCategory(0)}
@@ -73,7 +73,7 @@ const PopularCategories: React.FC = () => {
                 <div className="w-full overflow-x-hidden bg-white rounded">
                     <div
                         className={clsx(
-                            "flex transition-all ease-in-out delay-200 relative",
+                            "flex max-xl:flex-wrap max-xl:justify-center max-xl:mb-9 max-xl:mt-9 transition-all ease-in-out delay-200 relative",
                             {
                                 "right-0": showCategory === 0,
                                 "right-[100%]": showCategory === 1,
@@ -99,7 +99,7 @@ const PopularCategories: React.FC = () => {
                     <button
                         onClick={() => handleShowCategory(true)}
                         type="button"
-                        className="relative left-[97.3%] bottom-48 border-none flex justify-center items-center bg-white bg-opacity-90 text-pallet-blue text-2xl w-16 h-16 rounded-full hover:shadow-lg hover:shadow-slate-500 transition-shadow ease-in-out delay-75"
+                        className="relative max-xl:hidden left-[97.3%] bottom-48 border-none flex justify-center items-center bg-white bg-opacity-90 text-pallet-blue text-2xl w-16 h-16 rounded-full hover:shadow-lg hover:shadow-slate-500 transition-shadow ease-in-out delay-75"
                     >
                         <FcNext />
                     </button>
@@ -109,7 +109,7 @@ const PopularCategories: React.FC = () => {
                         onClick={() => handleShowCategory(false)}
                         type="button"
                         className={clsx(
-                            "relative -left-[25px] bottom-64 border-none flex justify-center items-center bg-white bg-opacity-90 text-pallet-blue text-2xl w-16 h-16 rounded-full hover:shadow-lg hover:shadow-slate-500 transition-shadow ease-in-out delay-75",
+                            "relative max-xl:hidden -left-[25px] bottom-64 border-none flex justify-center items-center bg-white bg-opacity-90 text-pallet-blue text-2xl w-16 h-16 rounded-full hover:shadow-lg hover:shadow-slate-500 transition-shadow ease-in-out delay-75",
                             {
                                 "bottom-[12rem]": showCategory === 2,
                             }
