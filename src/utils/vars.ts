@@ -1,6 +1,6 @@
 import * as Icons from 'react-icons/all';
 
-import { IPropsMidSecondLevelHeader, IPhotosSwiper, IPropsPaymentMidContent, IOffer, IPropsContentTodayOffer, IPropsContainLevelSix, IContainBenefits, iCategory } from "../interfaces"
+import { IPropsMidSecondLevelHeader, IPhotosSwiper, IPropsPaymentMidContent, IOffer, IPropsContentTodayOffer, IPropsContainLevelSix, IContainBenefits, iCategory, IContainCategories } from "../interfaces"
 import {
     offer12,
     offer11,
@@ -157,3 +157,23 @@ export const iconMapCategoty = {
     SlScreenDesktop: Icons.SlScreenDesktop,
     HiSquaresPlus: Icons.HiSquaresPlus,
 };
+
+export const allCategories: IContainCategories[] = [
+    {icon1: "GiSteeringWheel", icon2: "FaTractor", index: 2, text1: "Acessórios para Veículos", text2: "Agro"},
+    {icon1: "GiChefToque", icon2: "MdPets", index: 4, text1: "Alimentos e Bebidas", text2: "Animais"},
+    {icon1: "BsHourglassSplit", icon2: "MdPalette", index: 6, text1: "Antiguidades e Coleções", text2: "Arte, Papelaria e Armarinho"},
+    {icon1: "FaBaby", icon2: "GiLipstick", index: 8, text1: "Bebês", text2: "Beleza e Cuidado Pessoal"},
+    {icon1: "GiBearFace", icon2: "FaTshirt", index: 10, text1: "Brinquedo e Hobbies", text2: "Calçados, Roupas e Bolsas"},
+    {icon1: "BsCameraFill", icon2: "FaCar", index: 12, text1: "Câmera e Acessórios", text2: "Carros, Motos e Outros"},
+    {icon1: "GiSofa", icon2: "GiSmartphone", index: 14, text1: "Casa, Móveis e decoração", text2: "Celulares e Telefones"},
+    {icon1: "MdEngineering", icon2: "CgSmartHomeRefrigerator", index: 16, text1: "Construção", text2: "Eletrodomésticos"},
+    {icon1: "FaMicrophone", icon2: "GiSoccerBall", index: 18, text1: "Eletrônicos, Áudio e Vídeo", text2: "Esportes e Fitness"},
+    {icon1: "FaTools", icon2: "GiBalloons", index: 20, text1: "Ferramentas", text2: "Festas e Lembrancinhas"},
+    {icon1: "GiRetroController", icon2: "BsBuilding", index: 22, text1: "Games", text2: "Imóveis"},
+    {icon1: "GiFactory", icon2: "SlScreenDesktop", index: 24, text1: "Indústria e Comércio", text2: "Informática"},
+    {icon1: "GiTicket", icon2: "GiViolin", index: 26, text1: "Ingressos", text2: "Instrumentos Musicais"},
+    {icon1: "GiWatch", icon2: "GiBookCover", index: 28, text1: "Joias e Relógios", text2: "Livros, Revistas e Comics"},
+    {icon1: "FaMusic", icon2: "GiHeartPlus", index: 30, text1: "Música, Filmes e Seriados", text2: "Saúde"},
+    {icon1: "FaUsers", icon2: "HiSquaresPlus", index: 32, text1: "Serviços", text2: "Mais Categorias"},
+]
+
