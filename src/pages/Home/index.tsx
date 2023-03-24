@@ -12,6 +12,7 @@ import Benefits from "../../components/Benefits";
 import BrandOffer from "../../components/BrandOffer";
 import CheckOutOffers from "../../components/CheckOutOffers";
 import PopularCategories from "../../components/PopularCategories";
+import BenefitsApp from "../../components/BenefitsApp";
 
 const Home: React.FC = () => {
     const [showSemiFooter, setShowSemiFooter] = useState<boolean>(false);
@@ -46,7 +47,7 @@ const Home: React.FC = () => {
             <BrandOffer />
             <CheckOutOffers />
             <PopularCategories />
-            
+            <BenefitsApp />
             <section className="w-screen flex bg-white border-b border-gray-200 flex-col justify-center items-center">
                 <button
                     type="button"
