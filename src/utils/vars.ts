@@ -1,6 +1,6 @@
 import * as Icons from 'react-icons/all';
 
-import { IPropsMidSecondLevelHeader, IPhotosSwiper, IPropsPaymentMidContent, IOffer, IPropsContentTodayOffer, IPropsContainLevelSix, IContainBenefits, iCategory, IContainCategories } from "../interfaces"
+import { IPropsMidSecondLevelHeader, IPhotosSwiper, IPropsPaymentMidContent, IOffer, IPropsContentTodayOffer, IPropsContainLevelSix, IContainBenefits, iCategory, IContainCategories, IPropsContainBenefitsApp } from "../interfaces"
 import {
     offer12,
     offer11,
@@ -177,3 +177,8 @@ export const allCategories: IContainCategories[] = [
     {icon1: "FaUsers", icon2: "HiSquaresPlus", index: 32, text1: "Serviços", text2: "Mais Categorias"},
 ]
 
+export const allBenefitsApp: IPropsContainBenefitsApp[] = [
+    {alt: "Pagamento", linkBenefit: "Como pagar com Mercado Pago", id: 0, title: "Escolha como pagar", link: "https://http2.mlstatic.com/storage/homes-korriban/assets/images/ecosystem/payment.svg", content: "Com o Mercado Pago, você paga com cartão, boleto ou Pix. Você também pode pagar em até 12x no boleto com o Mercado Crédito." },
+    {alt: "Frete Gratis", linkBenefit: "Saiba mais sobre este benefício", id: 1, title: "Frete grátis a partir de R$ 79", link: "https://http2.mlstatic.com/storage/homes-korriban/assets/images/ecosystem/shipping.svg", content: "Só por estar cadastrado no Mercado Livre, você tem frete grátis em milhares de produtos. É um benefício do Mercado Pontos." },
+    {alt: "Seguro", linkBenefit: "Segurança, do início ao fim", id: 2, title: "Como te protegemos", link: "https://http2.mlstatic.com/storage/homes-korriban/assets/images/ecosystem/protected.svg", content: "Você não gostou do que comprou? Devolva! No Mercado Livre não há nada que você não possa fazer, porque você está sempre protegido." },
+]
