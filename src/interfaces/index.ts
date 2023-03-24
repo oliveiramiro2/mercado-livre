@@ -148,3 +148,12 @@ export interface IContainCategories {
     icon1: string;
     icon2: string;
 }
+
+export interface IPropsContainBenefitsApp {
+    link: string;
+    alt: string;
+    title: string;
+    content: string;
+    linkBenefit: string;
+    id?: number;
+}
