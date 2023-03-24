@@ -225,3 +225,12 @@ export const semiFooter6: IPropsSemiFooter[] = [
     {text: "Paramount+", id: 4},
     {text: "Deezer", id: 5},
 ]
+
+export const footerLinks: IPropsSemiFooter[] = [
+    {text: "Trabalhe conosco", id: 0},
+    {text: "Termos e condições", id: 1},
+    {text: "Como cuidamos da sua privacidade", id: 2},
+    {text: "Acessibilidade", id: 3},
+    {text: "Contato", id: 4},
+    {text: "Informações sobre seguros", id: 5},
+]

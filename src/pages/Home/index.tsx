@@ -11,6 +11,7 @@ import CheckOutOffers from "../../components/CheckOutOffers";
 import PopularCategories from "../../components/PopularCategories";
 import BenefitsApp from "../../components/BenefitsApp";
 import SemiFooter from "../../components/SemiFooter";
+import Footer from "../../components/Footer";
 
 const Home: React.FC = () => {
 
@@ -27,7 +28,7 @@ const Home: React.FC = () => {
             <PopularCategories />
             <BenefitsApp />
             <SemiFooter />
-            
+            <Footer />
         </div>
     );
 };
